@@ -1,34 +1,45 @@
 "use client";
 
-interface ThemeButtonProps{
-
-}
+interface ThemeButtonProps {}
 
 import { useState, useEffect } from "react";
+import { FaMoon } from "react-icons/fa";
+import { FaRegSun } from "react-icons/fa";
 
 export default function ThemeButton() {
-  const [themeDark, setThemeDark] = useState(true);
+  const [themeDark, setThemeDark] = useState(false);
 
-  useEffect(()=>{
-    const theme = localStorage.getItem("theme")
-    if(theme === 'dark') setThemeDark(true)
-  },[])
+  useEffect(() => {
+    const theme = localStorage.getItem("theme");
+    console.log(theme)
+    if (theme === "dark") setThemeDark(true);
+  }, []);
 
-  useEffect(()=>{
-    if(themeDark){
-        document.documentElement.classList.add('dark')
-        localStorage.setItem('theme','dark')
-    }else{
-        document.documentElement.classList.remove('dark')
-        localStorage.setItem('theme','light')
+  useEffect(() => {
+    if (themeDark) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
     }
-  },[themeDark])
+  }, [themeDark]);
 
   return (
     <button
-      className="absolute w-12 h-12 bottom-16 right-16 bg-orange-500 rounded-full text-slate-50"
-      onClick={()=> setThemeDark(!themeDark)}
+      className="relative flex w-16 h-8 rounded-full p-1 bg-white dark:bg-v-dark-900"
+      onClick={() => setThemeDark(!themeDark)}
     >
+      <FaMoon size={22} 
+      className=" text-v-dark-500"/>
+      <div
+        className="absolute bg-v-white-900 dark:bg-v-dark-500 w-6 h-6 rounded-full shadow-md transform transition-transform duration-200"
+        style={themeDark ? { left: "4px" } : { right: "4px" }}
+      >
+      </div>
+      <FaRegSun
+      size={22}
+      className="ml-auto text-gray-50"/>
     </button>
   );
 }
