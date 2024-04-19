@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ThemeButton from "./components/ThemeButton/index";
+import ThemeButton from "../ThemeButton";
 
 export default function Header() {
   return (
@@ -12,9 +12,10 @@ export default function Header() {
             <li>Oi</li>
             <li>Oi</li>
           </ul>
+          <ThemeButton />
         </nav>
       </header>
-      <ThemeButton />
+
     </>
   );
 }
