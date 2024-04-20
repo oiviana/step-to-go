@@ -27,7 +27,7 @@ export default function ThemeButton() {
 
   return (
     <button
-      className="relative flex w-16 h-8 rounded-full p-1 bg-white dark:bg-v-dark-900"
+      className="relative hidden md:flex w-16 h-8 rounded-full p-1 bg-white dark:bg-v-dark-900"
       onClick={() => setThemeDark(!themeDark)}
     >
       <FaMoon size={22} 
