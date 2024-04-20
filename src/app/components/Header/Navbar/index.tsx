@@ -7,11 +7,11 @@ import Link from "next/link";
 export default function Navbar() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   return (
-    <nav className="flex w-full">
-      <div className="flex w-full justify-between items-center px-4">
+    <nav className="flex w-full max-w-[1440px] mx-auto">
+      <div className="flex w-full justify-between items-center px-5 h-20 md:h-16">
         <Link
           href="/"
-          className="font-bold text-xl text-gray-900 dark:text-slate-100"
+          className="font-bold text-xl text-gray-900 dark:text-slate-100 w-full md:max-w-44"
         >
           Logo
         </Link>
@@ -19,7 +19,10 @@ export default function Navbar() {
           className="flex md:hidden"
           onClick={() => setShowMobileMenu(true)}
         >
-          <GiHamburgerMenu size={30} className="text-v-dark-500 dark:text-v-white-500" />
+          <GiHamburgerMenu
+            size={30}
+            className="text-v-dark-500 dark:text-v-white-500"
+          />
         </button>
       </div>
 
@@ -39,10 +42,19 @@ export default function Navbar() {
             className="flex md:hidden"
             onClick={() => setShowMobileMenu(false)}
           >
-            <IoClose size={40} className="text-v-dark-500 dark:text-v-white-500" />
+            <IoClose
+              size={40}
+              className="text-v-dark-500 dark:text-v-white-500"
+            />
           </button>
         </div>
-        <li>Sobre mim</li>
+        <li>Sobre</li>
+        <li>Profissional</li>
+        <li>Acadêmico</li>
+        <li>Projetos</li>
+      </ul>
+      <ul className="hidden md:flex text-v-dark-500 dark:text-v-white-500 items-center gap-8 md:text-lg lg:gap-24">
+        <li>Sobre</li>
         <li>Profissional</li>
         <li>Acadêmico</li>
         <li>Projetos</li>
