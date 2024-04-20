@@ -8,7 +8,7 @@ import { IoLanguage } from "react-icons/io5";
 export default function Header() {
   return (
     <>
-      <header className="w-100 flex flex-col bg-v-white-900 dark:bg-v-dark-500 px-2">
+      <header className="w-100 flex flex-col bg-v-white-500 dark:bg-v-dark-700 px-2 shadow">
         <div className="w-full justify-between ">
           <Navbar />
         </div>
