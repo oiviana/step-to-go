@@ -11,7 +11,6 @@ export default function ThemeButton() {
 
   useEffect(() => {
     const theme = localStorage.getItem("theme");
-    console.log(theme)
     if (theme === "dark") setThemeDark(true);
   }, []);
 
@@ -31,7 +30,7 @@ export default function ThemeButton() {
       onClick={() => setThemeDark(!themeDark)}
     >
       <FaMoon size={22} 
-      className=" text-v-dark-500"/>
+      className=" text-v-dark-500 mt-[1px]"/>
       <div
         className="absolute bg-v-white-900 dark:bg-v-dark-300 w-6 h-6 rounded-full shadow-md transform transition-transform duration-200"
         style={themeDark ? { left: "4px" } : { right: "4px" }}
@@ -39,7 +38,7 @@ export default function ThemeButton() {
       </div>
       <FaRegSun
       size={22}
-      className="ml-auto text-gray-50"/>
+      className="ml-auto text-gray-50 mt-[1px]"/>
     </button>
   );
 }

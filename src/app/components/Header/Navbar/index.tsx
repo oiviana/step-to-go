@@ -1,8 +1,10 @@
 "use client";
+import React from 'react'
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 import { useState } from "react";
 import Link from "next/link";
+
 
 export default function Navbar() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
