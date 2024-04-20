@@ -11,6 +11,10 @@ export default function Home() {
         <h1>TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste</h1>
         <h2>Teste</h2>
       </LayoutSection>
+      <LayoutSection>
+        <h1>TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste</h1>
+        <h2>Teste</h2>
+      </LayoutSection>
       <Footer />
     </>
   );
