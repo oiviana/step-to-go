@@ -11,8 +11,10 @@ const config: Config = {
       colors: {
         'v-dark-300':'#464158',
         'v-dark-500': '#2B2836',
+        'v-dark-700': '#23212c',
         'v-dark-900': '#1D1A26',
         'v-dark-bold': '#17151e',
+        'v-white-300': '#f2f2f2',
         'v-white-500': '#E9E9E9',
         'v-white-900': '#d9d9d9'
       },
