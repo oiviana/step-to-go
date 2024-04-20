@@ -1,11 +1,16 @@
 import Footer from "./components/Footer/Footer";
-import Header from "./components/Header";
+import Header from "./components/Header/";
+import LayoutSection from "./components/LayoutSection";
+
 
 export default function Home() {
   return (
     <>
       <Header />
-      <h1>Hello World</h1>
+      <LayoutSection>
+        <h1>TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste</h1>
+        <h2>Teste</h2>
+      </LayoutSection>
       <Footer />
     </>
   );
