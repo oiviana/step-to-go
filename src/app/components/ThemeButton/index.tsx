@@ -27,13 +27,13 @@ export default function ThemeButton() {
 
   return (
     <button
-      className="relative hidden md:flex w-16 h-8 rounded-full p-1 bg-white dark:bg-v-dark-900"
+      className="relative hidden md:flex w-16 h-8 rounded-full p-1 bg-white dark:bg-v-dark-bold shadow"
       onClick={() => setThemeDark(!themeDark)}
     >
       <FaMoon size={22} 
       className=" text-v-dark-500"/>
       <div
-        className="absolute bg-v-white-900 dark:bg-v-dark-500 w-6 h-6 rounded-full shadow-md transform transition-transform duration-200"
+        className="absolute bg-v-white-900 dark:bg-v-dark-300 w-6 h-6 rounded-full shadow-md transform transition-transform duration-200"
         style={themeDark ? { left: "4px" } : { right: "4px" }}
       >
       </div>
