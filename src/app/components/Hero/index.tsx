@@ -1,15 +1,16 @@
 import LayoutSection from "../LayoutSection";
+import TechnologySlider from "./TechnologySlider";
 import Image from "next/image";
 
 export default function Hero() {
   return (
     <LayoutSection>
-      <div className="lg:relative">
-        <h2 className="text-2xl lg:text-4xl font-bold py-5 lg:pb-16">
+      <div className="relative">
+        <h2 className="text-2xl lg:text-4xl font-bold py-5 lg:pb-16 sm:text-center lg:text-left">
           Prazer, me chamo Lucas Viana!
         </h2>
         <div className="flex flex-col-reverse lg:flex-row lg:justify-between">
-          <div className="lg: max-w-[40rem]">
+          <div className="lg: max-w-[40rem] mt-[2rem] lg:mt-0 sm:mx-auto lg:mx-0">
             <p className="leading-9">
               Sou apaixonado por tecnologia, com mais de 5 anos de experiência
               em desenvolvimento. Meu objetivo é contribuir ativamente para o
@@ -19,8 +20,9 @@ export default function Hero() {
             <h3 className="text-xl py-6">
                 Tecnologias que utilizo:
             </h3>
+            <TechnologySlider/>
           </div>
-          <div className="lg:absolute top-7 right-0">
+          <div className="lg:absolute top-7 right-0 sm:mx-auto lg:mx-0">
             <Image
               src="/hero.png"
               width={400}
@@ -29,6 +31,10 @@ export default function Hero() {
               className="rounded-full"
             />
           </div>
+          <div className="bottom-[15rem] hidden lg:flex items-end lg:h-[378px] min-w-[300px]">
+          <button className="p-5 h-[60px] rounded-md absolute shadow-md font-semibold bg-v-dark-900 dark:bg-v-white-500 text-v-white-300 dark:text-v-dark-bold">Veja meu currículo</button>
+          </div>
+     
         </div>
       </div>
     </LayoutSection>
