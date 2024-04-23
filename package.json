@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@isaacs/cliui": "^8.0.2",
+    "emoji-regex": "9.2.2",
     "next": "14.2.1",
     "react": "^18",
     "react-dom": "^18",
@@ -18,16 +20,13 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.1.1",
-    "@types/node": "^20",
+    "@types/node": "^20.12.7",
     "@types/react": "^18.2.79",
     "@types/react-dom": "^18",
-    "eslint": "^9.1.0",
-    "eslint-config-next": "14.2.1",
-    "eslint-plugin-react": "^7.34.1",
     "globals": "^15.0.0",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5",
-    "typescript-eslint": "^7.7.0"
+    "typescript-eslint": "^7.7.1"
   }
 }
