@@ -2,7 +2,7 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/";
 import HomeSlider from "./components/HomeSlider/";
 import Hero from "./components/Hero/";
-import TimeLineCard from "./components/TimeLine/TimeLineCard";
+import TimeLine from "./components/TimeLine/";
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
       <Header />
       <HomeSlider />
       <Hero />
-      <TimeLineCard/>
+      <TimeLine/>
 
     </>
   );
