@@ -1,4 +1,5 @@
 import LayoutSection from "../LayoutSection";
+import TitleSection from "../TitleSection";
 import TechnologySlider from "./TechnologySlider";
 import Image from "next/image";
 
@@ -6,9 +7,7 @@ export default function Hero() {
   return (
     <LayoutSection>
       <div className="relative">
-        <h2 className="text-2xl lg:text-4xl font-bold py-5 lg:pb-16 sm:text-center lg:text-left">
-          Prazer, me chamo Lucas Viana!
-        </h2>
+        <TitleSection title="Prazer, me chamo Lucas Viana!"/>
         <div className="flex flex-col-reverse lg:flex-row lg:justify-between">
           <div className="lg: max-w-[40rem] mt-[2rem] lg:mt-0 sm:mx-auto lg:mx-0">
             <p className="leading-9">
