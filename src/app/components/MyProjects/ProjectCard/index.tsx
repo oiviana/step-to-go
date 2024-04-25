@@ -1,19 +1,27 @@
 import Image from "next/image";
 
-export default function ProjectCard(){
+interface ProjectCardProps{
+    title: string;
+    subtitle: string;
+    description: string;
+    stack: string[];
+    hasDeploy: boolean;
+}
+
+export default function ProjectCard({title, subtitle, description, stack, hasDeploy}:ProjectCardProps){
 
     return(
         <div className="flex flex-col w-full max-w-[400px] shadow-md">
-            <div className="max-h-[260px]">
+            <div className="max-h-[260px] group overflow-hidden rounded-t">
                 <Image
                 src="/building-project.jpg"
                 alt="Projeto em construção"
                 width={420}
                 height={280}
-                className="rounded-t"
+                className="transition-all duration-200 group-hover:scale-105 "
                 />
             </div>
-            <div className="flex flex-col p-2 gap-3 rounded-b bg-white dark:bg-v-dark-900">
+            <div className="flex flex-col p-2 gap-3 rounded-b bg-white dark:bg-v-dark-900 border-t border-v-white-300">
                 <h3 className="text-lg lg:text-xl text-v-dark-bold dark:text-v-white-300 font-bold mb-1">
                     Projeto de aplicativo
                 </h3>
