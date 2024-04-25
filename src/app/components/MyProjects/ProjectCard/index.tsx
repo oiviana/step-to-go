@@ -23,7 +23,7 @@ export default function ProjectCard({title, subtitle, description, stack, hasDep
             </div>
             <div className="flex flex-col p-2 gap-3 rounded-b bg-white dark:bg-v-dark-900 border-t border-v-white-300">
                 <h3 className="text-lg lg:text-xl text-v-dark-bold dark:text-v-white-300 font-bold mb-1">
-                    Projeto de aplicativo
+                    {title}
                 </h3>
                 <p className="text-xs lg:text-sm max-h-[80px] overflow-hidden text-ellipsis line-clamp-[4]">
                 é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma

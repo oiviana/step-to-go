@@ -5,7 +5,7 @@ import {projects} from "./data"
 
 export default function MyProjects(){
 
-    const projectCards = projects.map((project)=>(
+    const projectCards = projects.slice(0,3).map((project)=>(
         <ProjectCard
         title={project.title}
         subtitle={project.subtitle}

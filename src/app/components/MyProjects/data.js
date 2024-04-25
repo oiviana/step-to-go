@@ -1,6 +1,6 @@
 export const projects = [
   {
-    "title": "fev/2016",
+    "title": "Projeto 1",
     "subtitle":"Iniciei meu curso técnico e tive meu primeiro contato com programação meu curso técnico e tive meu primeiro contato com programação.",
     "description":"Iniciei meu curso técnico e tive meu primeiro contato com programação meu curso técnico e tive meu primeiro contato com programação.",
     "stack":["Next, bla, ble"],
@@ -8,7 +8,7 @@ export const projects = [
 
   },
   {
-    "title": "fev/2016",
+    "title": "Projeto 2",
     "subtitle":"Iniciei meu curso técnico e tive meu primeiro contato com programação meu curso técnico e tive meu primeiro contato com programação.",
     "description":"Iniciei meu curso técnico e tive meu primeiro contato com programação meu curso técnico e tive meu primeiro contato com programação.",
     "stack":["Next, bla, ble"],
@@ -16,7 +16,7 @@ export const projects = [
 
   },
   {
-    "title": "fev/2016",
+    "title": "Projeto 3",
     "subtitle":"Iniciei meu curso técnico e tive meu primeiro contato com programação meu curso técnico e tive meu primeiro contato com programação.",
     "description":"Iniciei meu curso técnico e tive meu primeiro contato com programação meu curso técnico e tive meu primeiro contato com programação.",
     "stack":["Next, bla, ble"],
@@ -24,7 +24,7 @@ export const projects = [
 
   },
   {
-    "title": "fev/2016",
+    "title": "Projeto 4",
     "subtitle":"Iniciei meu curso técnico e tive meu primeiro contato com programação meu curso técnico e tive meu primeiro contato com programação.",
     "description":"Iniciei meu curso técnico e tive meu primeiro contato com programação meu curso técnico e tive meu primeiro contato com programação.",
     "stack":["Next, bla, ble"],
@@ -32,7 +32,7 @@ export const projects = [
 
   },
   {
-    "title": "fev/2016",
+    "title": "Projeto 5",
     "subtitle":"Iniciei meu curso técnico e tive meu primeiro contato com programação meu curso técnico e tive meu primeiro contato com programação.",
     "description":"Iniciei meu curso técnico e tive meu primeiro contato com programação meu curso técnico e tive meu primeiro contato com programação.",
     "stack":["Next, bla, ble"],
@@ -40,7 +40,7 @@ export const projects = [
 
   },
   {
-    "title": "fev/2016",
+    "title": "Projeto 6",
     "subtitle":"Iniciei meu curso técnico e tive meu primeiro contato com programação meu curso técnico e tive meu primeiro contato com programação.",
     "description":"Iniciei meu curso técnico e tive meu primeiro contato com programação meu curso técnico e tive meu primeiro contato com programação.",
     "stack":["Next, bla, ble"],
