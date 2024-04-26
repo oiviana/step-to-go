@@ -9,7 +9,8 @@ interface ProjectCardProps{
 }
 
 export default function ProjectCard({title, subtitle, description, stack, hasDeploy}:ProjectCardProps){
-
+    const stackList = stack.join(" - ");
+    console.log(stackList)
     return(
         <div className="flex flex-col w-full max-w-[400px] shadow-md mx-auto lg:mx-0">
             <div className="max-h-[260px] group overflow-hidden rounded-t">
@@ -25,10 +26,10 @@ export default function ProjectCard({title, subtitle, description, stack, hasDep
                 <h3 className="text-lg lg:text-xl text-v-dark-bold dark:text-v-white-300 font-bold mb-1">
                     {title}
                 </h3>
-                <p className="text-xs lg:text-sm max-h-[80px] overflow-hidden text-ellipsis line-clamp-[4]">
-                é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma
+                <p className="text-xs lg:text-sm min-h-[60px] max-h-[80px] overflow-hidden text-ellipsis line-clamp-[4]">
+               {subtitle}
                 </p>
-                <span className="text-sm font-bold">NextJS - React - PHP - Tudinho</span>
+                <span className="text-sm font-bold">{stackList}</span>
 
 
                 <div>
