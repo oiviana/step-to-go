@@ -47,5 +47,21 @@ export const projects = [
     "hasDeploy": true
 
   },
+  {
+    "title": "Projeto 7",
+    "subtitle":"Iniciei meu curso técnico e tive meu primeiro contato com programação meu curso técnico e tive meu primeiro contato com programação.",
+    "description":"Iniciei meu curso técnico e tive meu primeiro contato com programação meu curso técnico e tive meu primeiro contato com programação.",
+    "stack":["Next, bla, ble"],
+    "hasDeploy": true
+
+  },
+  {
+    "title": "Projeto 8",
+    "subtitle":"Iniciei meu curso técnico e tive meu primeiro contato com programação meu curso técnico e tive meu primeiro contato com programação.",
+    "description":"Iniciei meu curso técnico e tive meu primeiro contato com programação meu curso técnico e tive meu primeiro contato com programação.",
+    "stack":["Next, bla, ble"],
+    "hasDeploy": true
+
+  },
   ];
   
