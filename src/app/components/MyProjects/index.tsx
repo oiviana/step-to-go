@@ -108,7 +108,7 @@ function PaginationSection({
 
   return (
     <div className="w-full flex justify-center p-6 gap-8">
-      <button className={`shadow py-3 px-6 bg-white dark:bg-v-dark-900 rounded flex justify-center items-center transition-opacity ${currentPage == 1 && 'opacity-[0.50]'}`}
+      <button className={`shadow py-3 px-6 bg-white dark:bg-v-dark-900 rounded flex justify-center items-center transition-opacity ${currentPage == 1 && 'opacity-[0.50] cursor-not-allowed'}`}
       onClick={() => handlePrevPage()}>
         <MdArrowBackIosNew size={25} 
         className="flex justify-center" />
@@ -116,7 +116,8 @@ function PaginationSection({
 
       <button 
       onClick={() => handleNextPage()}
-      className={`shadow py-3 px-6 bg-white dark:bg-v-dark-900 rounded flex justify-center items-center transition-opacity ${currentPage == pages.length && 'opacity-[0.50]'}`}>
+      className={`shadow py-3 px-6 bg-white dark:bg-v-dark-900 rounded flex justify-center items-center transition-opacity ${currentPage == pages.length && 'opacity-[0.50] cursor-not-allowed'}`}
+      >
       <MdArrowForwardIos size={25}/>
       </button>
     </div>
