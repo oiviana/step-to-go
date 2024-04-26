@@ -11,7 +11,7 @@ interface ProjectCardProps{
 export default function ProjectCard({title, subtitle, description, stack, hasDeploy}:ProjectCardProps){
 
     return(
-        <div className="flex flex-col w-full max-w-[400px] shadow-md">
+        <div className="flex flex-col w-full max-w-[400px] shadow-md mx-auto lg:mx-0">
             <div className="max-h-[260px] group overflow-hidden rounded-t">
                 <Image
                 src="/building-project.jpg"
