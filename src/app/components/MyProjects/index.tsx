@@ -4,6 +4,8 @@ import LayoutSection from "../LayoutSection";
 import TitleSection from "../TitleSection";
 import ProjectCard from "./ProjectCard";
 import { projects } from "./data";
+import { MdArrowForwardIos } from "react-icons/md";
+import { MdArrowBackIosNew } from "react-icons/md";
 
 export default function MyProjects() {
   const [isClient, setIsClient] = useState<boolean>();
@@ -28,7 +30,7 @@ export default function MyProjects() {
   useEffect(() => {
     setIsClient(true);
   }, []);
-  
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1230) {
@@ -41,10 +43,10 @@ export default function MyProjects() {
     };
     handleResize();
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -53,7 +55,13 @@ export default function MyProjects() {
       <TitleSection title="Meus projetos" />
       {isClient ? (
         <>
-          <div className={`grid grid-cols-1 md:grid-cols-2 min-[1230px]:grid-cols-3 xl:flex ${currentItems.length % 2 === 0 ?'xl:justify-start gap-[7.5rem]':'xl:justify-between'}`}>
+          <div
+            className={`grid grid-cols-1 md:grid-cols-2 min-[1230px]:grid-cols-3 xl:flex ${
+              currentItems.length % 2 === 0
+                ? "xl:justify-start gap-[7.5rem]"
+                : "xl:justify-between"
+            }`}
+          >
             {currentItems}
           </div>
           <PaginationSection
@@ -79,7 +87,7 @@ function PaginationSection({
   totalItems: number;
   itemsPerPage: number;
   currentPage: number;
-  setCurrentPage: (page:number) => void;
+  setCurrentPage: (page: number) => void;
 }) {
   let pages = [];
   for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
@@ -99,10 +107,18 @@ function PaginationSection({
   };
 
   return (
-    <div>
-      <button onClick={() => handlePrevPage()}>Voltar</button>
+    <div className="w-full flex justify-center p-6 gap-8">
+      <button className={`shadow py-3 px-6 bg-white dark:bg-v-dark-900 rounded flex justify-center items-center transition-opacity ${currentPage == 1 && 'opacity-[0.50]'}`}
+      onClick={() => handlePrevPage()}>
+        <MdArrowBackIosNew size={25} 
+        className="flex justify-center" />
+      </button>
 
-      <button onClick={() => handleNextPage()}> Proxim</button>
+      <button 
+      onClick={() => handleNextPage()}
+      className={`shadow py-3 px-6 bg-white dark:bg-v-dark-900 rounded flex justify-center items-center transition-opacity ${currentPage == pages.length && 'opacity-[0.50]'}`}>
+      <MdArrowForwardIos size={25}/>
+      </button>
     </div>
   );
 }
