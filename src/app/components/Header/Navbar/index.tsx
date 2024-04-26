@@ -4,6 +4,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 import { useState } from "react";
 import Link from "next/link";
+import Logo from "../../Logo";
 
 export default function Navbar() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -12,9 +13,9 @@ export default function Navbar() {
       <div className="flex w-full justify-between items-center px-5 h-20 md:h-16">
         <Link
           href="/"
-          className="font-bold text-xl text-gray-900 dark:text-slate-100 w-full md:max-w-44"
+          className="font-bold text-xl text-gray-900 dark:text-slate-100 w-full md:max-w-44 lg:mt-[2.5rem]"
         >
-          Logo
+          <Logo />
         </Link>
         <button
           className="flex md:hidden"
@@ -32,15 +33,15 @@ export default function Navbar() {
           showMobileMenu ? "fixed" : "hidden"
         } md:hidden inset-y-0 left-0 z-10 w-full overflow-y-auto bg-v-white-900 dark:bg-v-dark-500 flex flex-col gap-5 text-v-dark-500 dark:text-v-white-500 text-base p-3`}
       >
-        <div className="flex w-full justify-between p-2 mt-3">
+        <div className="flex w-full justify-between p-2 mt-3 mb-9">
           <Link
             href="/"
             className="font-bold text-xl text-gray-900 dark:text-v-white-500"
           >
-            Logo
+            <Logo />
           </Link>
           <button
-            className="flex md:hidden"
+            className="flex md:hidden items-center"
             onClick={() => setShowMobileMenu(false)}
           >
             <IoClose
