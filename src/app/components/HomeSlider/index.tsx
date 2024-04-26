@@ -23,7 +23,7 @@ export default function HomeSlider() {
     <LayoutSection>
       <ul className="flex items-center text-2xl lg:text-5xl leading-[3rem] lg:leading-[4rem] font-bold min-h-[28rem] lg:min-h-[48rem]">
         <h1
-          className={`transition-opacity ease-in-out duration-1000 ${
+          className={`text-v-dark-900 dark:text-v-white-500 transition-opacity ease-in-out duration-1000 ${
             fade ? "opacity-0" : "opacity-100"
           }`}
           style={{ display: "flex" }}
