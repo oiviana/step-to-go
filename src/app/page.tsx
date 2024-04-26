@@ -3,6 +3,7 @@ import Header from "./components/Header/";
 import HomeSlider from "./components/HomeSlider/";
 import Hero from "./components/Hero/";
 import TimeLine from "./components/TimeLine/";
+import MyProjects from "./components/MyProjects";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <HomeSlider />
       <Hero />
       <TimeLine/>
+      <MyProjects/>
 
     </>
   );

@@ -51,15 +51,15 @@ export default function Navbar() {
           </button>
         </div>
         <li>Sobre</li>
-        <li>Profissional</li>
-        <li>Acadêmico</li>
+        <li>Trajetória</li>
         <li>Projetos</li>
+        <li>Contato</li>
       </ul>
       <ul className="hidden md:flex text-v-dark-500 dark:text-v-white-500 items-center gap-8 md:text-lg lg:gap-24">
         <li>Sobre</li>
-        <li>Profissional</li>
-        <li>Acadêmico</li>
+        <li>Trajetória</li>
         <li>Projetos</li>
+        <li>Contato</li>
       </ul>
     </nav>
   );
