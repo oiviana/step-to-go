@@ -14,11 +14,6 @@ export default function Header() {
         </div>
         <div className="justify-end  hidden md:flex w-full max-w-[1440px] mx-auto gap-10 py-2">
           <Link href="/">
-            <FaGithub 
-            className="text-v-dark-900 dark:text-v-white-500"
-            size={30}/>
-          </Link>
-          <Link href="/">
             <IoLanguage 
             className="text-v-dark-900 dark:text-v-white-500"
             size={30}/>
