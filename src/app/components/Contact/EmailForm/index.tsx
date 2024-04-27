@@ -1,4 +1,5 @@
 "use client";
+import axios from "axios";
 import { useForm, SubmitHandler } from "react-hook-form";
 
 interface EmailFormProps {
@@ -10,8 +11,14 @@ interface EmailFormProps {
 export default function EmailForm() {
   const { handleSubmit, register } = useForm<EmailFormProps>();
 
-  const handleSendEmail: SubmitHandler<EmailFormProps> = (data) => {
-    console.log(data);
+  const handleSendEmail: SubmitHandler<EmailFormProps> = async (data) => {
+    try {
+    
+      const response = await axios.post('/api/emails/', data);
+      console.log(response.data); 
+    } catch (error) {
+      console.error('Erro ao enviar e-mail:', error);
+    }
   };
 
   return (
