@@ -25,9 +25,11 @@ export default function Contact() {
               Você também pode entrar em contato pessoalmente comigo, via
               WhatsApp!
             </h3>
-            <button>
+            <a
+            target="_blank"
+            href="https://wa.me/5511943488946">
               <IoLogoWhatsapp className="text-green-500" size={80} />
-            </button>
+            </a>
           </div>
           <h3 className="text-base lg:text-xl my-7">Redes de contato:</h3>
           <a
