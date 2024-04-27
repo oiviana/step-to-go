@@ -10,7 +10,7 @@ interface ProjectCardProps{
 
 export default function ProjectCard({title, subtitle, description, stack, hasDeploy}:ProjectCardProps){
     const stackList = stack.join(" - ");
-    console.log(stackList)
+
     return(
         <div className="flex flex-col w-full max-w-[400px] shadow-md mx-auto lg:mx-0">
             <div className="max-h-[260px] group overflow-hidden rounded-t">
@@ -20,6 +20,7 @@ export default function ProjectCard({title, subtitle, description, stack, hasDep
                 width={420}
                 height={280}
                 className="transition-all duration-200 group-hover:scale-105 "
+                priority={false}
                 />
             </div>
             <div className="flex flex-col p-2 gap-3 rounded-b bg-white dark:bg-v-dark-900 border-t border-v-white-300">
