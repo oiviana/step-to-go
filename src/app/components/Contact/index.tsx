@@ -11,9 +11,9 @@ export default function Contact() {
   return (
     <LayoutSection>
       <TitleSection title="Contato" />
-      <div className="flex flex-col lg:flex-row lg:justify-between">
+      <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between">
         <div>
-          <h3 className=" text-base lg:text-xl text-center lg:text-left max-w-[530px] !leading-8">
+          <h3 className="text-base lg:text-xl text-center lg:text-left max-w-[530px] !leading-8">
             Gostou do que viu por aqui? Entre em contato comigo por email e
             contrate meus serviços!
           </h3>
@@ -30,22 +30,38 @@ export default function Contact() {
             </button>
           </div>
           <h3 className="text-base lg:text-xl my-7">Redes de contato:</h3>
-          <button className="flex py-2  justify-start items-end gap-2 leading-[16px] my-1">
-            <FaLinkedin size={25}/>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/lucasviana80/"
+            rel="noopener noreferrer"
+            className="flex py-2  justify-start items-end gap-2 leading-[16px] my-1"
+          >
+            <FaLinkedin size={25} />
             LinkedIn
-          </button>
+          </a>
+
           <button className="flex py-2  justify-start items-end gap-2 leading-[20px] my-1">
-            <MdEmail size={25}/>
+            <MdEmail size={25} />
             vianalucas80@gmail.com
           </button>
-          <button className="flex py-2  justify-start items-end gap-2 leading-[20px] my-1">
-            <FaGithubSquare size={25}/>
+          <a
+            target="_blank"
+            href="https://github.com/oiviana"
+            rel="noopener noreferrer"
+            className="flex py-2  justify-start items-end gap-2 leading-[16px] my-1"
+          >
+            <FaGithubSquare size={25} />
             Github
-          </button>
-          <button className="flex py-2  justify-start items-end gap-2 leading-[20px] my-1">
-            <FaSquareInstagram size={25}/>
+          </a>
+          <a
+            target="_blank"
+            href="https://www.instagram.com/viana.jpg/"
+            rel="noopener noreferrer"
+            className="flex py-2  justify-start items-end gap-2 leading-[16px] my-1"
+          >
+            <FaSquareInstagram size={25} />
             @oiviana
-          </button>
+          </a>
         </div>
       </div>
     </LayoutSection>
