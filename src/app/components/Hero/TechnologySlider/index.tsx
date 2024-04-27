@@ -26,7 +26,7 @@ export default function TechnologySlider() {
   };
 
   return (
-    <div className="slider-container">
+    <div className="slider-container h-[65px]">
       <Slider ref={(slider) => (sliderRef = slider)} {...settings}>
         <span className="!flex !w-[132px] h-16 justify-start items-center text-v-dark-500 dark:text-v-white-500" title="React JS">
           <FaReact
