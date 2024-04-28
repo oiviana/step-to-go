@@ -27,7 +27,7 @@ export default function Footer() {
             </h3>
           </div>
           <div className="">
-            <span className="flex items-center gap-6">
+            <span className="flex items-center gap-5">
               Desenvolvido com
               <span>
                 <NextLogo />

@@ -6,7 +6,7 @@ import TimeLineCard from "./TimeLineCard";
 export default function TimeLine() {
   return (
     <LayoutSection>
-      <TitleSection title="Minha trajetória"/>
+      <TitleSection title="Minha trajetória" id="trajectory"/>
       <div className="flex mt-4 flex-wrap justify-center lg:justify-start">
         {events.map((event, index) => (
           <TimeLineCard

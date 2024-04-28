@@ -52,7 +52,7 @@ export default function MyProjects() {
 
   return (
     <LayoutSection>
-      <TitleSection title="Meus projetos" />
+      <TitleSection title="Meus projetos" id="projects" />
       {isClient ? (
         <>
           <div

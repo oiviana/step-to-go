@@ -10,7 +10,7 @@ import { FaSquareInstagram } from "react-icons/fa6";
 export default function Contact() {
   return (
     <LayoutSection>
-      <TitleSection title="Contato" />
+      <TitleSection title="Contato" id="contact"/>
       <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between">
         <div>
           <h3 className="text-base lg:text-xl text-center lg:text-left max-w-[530px] !leading-8">
