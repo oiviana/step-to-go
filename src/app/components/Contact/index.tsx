@@ -50,7 +50,7 @@ export default function Contact() {
             target="_blank"
             href="https://github.com/oiviana"
             rel="noopener noreferrer"
-            className="flex py-2  justify-start items-end gap-2 leading-[16px] my-1"
+            className="flex py-2  justify-start items-end gap-2 leading-[20px] my-1"
           >
             <FaGithubSquare size={25} />
             Github
@@ -59,7 +59,7 @@ export default function Contact() {
             target="_blank"
             href="https://www.instagram.com/viana.jpg/"
             rel="noopener noreferrer"
-            className="flex py-2  justify-start items-end gap-2 leading-[16px] my-1"
+            className="flex py-2  justify-start items-end gap-2 leading-[20px] my-1"
           >
             <FaSquareInstagram size={25} />
             @oiviana
