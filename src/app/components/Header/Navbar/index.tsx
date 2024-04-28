@@ -5,6 +5,7 @@ import { IoClose } from "react-icons/io5";
 import { useState } from "react";
 import Link from "next/link";
 import Logo from "../../Logo";
+import ThemeButton from "../../ThemeButton";
 
 export default function Navbar() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -50,16 +51,37 @@ export default function Navbar() {
             />
           </button>
         </div>
-        <li>Sobre</li>
-        <li>Trajetória</li>
-        <li>Projetos</li>
-        <li>Contato</li>
+        <li>
+        <Link href="/#about"
+         onClick={() => setShowMobileMenu(false)}>Sobre</Link>
+        </li>
+        <li>
+        <Link href="/#trajectory"
+         onClick={() => setShowMobileMenu(false)}>Trajetória</Link>
+        </li>
+        <li>
+          <Link href="/#projects"
+           onClick={() => setShowMobileMenu(false)}>Projetos</Link>
+        </li>
+        <li>
+        <Link href="/#contact"
+         onClick={() => setShowMobileMenu(false)}>Contato</Link>
+        </li>
+        <ThemeButton/>
       </ul>
       <ul className="hidden md:flex text-v-dark-500 dark:text-v-white-500 items-center gap-8 md:text-lg lg:gap-24">
-        <li>Sobre</li>
-        <li>Trajetória</li>
-        <li>Projetos</li>
-        <li>Contato</li>
+        <li className="hover:text-black hover:dark:text-v-white-900 transition-colors">
+        <Link href="/#about">Sobre</Link>
+        </li>
+        <li className="hover:text-black hover:dark:text-v-white-900 transition-colors">
+        <Link href="/#trajectory">Trajetória</Link>
+        </li>
+        <li className="hover:text-black hover:dark:text-v-white-900 transition-colors">
+          <Link href="/#projects">Projetos</Link>
+        </li>
+        <li className="hover:text-black hover:dark:text-v-white-900 transition-colors">
+        <Link href="/#contact">Contato</Link>
+        </li>
       </ul>
     </nav>
   );
