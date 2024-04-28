@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Logo from "../Logo";
 import NextLogo from "../Logo/NextLogo";
 
@@ -13,11 +14,19 @@ export default function Footer() {
             </h2>
           </div>
           <div>
-            <ul>
-              <li>Sobre</li>
-              <li>Trajetória</li>
-              <li>Projetos</li>
-              <li>Contato</li>
+            <ul className="flex flex-wrap gap-2 text-sm lg:flex-col  lg:text-base">
+              <li className="hover:text-black hover:dark:text-v-white-900 transition-colors">
+                <Link href="/#about">Sobre</Link>
+              </li>
+              <li className="hover:text-black hover:dark:text-v-white-900 transition-colors">
+                <Link href="/#trajectory">Trajetória</Link>
+              </li>
+              <li className="hover:text-black hover:dark:text-v-white-900 transition-colors">
+                <Link href="/#projects">Projetos</Link>
+              </li>
+              <li className="hover:text-black hover:dark:text-v-white-900 transition-colors">
+                <Link href="/#contact">Contato</Link>
+              </li>
             </ul>
           </div>
           <div className="max-w-[300px]">
