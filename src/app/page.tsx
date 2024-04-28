@@ -1,4 +1,4 @@
-import Footer from "./components/Footer/Footer";
+import Footer from "./components/Footer";
 import Header from "./components/Header/";
 import HomeSlider from "./components/HomeSlider/";
 import Hero from "./components/Hero/";
@@ -15,6 +15,7 @@ export default function Home() {
       <TimeLine/>
       <MyProjects/>
       <Contact/>
+      <Footer/>
 
     </>
   );
