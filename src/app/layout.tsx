@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={mainFontFamily.className}>{children}</body>
+      <body className={`${mainFontFamily.className} bg-v-white-500 dark:bg-v-dark-500`}>{children}</body>
     </html>
   );
 }
