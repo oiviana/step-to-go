@@ -1,13 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 
-interface ProjectCardProps {
+export interface ProjectCardProps {
   title: string;
   subtitle: string;
   description: string;
   stack: string[];
   hasDeploy: boolean;
   slug: string;
+  codeUrl: string;
+  deployUrl: string;
 }
 
 export default function ProjectCard({
@@ -17,6 +19,8 @@ export default function ProjectCard({
   stack,
   hasDeploy,
   slug,
+  deployUrl,
+  codeUrl
 }: ProjectCardProps) {
   const stackList = stack.join(" - ");
 

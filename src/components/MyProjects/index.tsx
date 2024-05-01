@@ -27,6 +27,9 @@ export default function MyProjects({myProjects}:ComponentProjectProps) {
       stack={project.technologies}
       key={index}
       slug={project.slug}
+      codeUrl={project.codeUrl}
+      deployUrl={project.deployUrl}
+      
     />
   ));
 
