@@ -6,20 +6,27 @@ import ProjectCard from "./ProjectCard";
 import { projects } from "./data";
 import { MdArrowForwardIos } from "react-icons/md";
 import { MdArrowBackIosNew } from "react-icons/md";
+import { ProjectProps } from "@/contentful/myProjects";
 
-export default function MyProjects() {
+interface ComponentProjectProps{
+  myProjects: ProjectProps[];
+}
+
+export default function MyProjects({myProjects}:ComponentProjectProps) {
   const [isClient, setIsClient] = useState<boolean>();
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [itemsPerPage, setItemsPerPage] = useState<number>(1);
+  console.log(myProjects)
 
-  const projectCards = projects.map((project, index) => (
+  const projectCards = myProjects.map((project, index) => (
     <ProjectCard
       title={project.title}
       subtitle={project.subtitle}
       description={project.description}
       hasDeploy={project.hasDeploy}
-      stack={project.stack}
+      stack={project.technologies}
       key={index}
+      slug={project.slug}
     />
   ));
 
