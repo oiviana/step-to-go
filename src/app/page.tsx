@@ -5,18 +5,18 @@ import Hero from "../components/Hero/";
 import TimeLine from "../components/TimeLine/";
 import MyProjects from "../components/MyProjects";
 import Contact from "../components/Contact";
-
-export default function Home() {
+import { fetchProjects } from "@/contentful/myProjects";
+export default async function Home() {
+  const getProjects = await fetchProjects();
   return (
     <>
       <Header />
       <HomeSlider />
       <Hero />
-      <TimeLine/>
-      <MyProjects/>
-      <Contact/>
-      <Footer/>
-
+      <TimeLine />
+      <MyProjects myProjects={getProjects} />
+      <Contact />
+      <Footer />
     </>
   );
 }
