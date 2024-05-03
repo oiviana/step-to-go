@@ -33,7 +33,7 @@ export default function Hero() {
               <a
                 href="https://drive.google.com/file/d/1ReRpGHVCIRJ69a9h2Ieemiz4dCNt-cSQ/view?usp=sharing"
                 target="_blank"
-                className="p-5 h-[60px] flex max-w-[220px] justify-center rounded-md lg:absolute shadow-md font-semibold bg-v-dark-900 dark:bg-v-white-500 text-v-white-300 dark:text-v-dark-bold"
+                className="p-5 h-[60px] flex max-w-[220px] leading-2 justify-center rounded-md lg:absolute shadow-md font-semibold bg-v-dark-900 dark:bg-v-white-500 text-v-white-300 dark:text-v-dark-bold"
               >
                 Veja meu currículo
               </a>

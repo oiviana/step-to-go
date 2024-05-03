@@ -3,23 +3,32 @@ import { useState, useEffect } from "react";
 import LayoutSection from "../LayoutSection";
 import TitleSection from "../TitleSection";
 import ProjectCard from "./ProjectCard";
-import { projects } from "./data";
 import { MdArrowForwardIos } from "react-icons/md";
 import { MdArrowBackIosNew } from "react-icons/md";
+import { ProjectProps } from "@/contentful/myProjects";
 
-export default function MyProjects() {
+interface ComponentProjectProps{
+  myProjects: ProjectProps[];
+}
+
+export default function MyProjects({myProjects}:ComponentProjectProps) {
   const [isClient, setIsClient] = useState<boolean>();
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [itemsPerPage, setItemsPerPage] = useState<number>(1);
+  const [fadeSlides, setFadeSlides] = useState<boolean>(false)
 
-  const projectCards = projects.map((project, index) => (
+  const projectCards = myProjects.map((project, index) => (
     <ProjectCard
       title={project.title}
       subtitle={project.subtitle}
       description={project.description}
       hasDeploy={project.hasDeploy}
-      stack={project.stack}
+      stack={project.technologies}
       key={index}
+      slug={project.slug}
+      codeUrl={project.codeUrl}
+      deployUrl={project.deployUrl}
+      
     />
   ));
 
@@ -50,13 +59,27 @@ export default function MyProjects() {
     };
   }, []);
 
+  useEffect(() => {
+    // Adiciona a classe fade-in temporariamente
+    setFadeSlides(true);
+    // Remove a classe fade-in após 1 segundo (1000ms)
+    const timeout = setTimeout(() => {
+      setFadeSlides(false);
+    }, 1000);
+
+    return () => clearTimeout(timeout);
+  }, [currentPage]); // Executa sempre que a página atual muda
+
+
   return (
     <LayoutSection>
       <TitleSection title="Meus projetos" id="projects" />
       {isClient ? (
         <>
           <div
-            className={`grid grid-cols-1 md:grid-cols-2 min-[1230px]:grid-cols-3 xl:flex ${
+            className={`grid grid-cols-1 md:grid-cols-2 min-[1230px]:grid-cols-3 xl:flex
+            ${fadeSlides ? "animate-vote duration-500" : ""} 
+            ${
               currentItems.length % 2 === 0
                 ? "xl:justify-start gap-[7.5rem]"
                 : "xl:justify-between"

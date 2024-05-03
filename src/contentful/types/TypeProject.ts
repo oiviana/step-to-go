@@ -1,0 +1,26 @@
+import type {
+    EntryFieldTypes,
+    EntrySkeletonType,
+    // LocaleCode,
+    // ChainModifiers,
+    // Entry,
+  } from "contentful";
+  
+  export interface TypeProjectFields {
+    title?: EntryFieldTypes.Symbol;
+    subtitle?: EntryFieldTypes.Text;
+    description?: EntryFieldTypes.Symbol;
+    slug: EntryFieldTypes.Symbol;
+    thumbnail?: EntryFieldTypes.AssetLink;
+    images?: EntryFieldTypes.AssetLink[];
+    hasDeploy: EntryFieldTypes.Boolean;
+    technologies: EntryFieldTypes.Symbol[];
+    codeUrl: EntryFieldTypes.Symbol;
+    deployUrl: EntryFieldTypes.Symbol;
+
+  }
+  
+  export type TypeProjectSkeleton = EntrySkeletonType<
+  TypeProjectFields,
+    "project"
+  >;

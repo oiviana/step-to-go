@@ -7,11 +7,14 @@ import { FaMoon } from "react-icons/fa";
 import { FaRegSun } from "react-icons/fa";
 
 export default function ThemeButton() {
+  
   const [themeDark, setThemeDark] = useState(false);
 
   useEffect(() => {
     const theme = localStorage.getItem("theme");
-    if (theme === "dark") setThemeDark(true);
+    if (theme === "dark" || window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setThemeDark(true);
+    }
   }, []);
 
   useEffect(() => {
@@ -30,7 +33,7 @@ export default function ThemeButton() {
       onClick={() => setThemeDark(!themeDark)}
     >
       <FaMoon size={22} 
-      className=" text-v-dark-500 mt-[1px]"/>
+      className="text-v-dark-500 dark:text-gray-50 mt-[1px]"/>
       <div
         className="absolute top-[4px] bg-v-white-900 dark:bg-v-dark-300 w-6 h-6 rounded-full shadow-md transform transition-transform duration-200 z-30"
         style={themeDark ? { left: "4px" } : { right: "4px" }}
