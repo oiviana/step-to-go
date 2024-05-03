@@ -18,6 +18,19 @@ const config: Config = {
         'v-white-500': '#E9E9E9',
         'v-white-900': '#d9d9d9'
       },
+      animation: {
+        'vote': 'vote 0.4s ease-in-out',
+    },
+    keyframes: {
+        vote: {
+            '0%': {
+                opacity: '0'
+            },
+            '100%': {
+                opacity: '1'
+            },
+        }
+    }
     },
   },
   plugins: [],
