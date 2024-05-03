@@ -16,7 +16,6 @@ export default function MyProjects({myProjects}:ComponentProjectProps) {
   const [isClient, setIsClient] = useState<boolean>();
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [itemsPerPage, setItemsPerPage] = useState<number>(1);
-  console.log(myProjects)
 
   const projectCards = myProjects.map((project, index) => (
     <ProjectCard
