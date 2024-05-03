@@ -17,8 +17,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const projectBySlug: ProjectProps | null = await fetchProjectsBySlug(
     params.slug
   );
+  
   const stackList = projectBySlug?.technologies.join(" - ");
-  console.log(projectBySlug);
+
   if (!params.slug || !projectBySlug) {
     return <div>Carregando...</div>;
   }
