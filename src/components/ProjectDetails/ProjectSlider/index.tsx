@@ -42,7 +42,7 @@ export default function ProjectSlider({ images }: ProjectSliderProps) {
         srcSet={`https:${images?.[currentSlide].src}`}
         src={`https:${images?.[currentSlide].src}`}
         alt={images?.[currentSlide].alt}
-        className="w-full lg:h-[550px] aspect-square lg:aspect-video  duration-500 animate-vote"
+        className="w-full lg:h-[620px] aspect-square lg:aspect-video  duration-500 animate-vote"
       />
       <button className="absolute top-[40%] translate-x-0 translate-y-[50%] left-4 rounded-full p-2 bg-black bg-opacity-30 flex justify-center items-center">
         <BsChevronLeft size={35} className="mr-[2px]" onClick={prevSlide}/>
