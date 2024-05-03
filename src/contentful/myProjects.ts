@@ -1,8 +1,12 @@
-import { ContentImage, parseContentfulContentImage, parseContentfulContentImages } from "./contentImage";
+import {
+  ContentImage,
+  parseContentfulContentImage,
+  parseContentfulContentImages,
+} from "./contentImage";
 import { TypeProjectSkeleton } from "./types/TypeProject";
 import { Entry } from "contentful";
 import { Document as RichTextDocument } from "@contentful/rich-text-types";
-import  contentfulClient  from "./client";
+import contentfulClient from "./client";
 
 export interface ProjectProps {
   title: string;
@@ -35,15 +39,26 @@ export function parseContentfulProject(
     hasDeploy: projectEntry.fields.hasDeploy,
     codeUrl: projectEntry.fields.codeUrl,
     deployUrl: projectEntry.fields.deployUrl,
-    technologies: projectEntry.fields.technologies
+    technologies: projectEntry.fields.technologies,
   };
 }
 export async function fetchProjects() {
   const client = contentfulClient();
   const projectsResult = await client.getEntries<TypeProjectSkeleton>({
-    content_type: 'project',
-    include: 2
-  })
-  return projectsResult.items.map((entry) => parseContentfulProject(entry ) as ProjectProps)
+    content_type: "project",
+    include: 2,
+  });
+  return projectsResult.items.map(
+    (entry) => parseContentfulProject(entry) as ProjectProps
+  );
 }
 
+export async function fetchProjectsBySlug(slug: string) {
+  const client = contentfulClient();
+  const projectResult = await client.getEntries<TypeProjectSkeleton>({
+    content_type: "project",
+    "fields.slug": slug,
+    include: 2,
+  });
+  return parseContentfulProject(projectResult.items[0]);
+}
