@@ -12,9 +12,8 @@ export default function Hero() {
           <div className="lg: max-w-[40rem] mt-[2rem] lg:mt-0 sm:mx-auto lg:mx-0">
             <p className="leading-9">
               Sou apaixonado por tecnologia, com mais de 5 anos de experiência
-              em desenvolvimento. Meu objetivo é contribuir ativamente para o
-              mercado, aplicando meu conhecimento e habilidades para solucionar
-              desafios em projetos diversos.
+              em desenvolvimento. Criei esse site para mostrar o que faço e para iniciar
+              um projeto de aprendizado compartilhado na área de programação!
             </p>
             <h3 className="text-xl py-6">Tecnologias que utilizo:</h3>
             <TechnologySlider />
