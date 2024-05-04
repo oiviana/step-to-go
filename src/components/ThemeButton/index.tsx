@@ -31,6 +31,7 @@ export default function ThemeButton() {
     <button
       className="relative  md:flex w-16 h-8 rounded-full p-1 bg-white dark:bg-v-dark-bold shadow"
       onClick={() => setThemeDark(!themeDark)}
+      aria-label="Switch theme button"
     >
       <FaMoon size={22} 
       className="text-v-dark-500 dark:text-gray-50 mt-[1px]"/>

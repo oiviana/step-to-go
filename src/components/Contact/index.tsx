@@ -27,7 +27,8 @@ export default function Contact() {
             </h3>
             <a
             target="_blank"
-            href="https://wa.me/5511943488946">
+            href="https://wa.me/5511943488946"
+            title="Whatsapp Logo">
               <IoLogoWhatsapp className="text-green-500" size={80} />
             </a>
           </div>

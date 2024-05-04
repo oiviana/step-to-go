@@ -15,12 +15,14 @@ export default function Navbar() {
         <Link
           href="/"
           className="font-bold text-xl text-gray-900 dark:text-slate-100 w-full md:max-w-44 lg:mt-[2.5rem]"
+          aria-label="Logo do site"
         >
           <Logo />
         </Link>
         <button
           className="flex md:hidden"
           onClick={() => setShowMobileMenu(true)}
+          aria-label="Abrir menu"
         >
           <GiHamburgerMenu
             size={30}
@@ -38,12 +40,14 @@ export default function Navbar() {
           <Link
             href="/"
             className="font-bold text-xl text-gray-900 dark:text-v-white-500"
+            aria-label="Logo do site"
           >
             <Logo />
           </Link>
           <button
             className="flex md:hidden items-center"
             onClick={() => setShowMobileMenu(false)}
+            aria-label="Fechar menu"
           >
             <IoClose
               size={40}

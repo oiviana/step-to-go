@@ -7,15 +7,15 @@ import { MdArrowForwardIos } from "react-icons/md";
 import { MdArrowBackIosNew } from "react-icons/md";
 import { ProjectProps } from "@/contentful/myProjects";
 
-interface ComponentProjectProps{
+interface ComponentProjectProps {
   myProjects: ProjectProps[];
 }
 
-export default function MyProjects({myProjects}:ComponentProjectProps) {
+export default function MyProjects({ myProjects }: ComponentProjectProps) {
   const [isClient, setIsClient] = useState<boolean>();
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [itemsPerPage, setItemsPerPage] = useState<number>(1);
-  const [fadeSlides, setFadeSlides] = useState<boolean>(false)
+  const [fadeSlides, setFadeSlides] = useState<boolean>(false);
 
   const projectCards = myProjects.map((project, index) => (
     <ProjectCard
@@ -28,7 +28,6 @@ export default function MyProjects({myProjects}:ComponentProjectProps) {
       slug={project.slug}
       codeUrl={project.codeUrl}
       deployUrl={project.deployUrl}
-      
     />
   ));
 
@@ -69,7 +68,6 @@ export default function MyProjects({myProjects}:ComponentProjectProps) {
 
     return () => clearTimeout(timeout);
   }, [currentPage]); // Executa sempre que a página atual muda
-
 
   return (
     <LayoutSection>
@@ -131,17 +129,24 @@ function PaginationSection({
 
   return (
     <div className="w-full flex justify-center p-6 gap-8">
-      <button className={`shadow py-3 px-6 bg-white dark:bg-v-dark-900 rounded flex justify-center items-center transition-opacity ${currentPage == 1 && 'opacity-[0.50] cursor-not-allowed'}`}
-      onClick={() => handlePrevPage()}>
-        <MdArrowBackIosNew size={25} 
-        className="flex justify-center" />
+      <button
+        className={`shadow py-3 px-6 bg-white dark:bg-v-dark-900 rounded flex justify-center items-center transition-opacity ${
+          currentPage == 1 && "opacity-[0.50] cursor-not-allowed"
+        }`}
+        onClick={() => handlePrevPage()}
+        aria-label="Projetos anteriores"
+      >
+        <MdArrowBackIosNew size={25} className="flex justify-center" />
       </button>
 
-      <button 
-      onClick={() => handleNextPage()}
-      className={`shadow py-3 px-6 bg-white dark:bg-v-dark-900 rounded flex justify-center items-center transition-opacity ${currentPage == pages.length && 'opacity-[0.50] cursor-not-allowed'}`}
+      <button
+        onClick={() => handleNextPage()}
+        className={`shadow py-3 px-6 bg-white dark:bg-v-dark-900 rounded flex justify-center items-center transition-opacity ${
+          currentPage == pages.length && "opacity-[0.50] cursor-not-allowed"
+        }`}
+        aria-label="Próximos projetos"
       >
-      <MdArrowForwardIos size={25}/>
+        <MdArrowForwardIos size={25} />
       </button>
     </div>
   );

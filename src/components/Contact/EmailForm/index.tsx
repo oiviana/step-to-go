@@ -27,6 +27,7 @@ export default function EmailForm() {
       onSubmit={handleSubmit(handleSendEmail)}
     >
       <fieldset className="relative border-2 bg-white  dark:bg-v-dark-300 border-v-white-900 dark:border-slate-400 rounded-md group">
+      <label htmlFor="name" className="sr-only">Nome</label>
         <legend className="text-base md:text-lg font-bold  ml-4 px-3 tracking-wider !leading-[14px]">
           Nome:
         </legend>
@@ -39,18 +40,20 @@ export default function EmailForm() {
         />
       </fieldset>
       <fieldset className="relative border-2 bg-white  dark:bg-v-dark-300 border-v-white-900 dark:border-slate-400 rounded-md ">
+      <label htmlFor="email" className="sr-only">Email</label>
         <legend className="text-base md:text-lg font-bold  ml-4 px-3 tracking-wider !leading-[14px]">
           Email:
         </legend>
         <input
           type="email"
           {...register("email", { required: true })}
-          id="name"
+          id="email"
           required
           className="p-2 rounded-md w-full bg-transparent outline-0"
         />
       </fieldset>
       <fieldset className="relative border-2 bg-white  dark:bg-v-dark-300 border-v-white-900 dark:border-slate-400 rounded-md rounded-ee-none">
+      <label htmlFor="message" className="sr-only">Mensagem</label>
         <legend className="text-base md:text-lg font-bold  ml-4 px-3 tracking-wider !leading-[14px]">
           Mensagem:
         </legend>
