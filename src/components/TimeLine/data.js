@@ -8,20 +8,12 @@ export const events = [
     "event":"Iniciei meus estudos em HTML, CSS e lógica de programação desenvolvendo pseudocódigos e fluxogramas."
   },
   {
-    "date": "fev/2017",
-    "event":"Tive meu primeiro contato com a linguagem java transformando meus pseudocódigos em códigos reais."
-  },
-  {
-    "date": "mai/2017",
-    "event":"Comecei a utilizar a orientação a objetos com Java e criei meus primeiros projetos web com PHP."
+    "date": "mar/2017",
+    "event":"Tive meu primeiro contato com a linguagem java. Iniciei na orientação a objetos com Java e criei meus primeiros projetos web com PHP."
   },
   {
     "date": "set/2017",
-    "event":"Criei meus primeiros bancos de dados relacionais em MySQL para alimentar minhas aplicações."
-  },
-  {
-    "date": "nov/2017",
-    "event":"Apresentei meu primeiro projeto web com HTML, PHP e MySQL. Um site de reservas para uma pousada."
+    "event":"Criei meus primeiros bancos de dados relacionais em MySQL. Apresentei meu primeiro projeto web com HTML, PHP e MySQL."
   },
   {
     "date": "abr/2018",
@@ -33,15 +25,11 @@ export const events = [
   },
   {
     "date": "ago/2019",
-    "event":"Iniciei minha graduação em Análise e Desenvolvimento de Sistemas."
-  },
-  {
-    "date": "jun/2020",
-    "event":"Revisitei o conteúdo que já havia estudado e também aprendi conteúdos avançados da programação."
+    "event":"Iniciei minha graduação em Análise e Desenvolvimento de Sistemas. Revisitei o conteúdo que já havia estudado e também aprendi conteúdos avançados da programação."
   },
   {
     "date": "jul/2021",
-    "event":"Consegui meu primeiro emprego de tecnologia, na época como Quality Assurance."
+    "event":"Consegui meu primeiro emprego na área, na época como QA. Após isso, migrei de área dentro da empresa, me tornando estagiário de desenvolvimento."
   },
   {
     "date": "fev/2022",
@@ -61,15 +49,11 @@ export const events = [
   },
   {
     "date": "fev/2023",
-    "event":"Tive meu primeiro contato com a arquitetura Jamstack e Headless CMS atuando no projeto de Plurix."
-  },
-  {
-    "date": "nov/2023",
-    "event":"Estudei o framework Deno Fresh utilizado pela plataforma Deco.cx. "
+    "event":"Tive meu primeiro contato com a arquitetura Jamstack e Headless CMS atuando no projeto de Plurix e também Vivara."
   },
   {
     "date": "jan/2024",
-    "event":'Na empresa Adaptio, desenvolvi uma página de produto para a loja de camisas "Aviator" construída com o Fresh.'
+    "event":'Na empresa Adaptio, aprendi o framework Deno Fresh e desenvolvi uma página de produto para a loja de camisas "Aviator".'
   },
   {
     "date": "Atualmente",
