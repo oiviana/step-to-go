@@ -28,6 +28,7 @@ export default function MyProjects({ myProjects }: ComponentProjectProps) {
       slug={project.slug}
       codeUrl={project.codeUrl}
       deployUrl={project.deployUrl}
+      thumbnail={project.thumbnail}
     />
   ));
 

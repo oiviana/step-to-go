@@ -1,3 +1,4 @@
+import { ContentImage } from "@/contentful/contentImage";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,29 +11,29 @@ export interface ProjectCardProps {
   slug: string;
   codeUrl: string;
   deployUrl: string;
+  thumbnail: ContentImage | null;
 }
 
 export default function ProjectCard({
   title,
   subtitle,
-  description,
   stack,
-  hasDeploy,
   slug,
-  deployUrl,
-  codeUrl
+  thumbnail,
 }: ProjectCardProps) {
+
   const stackList = stack.join(" - ");
 
   return (
     <div className="flex flex-col w-full max-w-[400px] shadow-md mx-auto lg:mx-0">
       <div className="max-h-[260px] group overflow-hidden rounded-t">
         <Image
-          src="/building-project.jpg"
+          src={`https:${thumbnail?.src ?? "/building-project.jpg"}`}
           alt="Projeto em construção"
           width={420}
           height={280}
           className="transition-all duration-200 group-hover:scale-105 "
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           priority={false}
         />
       </div>

@@ -26,7 +26,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <div className="max-w-[1440px] mx-auto px-2 flex flex-col gap-4">
-      <header className="flex py-4 shadow-xl mt-3 px-2 dark:text-v-white-300">
+      <header className="flex py-3 shadow-xl mt-3 px-2 dark:text-v-white-300">
         <Link
           href="/"
           className="flex justify-between p-2 gap-2 font-bold text-lg "
@@ -39,12 +39,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </h2>
       </header>
       <section className="mb-5 ">
-        <div className="h-[400px] lg:h-[620px] w-full">
+        <div className="h-[400px] lg:h-[800px] w-full">
           <ProjectSlider images={projectBySlug.images} />
         </div>
       </section>
       <section>
-        <div className="flex flex-col shadow-lg py-6 md:p-7 gap-4 bg-v-white-900 min-h-[450px] w-full rounded-t-md bg-gradient-to-b dark:from-v-dark-700 from-10% dark:via-v-dark-900 via-40% dark:to-v-dark-bold to-80% px-2 dark:text-v-white-300">
+        <div className="flex flex-col shadow-lg py-6 md:p-6 gap-4 bg-v-white-900 min-h-[450px] w-full rounded-t-md bg-gradient-to-b dark:from-v-dark-700 from-10% dark:via-v-dark-900 via-40% dark:to-v-dark-bold to-80% px-2 dark:text-v-white-300">
           <div className="flex justify-center md:justify-between flex-col md:flex-row">
             <h1 className="text-xl md:text-3xl font-bold text-center lg:text-left">
               {projectBySlug.title}
