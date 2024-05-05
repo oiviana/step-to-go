@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./styles/globals.css";
 
-const mainFontFamily = JetBrains_Mono({ subsets: ["latin"] });
+const mainFontFamily = JetBrains_Mono({ subsets: ["latin"], display:"swap",  });
 
 export const metadata: Metadata = {
   title: "Step to Go",
