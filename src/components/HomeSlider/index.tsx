@@ -21,15 +21,14 @@ export default function HomeSlider() {
 
   return (
     <LayoutSection>
-      <div className="flex items-center text-2xl lg:text-5xl leading-[3rem] lg:leading-[4rem] font-bold min-h-[28rem] lg:min-h-[48rem]">
+      <div className="flex items-center  h-[28rem] lg:h-[48rem]">
         <h1
-          className={`text-v-dark-900 dark:text-v-white-300 transition-opacity ease-in-out duration-1000 lg:h-[250px] ${
+          className={`text-v-dark-900 dark:text-v-white-300 text-2xl lg:text-5xl leading-[3rem] lg:leading-[4rem] font-bold transition-opacity ease-in-out duration-1000 lg:h-[250px] ${
             fade ? "opacity-0" : "opacity-100"
           }`}
-          style={{ display: "flex" }}
         >
           {texts[currentText]}
-        </h1>
+        </h1>    
       </div>
     </LayoutSection>
   );

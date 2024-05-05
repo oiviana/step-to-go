@@ -26,6 +26,7 @@ export default function Hero() {
                 height={400}
                 alt="Lucas Viana"
                 className="rounded-full"
+                priority={true}
               />
             </div>
             <div className="bottom-[15rem] mt-2 lg:flex items-end lg:h-[378px] min-w-[300px] flex justify-center lg:justify-normal">
