@@ -29,7 +29,7 @@ export default function TranslateButton() {
       aria-label="Botão de tradução"
       >
         <IoLanguage
-          className="text-v-dark-900 dark:text-v-white-500"
+          className="text-v-dark-900 dark:text-v-white-500 hover:text-v-dark-300 hover:dark:text-v-white-900 transition-colors"
           size={30}
         />
       </button>
@@ -38,8 +38,8 @@ export default function TranslateButton() {
         className="absolute right-0 bottom-[5rem] text-v-white-500 dark:text-v-dark-700"
         size={25}
         />
-      <Link className="p-1 rounded mb-2 hover:bg-v-white-300 hover:dark:bg-v-dark-300 transition-colors" href={pathName} locale="pt" aria-label="botão de traduções" onClick={()=>setShowDropdown(false)}>Português</Link>
-      <Link  className=" p-1 rounded hover:bg-v-white-300 hover:dark:bg-v-dark-300 transition-colors" href={pathName} locale="en" aria-label="botão de traduções" onClick={()=>setShowDropdown(false)}>English</Link>
+      <Link className="p-1 text-center rounded mb-2 hover:bg-v-white-300 hover:dark:bg-v-dark-300 transition-colors" href={pathName} locale="pt" aria-label="botão de traduções" onClick={()=>setShowDropdown(false)}>Português</Link>
+      <Link  className=" p-1 text-center rounded hover:bg-v-white-300 hover:dark:bg-v-dark-300 transition-colors" href={pathName} locale="en" aria-label="botão de traduções" onClick={()=>setShowDropdown(false)}>English</Link>
       </div>
     </div>
   );

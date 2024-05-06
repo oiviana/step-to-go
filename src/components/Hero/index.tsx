@@ -33,7 +33,7 @@ export default function Hero() {
               <a
                 href="https://drive.google.com/file/d/1ReRpGHVCIRJ69a9h2Ieemiz4dCNt-cSQ/view?usp=sharing"
                 target="_blank"
-                className="w-[214px] p-5 h-[60px] flex  justify-center items-center rounded-md lg:absolute shadow-md font-semibold bg-v-dark-900 dark:bg-v-white-500 text-v-white-300 dark:text-v-dark-bold"
+                className="w-[214px] p-5 h-[60px] flex  justify-center items-center rounded-md lg:absolute shadow-md font-semibold bg-v-dark-900 dark:bg-v-white-500 text-v-white-300 dark:text-v-dark-bold hover:bg-v-dark-500 hover:dark:bg-v-white-900 transition-colors"
               >
                 {translate("hero.button")}
               </a>
