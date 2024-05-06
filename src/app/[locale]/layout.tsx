@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./styles/globals.css";
 import { notFound } from "next/navigation";
+import { NextIntlClientProvider, useMessages } from "next-intl";
 
 const mainFontFamily = JetBrains_Mono({
   subsets: ["latin"],
@@ -17,7 +18,8 @@ export const metadata: Metadata = {
   },
 };
 
-const locales = ['en', 'pt']
+const locales = ["en", "pt"];
+
 
 export default function RootLayout({
   children,
@@ -26,16 +28,18 @@ export default function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }>) {
-
-  if(!locales.includes(locale as any)) notFound();
+  if (!locales.includes(locale as any)) notFound();
+  const messages = useMessages();
 
   return (
     <html lang={locale}>
-      <body
-        className={`${mainFontFamily.className} bg-v-white-500 dark:bg-v-dark-500`}
-      >
-        {children}
-      </body>
+      <NextIntlClientProvider locale={locale} messages={messages}>
+        <body
+          className={`${mainFontFamily.className} bg-v-white-500 dark:bg-v-dark-500`}
+        >
+          {children}
+        </body>
+      </NextIntlClientProvider>
     </html>
   );
 }
