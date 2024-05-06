@@ -1,11 +1,103 @@
 {
-    "Home":{
-        "hero":{
-            "title": "Nice to meet you, my name is Lucas Viana!",
-            "description":"",
-            "technologies":"",
-            "button":""
-        }
+  "Header": {
+    "navbar": ["About", "Trajectory", "Projects", "Contact"]
+  },
+  "Home": {
+    "sectiontitles": [
+      {"title":"Nice to meet you, my name is Lucas Viana!"},
+      {"title":"My trajectory"},
+      {"title":"My projects"},
+      {"title":"Get in touch"}
+    ],
+
+    "homeslider": [
+      "Intelligence is the ability to adapt to changes",
+      "Step to Go aims to improve learning in the world of programming!",
+      "Discover my projects and my proposal to help people looking to present themselves in this market!"
+    ],
+    "hero": {
+      "description": "I love technology, with over 5 years of experience in development. I created this website to show what I can do and to start a shared learning project in the programming area!",
+      "technologies": "Technologies that i use:",
+      "button": "See my resume"
     },
-    "ProjectDetails":{}
+    "timeline": [
+      {
+        "date": "Feb 2016",
+        "event": "I started my technical course and had my first contact with programming."
+      },
+      {
+        "date": "Apr 2016",
+        "event": "I started my studies in HTML, CSS and programming logic by developing pseudocodes and flowcharts."
+      },
+      {
+        "date": "Mar 2017",
+        "event": "I had my first contact with the Java language. I started object oriented with Java and created my first web projects with PHP."
+      },
+      {
+        "date": "Sep 2017",
+        "event": "I created my first relational databases in MySQL. I presented my first web project with HTML, PHP and MySQL."
+      },
+      {
+        "date": "Apr 2018",
+        "event": "I created my first projects with C# and deepened my studies in Javascript."
+      },
+      {
+        "date": "Nov 2018",
+        "event": "I presented my undergraduate project. A web application for event management. I graduated as a computer technician."
+      },
+      {
+        "date": "Aug 2019",
+        "event": "I started my degree in Systems Analysis and Development. I revisited the content I had already studied and also learned advanced programming content."
+      },
+      {
+        "date": "Jul 2021",
+        "event": "I got my first job in the area, at the time as a QA. After that, I moved to another area within the company, becoming a development intern."
+      },
+      {
+        "date": "May 2022",
+        "event": "I worked on projects such as C&A, Chatuba and Obramax, building applications based on ReactJS and VTEX IO."
+      },
+      {
+        "date": "Jun 2022",
+        "event": "I developed my undergraduated project in college, an internship application, built with React Native, NodeJS and MySQL"
+      },
+      {
+        "date": "Jul 2022",
+        "event": "After the successful presentation of my project, I graduated as a Systems Analyst and Developer!"
+      },
+      {
+        "date": "Feb 2023",
+        "event": "I had my first contact with the Jamstack and Headless CMS architecture working on the Plurix project and also Vivara."
+      },
+      {
+        "date": "Jan 2024",
+        "event": "At Adaptio, I learned the Deno Fresh framework and developed a product page for the 'Aviator' shirt store."
+      },
+      {
+        "date": "Currently",
+        "event": "Studying hard and looking for new opportunities in the market!!!"
+      }
+    ],
+    "projects" :{
+      "button": "More details"
+    },
+    "contact":{
+      "description":"Did you like what you saw here? Contact me by email and hire my services!",
+      "whatsapp":"You can also contact me personally, via WhatsApp!",
+      "contacts":"Contact networks:",
+      "form":{
+        "nameLabel":"Name:",
+        "emailLabel":"Email:",
+        "messageLabel":"Message:",
+        "button":"Send"
+      }
+    }
+  },
+  "Footer":{
+    "links": ["About", "Trajectory", "Projects", "Contact"],
+    "description":"I am available for new opportunities. Get in touch to work together!",
+    "development":"Developed with",
+    "copyright": "Design and development by Lucas Viana"
+  },
+  "ProjectDetails": {}
 }
