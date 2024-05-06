@@ -32,10 +32,6 @@ export const events = [
     "event":"Consegui meu primeiro emprego na área, na época como QA. Após isso, migrei de área dentro da empresa, me tornando estagiário de desenvolvimento."
   },
   {
-    "date": "fev/2022",
-    "event":"Migrei de área dentro da empresa, me tornando estagiário de desenvolvimento web."
-  },
-  {
     "date": "mai/2022",
     "event":"Atuei em projetos como C&A, Chatuba e Obramax, construindo aplicações baseadas em ReactJS e VTEX IO."
   },
