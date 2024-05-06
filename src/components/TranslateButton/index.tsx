@@ -8,7 +8,7 @@ export default function TranslateButton() {
   const pathName = usePathname();
   const [showDropdown, setShowDropdown] = useState(false);
   const dropdownRef = useRef<HTMLInputElement>(null);
-  
+
   useEffect(() => {
     function handleClickOutside(event: TouchEvent | MouseEvent) {
       if (dropdownRef.current && event.target instanceof Node && !dropdownRef.current.contains(event.target)) {
@@ -26,6 +26,7 @@ export default function TranslateButton() {
     <div className="px-2 relative">
       <button
       onClick={()=> setShowDropdown(!showDropdown)} 
+      aria-label="Botão de tradução"
       >
         <IoLanguage
           className="text-v-dark-900 dark:text-v-white-500"
