@@ -2,10 +2,12 @@
 import { useState, useEffect } from "react";
 import { texts } from "./text";
 import LayoutSection from "../LayoutSection";
+import { useTranslations } from "next-intl";
 
 export default function HomeSlider() {
   const [currentText, setCurrentText] = useState(0);
   const [fade, setFade] = useState(false);
+  const translate = useTranslations("Home")
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -27,7 +29,7 @@ export default function HomeSlider() {
             fade ? "opacity-0" : "opacity-100"
           }`}
         >
-          {texts[currentText]}
+          {translate(`homeslider.${currentText}`)}
         </h1>    
       </div>
     </LayoutSection>

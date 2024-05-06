@@ -6,9 +6,12 @@ import { useState } from "react";
 import Link from "next/link";
 import Logo from "../../Logo";
 import ThemeButton from "../../ThemeButton";
+import { useTranslations } from "next-intl";
+import TranslateButton from "@/components/TranslateButton";
 
 export default function Navbar() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const translate = useTranslations("Header")
   return (
     <nav className="flex w-full max-w-[1440px] mx-auto">
       <div className="flex w-full justify-between items-center px-5 h-20 md:h-16">
@@ -57,34 +60,37 @@ export default function Navbar() {
         </div>
         <li>
         <Link href="/#about"
-         onClick={() => setShowMobileMenu(false)}>Sobre</Link>
+         onClick={() => setShowMobileMenu(false)}>{translate(`navbar.0`)}</Link>
         </li>
         <li>
         <Link href="/#trajectory"
-         onClick={() => setShowMobileMenu(false)}>Trajetória</Link>
+         onClick={() => setShowMobileMenu(false)}>{translate(`navbar.1`)}</Link>
         </li>
         <li>
           <Link href="/#projects"
-           onClick={() => setShowMobileMenu(false)}>Projetos</Link>
+           onClick={() => setShowMobileMenu(false)}>{translate(`navbar.2`)}</Link>
         </li>
         <li>
         <Link href="/#contact"
-         onClick={() => setShowMobileMenu(false)}>Contato</Link>
+         onClick={() => setShowMobileMenu(false)}>{translate(`navbar.3`)}</Link>
         </li>
+        <div className="flex gap-2">
         <ThemeButton/>
+        <TranslateButton/>
+        </div>
       </ul>
       <ul className="hidden md:flex text-v-dark-500 dark:text-v-white-500 items-center gap-8 md:text-lg lg:gap-24">
         <li className="hover:text-black hover:dark:text-v-white-900 transition-colors">
-        <Link href="/#about">Sobre</Link>
+        <Link href="/#about">{translate(`navbar.0`)}</Link>
         </li>
         <li className="hover:text-black hover:dark:text-v-white-900 transition-colors">
-        <Link href="/#trajectory">Trajetória</Link>
+        <Link href="/#trajectory">{translate(`navbar.1`)}</Link>
         </li>
         <li className="hover:text-black hover:dark:text-v-white-900 transition-colors">
-          <Link href="/#projects">Projetos</Link>
+          <Link href="/#projects">{translate(`navbar.2`)}</Link>
         </li>
         <li className="hover:text-black hover:dark:text-v-white-900 transition-colors">
-        <Link href="/#contact">Contato</Link>
+        <Link href="/#contact">{translate(`navbar.3`)}</Link>
         </li>
       </ul>
     </nav>

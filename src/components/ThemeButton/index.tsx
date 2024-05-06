@@ -1,7 +1,5 @@
 "use client";
 
-interface ThemeButtonProps {}
-
 import { useState, useEffect } from "react";
 import { FaMoon } from "react-icons/fa";
 import { FaRegSun } from "react-icons/fa";

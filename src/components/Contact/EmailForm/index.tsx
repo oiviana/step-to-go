@@ -1,5 +1,6 @@
 "use client";
 import axios from "axios";
+import { useTranslations } from "next-intl";
 import { useForm, SubmitHandler } from "react-hook-form";
 
 interface EmailFormProps {
@@ -10,6 +11,7 @@ interface EmailFormProps {
 
 export default function EmailForm() {
   const { handleSubmit, register } = useForm<EmailFormProps>();
+  const translate = useTranslations("Home")
 
   const handleSendEmail: SubmitHandler<EmailFormProps> = async (data) => {
     try {
@@ -29,7 +31,7 @@ export default function EmailForm() {
       <fieldset className="relative border-2 bg-white  dark:bg-v-dark-300 border-v-white-900 dark:border-slate-400 rounded-md group">
       <label htmlFor="name" className="sr-only">Nome</label>
         <legend className="text-base md:text-lg font-bold  ml-4 px-3 tracking-wider !leading-[14px]">
-          Nome:
+        {translate("contact.form.nameLabel")}
         </legend>
         <input
           type="text"
@@ -42,7 +44,7 @@ export default function EmailForm() {
       <fieldset className="relative border-2 bg-white  dark:bg-v-dark-300 border-v-white-900 dark:border-slate-400 rounded-md ">
       <label htmlFor="email" className="sr-only">Email</label>
         <legend className="text-base md:text-lg font-bold  ml-4 px-3 tracking-wider !leading-[14px]">
-          Email:
+        {translate("contact.form.emailLabel")}
         </legend>
         <input
           type="email"
@@ -55,7 +57,7 @@ export default function EmailForm() {
       <fieldset className="relative border-2 bg-white  dark:bg-v-dark-300 border-v-white-900 dark:border-slate-400 rounded-md rounded-ee-none">
       <label htmlFor="message" className="sr-only">Mensagem</label>
         <legend className="text-base md:text-lg font-bold  ml-4 px-3 tracking-wider !leading-[14px]">
-          Mensagem:
+        {translate("contact.form.messageLabel")}
         </legend>
         <textarea
           {...register("message", { required: true, maxLength: 20 })}
@@ -67,7 +69,7 @@ export default function EmailForm() {
       </fieldset>
       <input
         type="submit"
-        value="Enviar"
+        value={translate("contact.form.button")}
         className="p-4 h-[50px] cursor-pointer flex items-center justify-center w-full max-w-[180px] mx-auto leading-3 lg:mx-0 rounded-md shadow-md font-semibold bg-v-dark-900 dark:bg-v-white-500 text-v-white-300 dark:text-v-dark-bold"
       />
     </form>

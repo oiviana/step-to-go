@@ -1,8 +1,11 @@
 import Link from "next/link";
 import Logo from "../Logo";
 import NextLogo from "../Logo/NextLogo";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const translate = useTranslations("Footer");
+
   return (
     <footer className="w-full bg-v-white-500 dark:bg-v-dark-700 isolate ">
       <div className="max-w-[1440px] flex flex-col mx-auto px-2 pt-[80px] text-v-dark-bold dark:text-v-white-300">
@@ -16,28 +19,27 @@ export default function Footer() {
           <div>
             <ul className="flex flex-wrap gap-2 text-sm lg:flex-col  lg:text-base">
               <li className="hover:text-black hover:dark:text-v-white-900 transition-colors">
-                <Link href="/#about">Sobre</Link>
+                <Link href="/#about">{translate("links.0")}</Link>
               </li>
               <li className="hover:text-black hover:dark:text-v-white-900 transition-colors">
-                <Link href="/#trajectory">Trajetória</Link>
+                <Link href="/#trajectory">{translate("links.1")}</Link>
               </li>
               <li className="hover:text-black hover:dark:text-v-white-900 transition-colors">
-                <Link href="/#projects">Projetos</Link>
+                <Link href="/#projects">{translate("links.2")}</Link>
               </li>
               <li className="hover:text-black hover:dark:text-v-white-900 transition-colors">
-                <Link href="/#contact">Contato</Link>
+                <Link href="/#contact">{translate("links.3")}</Link>
               </li>
             </ul>
           </div>
           <div className="max-w-[300px]">
             <h3 className="text-center lg:text-left">
-              Estou disponível para novas oportunidades. Entre em contato para
-              trabalhar-mos juntos!
+              {translate("description")}
             </h3>
           </div>
           <div className="">
             <span className="flex items-center gap-5">
-              Desenvolvido com
+            {translate("development")}
               <span>
                 <NextLogo />
               </span>
@@ -45,7 +47,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="py-4 flex justify-center mt-9 border-t-2 border-v-white-300 dark:border-v-dark-500 text-xs lg:text-sm">
-          <span>&copy; 2024 - Design e desenvolvimento por Lucas Viana</span>
+          <span>&copy; 2024 - {translate("copyright")}</span>
         </div>
       </div>
     </footer>

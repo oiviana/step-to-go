@@ -6,6 +6,7 @@ import ProjectCard from "./ProjectCard";
 import { MdArrowForwardIos } from "react-icons/md";
 import { MdArrowBackIosNew } from "react-icons/md";
 import { ProjectProps } from "@/contentful/myProjects";
+import { useTranslations } from "next-intl";
 
 interface ComponentProjectProps {
   myProjects: ProjectProps[];
@@ -16,6 +17,7 @@ export default function MyProjects({ myProjects }: ComponentProjectProps) {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [itemsPerPage, setItemsPerPage] = useState<number>(1);
   const [fadeSlides, setFadeSlides] = useState<boolean>(false);
+  const translate = useTranslations("Home")
 
   const projectCards = myProjects.map((project, index) => (
     <ProjectCard
@@ -72,7 +74,7 @@ export default function MyProjects({ myProjects }: ComponentProjectProps) {
 
   return (
     <LayoutSection>
-      <TitleSection title="Meus projetos" id="projects" />
+      <TitleSection title={translate("sectiontitles.2.title")} id="projects" />
       {isClient ? (
         <>
           <div

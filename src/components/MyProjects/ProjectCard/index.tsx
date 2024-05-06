@@ -1,6 +1,7 @@
 import { ContentImage } from "@/contentful/contentImage";
 import Image from "next/image";
-import Link from "next/link";
+import { Link, usePathname } from "../../../../navigation";
+import { useTranslations } from "next-intl";
 
 export interface ProjectCardProps {
   title: string;
@@ -23,6 +24,7 @@ export default function ProjectCard({
 }: ProjectCardProps) {
 
   const stackList = stack.join(" - ");
+  const translate = useTranslations("Home")
 
   return (
     <div className="flex flex-col w-full max-w-[400px] shadow-md mx-auto lg:mx-0">
@@ -47,7 +49,7 @@ export default function ProjectCard({
         <span className="text-sm font-bold">{stackList}</span>
 
         <button className="text-xs lg:text-sm bg-v-white-500 dark:bg-v-dark-300 p-3 rounded shadow-sm">
-          <Link className="flex w-full h-full justify-center" href={`/projects/${slug}`}>Mais detalhes</Link>
+          <Link className="flex w-full h-full justify-center" href={`/projects/${slug}`}>{translate("projects.button")}</Link>
         </button>
       </div>
     </div>

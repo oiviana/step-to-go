@@ -6,24 +6,24 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaSquareInstagram } from "react-icons/fa6";
+import { useTranslations } from "next-intl";
 
 export default function Contact() {
+  const translate = useTranslations("Home")
   return (
     <LayoutSection>
-      <TitleSection title="Contato" id="contact"/>
+      <TitleSection title={translate("sectiontitles.3.title")} id="contact"/>
       <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between">
         <div>
           <h3 className="text-base lg:text-xl text-center lg:text-left max-w-[530px] !leading-8">
-            Gostou do que viu por aqui? Entre em contato comigo por email e
-            contrate meus serviços!
+            {translate("contact.description")}
           </h3>
           <EmailForm />
         </div>
         <div>
           <div className="flex mb-10">
-            <h3 className=" text-base lg:text-xl text-center lg:text-left max-w-[480px] !leading-10 font-bold">
-              Você também pode entrar em contato pessoalmente comigo, via
-              WhatsApp!
+            <h3 className=" text-base lg:text-xl text-center lg:text-left max-w-[460px] !leading-10 font-bold">
+            {translate("contact.whatsapp")}
             </h3>
             <a
             target="_blank"
@@ -32,7 +32,7 @@ export default function Contact() {
               <IoLogoWhatsapp className="text-green-500" size={80} />
             </a>
           </div>
-          <h3 className="text-base lg:text-xl my-7">Redes de contato:</h3>
+          <h3 className="text-base lg:text-xl my-7">{translate("contact.contacts")}</h3>
           <a
             target="_blank"
             href="https://www.linkedin.com/in/lucasviana80/"
