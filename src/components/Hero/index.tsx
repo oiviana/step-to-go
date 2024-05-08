@@ -11,11 +11,11 @@ export default function Hero() {
       <div className="relative">
         <TitleSection title={translate("sectiontitles.0.title")} id="about"/>
         <div className="flex flex-col-reverse lg:flex-row lg:justify-between">
-          <div className="lg: max-w-[40rem] mt-[2rem] lg:mt-0 sm:mx-auto lg:mx-0">
-            <p className="leading-9">
+          <div className=" max-w-[40rem] mt-[2rem] lg:mt-0 sm:mx-auto lg:mx-0">
+            <p className="leading-9 text-center lg:text-left py-5 lg:py-0">
          {translate("hero.description")}
             </p>
-            <h3 className="text-xl py-6">{translate("hero.technologies")}</h3>
+            <h3 className="text-xl py-6 text-center lg:text-left">{translate("hero.technologies")}</h3>
             <TechnologySlider />
           </div>
           <div>

@@ -25,7 +25,7 @@ export default function HomeSlider() {
     <LayoutSection>
       <div className="flex items-center  h-[28rem] lg:h-[48rem]">
         <h1
-          className={`text-v-dark-900 dark:text-v-white-300 text-2xl lg:text-5xl leading-[3rem] lg:leading-[4rem] font-bold transition-opacity ease-in-out duration-1000 lg:h-[250px] ${
+          className={`text-center lg:text-left  text-v-dark-900 dark:text-v-white-300 text-2xl lg:text-5xl leading-[3rem] lg:leading-[4rem] font-bold transition-opacity ease-in-out duration-1000 lg:h-[250px] ${
             fade ? "opacity-0" : "opacity-100"
           }`}
         >
