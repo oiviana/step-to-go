@@ -6,8 +6,11 @@ import TimeLine from "../../components/TimeLine";
 import MyProjects from "../../components/MyProjects";
 import Contact from "../../components/Contact";
 import { fetchProjects } from "@/contentful/myProjects";
+import { useLocale } from "next-intl";
+
 export default async function Home() {
-  const getProjects = await fetchProjects();
+  const locale = useLocale();
+  const getProjects = await fetchProjects({ locale: locale });
   return (
     <>
       <Header />

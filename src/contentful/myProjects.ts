@@ -42,23 +42,31 @@ export function parseContentfulProject(
     technologies: projectEntry.fields.technologies,
   };
 }
-export async function fetchProjects() {
+interface FetchProjectsProps {
+  locale: string;
+}
+
+export async function fetchProjects({
+  locale,
+}: FetchProjectsProps): Promise<ProjectProps[]> {
   const client = contentfulClient();
   const projectsResult = await client.getEntries<TypeProjectSkeleton>({
     content_type: "project",
     include: 2,
+    locale
   });
   return projectsResult.items.map(
     (entry) => parseContentfulProject(entry) as ProjectProps
   );
 }
 
-export async function fetchProjectsBySlug(slug: string) {
+export async function fetchProjectsBySlug(slug: string, locale: string) {
   const client = contentfulClient();
   const projectResult = await client.getEntries<TypeProjectSkeleton>({
     content_type: "project",
     "fields.slug": slug,
     include: 2,
+    locale
   });
   return parseContentfulProject(projectResult.items[0]);
 }

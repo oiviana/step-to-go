@@ -2,6 +2,7 @@ import ProjectSlider from "@/components/ProjectDetails/ProjectSlider";
 import ThemeButton from "@/components/ThemeButton";
 import { fetchProjectsBySlug } from "@/contentful/myProjects";
 import { ProjectProps } from "@/contentful/myProjects";
+import { useLocale } from "next-intl";
 import Link from "next/link";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { VscPreview } from "react-icons/vsc";
@@ -14,8 +15,12 @@ interface ProjectPageProps {
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
+  const locale = useLocale();
   const projectBySlug: ProjectProps | null = await fetchProjectsBySlug(
-    params.slug
+    params.slug,
+    locale
+
+    
   );
   
   const stackList = projectBySlug?.technologies.join(" - ");
