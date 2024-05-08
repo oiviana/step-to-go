@@ -1,9 +1,9 @@
 import type {
     EntryFieldTypes,
     EntrySkeletonType,
-    // LocaleCode,
-    // ChainModifiers,
-    // Entry,
+    LocaleCode,
+    ChainModifiers,
+    Entry,
   } from "contentful";
   
   export interface TypeProjectFields {
@@ -24,3 +24,7 @@ import type {
   TypeProjectFields,
     "project"
   >;
+  export type TypeProjects<
+  Modifiers extends ChainModifiers,
+  Locales extends LocaleCode
+> = Entry<TypeProjectSkeleton, Modifiers, Locales>;
