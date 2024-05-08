@@ -11,7 +11,7 @@
     ],
 
     "homeslider": [
-      "Intelligence is the ability to adapt to changes",
+      "Intelligence is the ability to adapt to change",
       "Step to Go aims to improve learning in the world of programming!",
       "Discover my projects and my proposal to help people looking to present themselves in this market!"
     ],
@@ -99,5 +99,11 @@
     "development":"Developed with",
     "copyright": "Design and development by Lucas Viana"
   },
-  "ProjectDetails": {}
+  "ProjectDetails":{
+    "return": "Back",
+    "title": "Project Details",
+    "tech": "Technologies:",
+    "description": "Description:",
+    "codebutton": "Code"
+  }
 }

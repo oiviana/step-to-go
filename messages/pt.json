@@ -100,5 +100,11 @@
       "development":"Desenvolvido com",
       "copyright": "Design e desenvolvimento por Lucas Viana"
     },
-    "ProjectDetails":{}
+    "ProjectDetails":{
+      "return": "Voltar",
+      "title": "Detalhes do Projeto",
+      "tech": "Tecnologias:",
+      "description": "Descrição:",
+      "codebutton": "Código"
+    }
 }

@@ -4,6 +4,7 @@ import { fetchProjectsBySlug } from "@/contentful/myProjects";
 import { ProjectProps } from "@/contentful/myProjects";
 import { useLocale } from "next-intl";
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { VscPreview } from "react-icons/vsc";
 import { FaCode } from "react-icons/fa";
@@ -24,6 +25,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   );
   
   const stackList = projectBySlug?.technologies.join(" - ");
+  const translate = await getTranslations("ProjectDetails")
 
   if (!params.slug || !projectBySlug) {
     return <div>Carregando...</div>;
@@ -37,10 +39,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           className="flex justify-between p-2 gap-2 font-bold text-lg "
         >
           <IoMdArrowRoundBack size={25} />
-          <span className="hidden md:flex">Voltar</span>
+          <span className="hidden md:flex">{translate("return")}</span>
         </Link>
         <h2 className="flex mx-auto text-lg md:text-2xl font-semibold leading-8">
-          Detalhes do Projeto
+        {translate("title")}
         </h2>
       </header>
       <section className="mb-5 ">
@@ -57,7 +59,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             <div className="flex gap-4 justify-center mt-4 md:mt-0">
               <button className="flex bg-v-dark-bold dark:bg-v-white-500 dark:text-v-dark-bold text-v-white-300 text-lg font-semibold py-2 px-3 gap-3 items-center rounded">
                 <FaCode size={18} />
-                <a href={projectBySlug.codeUrl}>Código</a>
+                <a href={projectBySlug.codeUrl}>{translate("codebutton")}</a>
               </button>
               {projectBySlug?.hasDeploy && (
                 <button className="flex bg-v-dark-bold dark:bg-v-white-500 dark:text-v-dark-bold text-v-white-300 text-lg font-semibold py-2 px-3 gap-3 items-center rounded">
@@ -68,11 +70,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             </div>
           </div>
           <span className="text-slate-600 dark:text-slate-500">
-            Tecnologias: {stackList}
+          {translate("tech")} {stackList}
           </span>
 
           <article className="mt-8 !leading-[40px] text-sm md:text-md !font-normal">
-            <b>Descrição: </b>
+            <b>{translate("description")} </b>
             {projectBySlug.description}
           </article>
         </div>
