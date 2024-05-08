@@ -37,21 +37,21 @@ export default function Contact() {
             target="_blank"
             href="https://www.linkedin.com/in/lucasviana80/"
             rel="noopener noreferrer"
-            className="flex py-2  justify-start items-end gap-2 leading-[16px] my-1"
+            className="group flex py-2  justify-start items-end gap-2 leading-[16px] my-1 hover:text-cyan-600 transition-colors"
           >
             <FaLinkedin size={25} />
             LinkedIn
           </a>
 
-          <button className="flex py-2  justify-start items-end gap-2 leading-[20px] my-1">
+          <span className="flex py-2  justify-start items-end gap-2 leading-[20px] my-1 hover:text-cyan-600 transition-colors">
             <MdEmail size={25} />
             vianalucas80@gmail.com
-          </button>
+          </span>
           <a
             target="_blank"
             href="https://github.com/oiviana"
             rel="noopener noreferrer"
-            className="flex py-2  justify-start items-end gap-2 leading-[20px] my-1"
+            className="flex py-2  justify-start items-end gap-2 leading-[20px] my-1 hover:text-cyan-600 transition-colors"
           >
             <FaGithubSquare size={25} />
             Github
@@ -60,7 +60,7 @@ export default function Contact() {
             target="_blank"
             href="https://www.instagram.com/viana.jpg/"
             rel="noopener noreferrer"
-            className="flex py-2  justify-start items-end gap-2 leading-[20px] my-1"
+            className="flex py-2  justify-start items-end gap-2 leading-[20px] my-1 hover:text-cyan-600 transition-colors"
           >
             <FaSquareInstagram size={25} />
             @oiviana
