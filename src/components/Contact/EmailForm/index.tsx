@@ -2,6 +2,7 @@
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
+import toast, { Toaster } from 'react-hot-toast';
 import MoonLoader from "react-spinners/MoonLoader";
 export interface EmailFormProps {
   name: string;
@@ -28,11 +29,12 @@ export default function EmailForm() {
       if (!response.ok) {
         throw new Error("Erro ao enviar e-mail");
       }
-
+      toast.success(translate("contact.form.success"))
       const responseData = await response.json();
-      console.log(responseData);
+      console.info(responseData);
     } catch (error) {
       console.error("Erro ao enviar e-mail:", error);
+      toast.error(translate("contact.form.error"))
     }
     setFormLoading(false);
     reset();
@@ -98,12 +100,22 @@ export default function EmailForm() {
             aria-label="Loading Spinner"
             data-testid="loader"
             className="[&>*:nth-child(1)]:!bg-white [&>*:nth-child(2)]:!border-v-white-500 [&>*:nth-child(1)]:dark:!bg-black [&>*:nth-child(2)]:dark:!border-v-dark-700"
-    
+
           />
         ) : (
           translate("contact.form.button")
         )}
       </button>
+      <Toaster
+        toastOptions={{
+      
+          error: {
+            style: {
+              background: 'red',
+              color: '#ffffff'
+            },
+          },
+        }}/>
     </form>
   );
 }
