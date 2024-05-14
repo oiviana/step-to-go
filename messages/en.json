@@ -89,7 +89,9 @@
         "nameLabel":"Name:",
         "emailLabel":"Email:",
         "messageLabel":"Message:",
-        "button":"Send"
+        "button":"Send",
+        "success":"Thanks for getting in touch, I'll get back to you as soon as possible :)",
+        "error": "There was a problem, please try again later :("
       }
     }
   },

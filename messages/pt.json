@@ -90,7 +90,9 @@
             "nameLabel":"Nome:",
             "emailLabel":"Email:",
             "messageLabel":"Mensagem:",
-            "button":"Enviar"
+            "button":"Enviar",
+            "success":"Obrigado por entrar em contato, retorno assim que possível :)",
+            "error": "Houve um problema, tente novamente mais tarde :("
           }
         }
     },
