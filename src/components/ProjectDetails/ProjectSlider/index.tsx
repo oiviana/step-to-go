@@ -1,7 +1,7 @@
 "use client";
 import { ContentImage } from "@/contentful/contentImage";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 
 interface ProjectSliderProps {
@@ -10,7 +10,6 @@ interface ProjectSliderProps {
 
 export default function ProjectSlider({ images }: ProjectSliderProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [themeDark, setThemeDark] = useState(false);
 
   const prevSlide = () => {
     const isFirstSlide = currentSlide === 0;
@@ -22,20 +21,6 @@ export default function ProjectSlider({ images }: ProjectSliderProps) {
     const newSlide = isLastSlide ? 0 : currentSlide + 1
     setCurrentSlide(newSlide)
   };
-
-  useEffect(() => {
-    const theme = localStorage.getItem("theme");
-    if (theme === "dark") setThemeDark(true);
-  }, []);
-  useEffect(() => {
-    if (themeDark) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  }, [themeDark]);
 
   return (
     <div className="relative text-v-white-300">

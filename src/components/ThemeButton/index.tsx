@@ -1,34 +1,18 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import useTheme from "@/hooks/useTheme";
 import { FaMoon } from "react-icons/fa";
 import { FaRegSun } from "react-icons/fa";
 
 export default function ThemeButton() {
   
-  const [themeDark, setThemeDark] = useState(false);
+  const [themeDark, toggleTheme] = useTheme();
 
-  useEffect(() => {
-    const theme = localStorage.getItem("theme");
-    if (theme === "dark" || window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setThemeDark(true);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (themeDark) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  }, [themeDark]);
 
   return (
     <button
       className="relative  md:flex w-16 h-8 rounded-full p-1 bg-white dark:bg-v-dark-bold shadow"
-      onClick={() => setThemeDark(!themeDark)}
+      onClick={toggleTheme}
       aria-label="Switch theme button"
     >
       <FaMoon size={22} 
