@@ -37,9 +37,9 @@ export default function Navbar() {
       <ul
         className={`${
           showMobileMenu ? "fixed" : "hidden"
-        } md:hidden inset-y-0 left-0 z-10 w-full overflow-y-auto bg-v-white-900 dark:bg-v-dark-500 flex flex-col gap-7 text-v-dark-500 dark:text-v-white-500 text-base p-3`}
+        } md:hidden inset-y-0 left-0 z-10 w-full overflow-y-auto bg-v-white-900 dark:bg-v-dark-700 flex flex-col gap-7 text-v-dark-500 dark:text-v-white-500 text-base p-3`}
       >
-        <div className="flex w-full justify-between p-2 mt-3 mb-9">
+        <div className="flex w-full justify-between px-[15px] py-2 mb-9">
           <Link
             href="/"
             className="font-bold text-xl text-gray-900 dark:text-v-white-500"
