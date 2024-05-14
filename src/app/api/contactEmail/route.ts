@@ -6,7 +6,6 @@ export async function POST(req: NextRequest) {
 
   try {
     const body: EmailFormProps = await req.json();
-    console.log(body);
 
     await transporter.sendMail({
       ...mailOptions,
@@ -21,7 +20,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ success: true });
   } catch (err) {
-    console.log("There's something wrong ", err);
+    console.error("There's something wrong ", err);
     return NextResponse.error();
   }
 }
