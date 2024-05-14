@@ -20,12 +20,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const projectBySlug: ProjectProps | null = await fetchProjectsBySlug(
     params.slug,
     locale
-
-    
   );
-  
+
   const stackList = projectBySlug?.technologies.join(" - ");
-  const translate = await getTranslations("ProjectDetails")
+  const translate = await getTranslations("ProjectDetails");
 
   if (!params.slug || !projectBySlug) {
     return <div>Carregando...</div>;
@@ -42,7 +40,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           <span className="hidden md:flex">{translate("return")}</span>
         </Link>
         <h2 className="flex mx-auto text-lg md:text-2xl font-semibold leading-8">
-        {translate("title")}
+          {translate("title")}
         </h2>
       </header>
       <section className="mb-5 ">
@@ -70,7 +68,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             </div>
           </div>
           <span className="text-slate-600 dark:text-slate-500">
-          {translate("tech")} {stackList}
+            {translate("tech")} {stackList}
           </span>
 
           <article className="mt-8 !leading-[40px] text-sm md:text-md !font-normal">
