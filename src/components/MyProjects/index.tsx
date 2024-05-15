@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect} from "react";
 import LayoutSection from "../LayoutSection";
 import TitleSection from "../TitleSection";
 import ProjectCard from "./ProjectCard";
@@ -7,6 +7,7 @@ import { MdArrowForwardIos } from "react-icons/md";
 import { MdArrowBackIosNew } from "react-icons/md";
 import { ProjectProps } from "@/contentful/myProjects";
 import { useTranslations } from "next-intl";
+import SkeletonGrid from "./SkeletonGrid";
 
 interface ComponentProjectProps {
   myProjects: ProjectProps[];
@@ -62,15 +63,15 @@ export default function MyProjects({ myProjects }: ComponentProjectProps) {
   }, []);
 
   useEffect(() => {
-    // Adiciona a classe fade-in temporariamente
+
     setFadeSlides(true);
-    // Remove a classe fade-in após 1 segundo (1000ms)
+
     const timeout = setTimeout(() => {
       setFadeSlides(false);
     }, 1000);
 
     return () => clearTimeout(timeout);
-  }, [currentPage]); // Executa sempre que a página atual muda
+  }, [currentPage]); 
 
   return (
     <LayoutSection>
@@ -96,8 +97,9 @@ export default function MyProjects({ myProjects }: ComponentProjectProps) {
           />
         </>
       ) : (
-        <span>Carregando</span>
+        <SkeletonGrid/>
       )}
+
     </LayoutSection>
   );
 }
