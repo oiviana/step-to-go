@@ -27,7 +27,7 @@ export default function ProjectCard({
   const translate = useTranslations("Home")
 
   return (
-    <div className="flex flex-col w-full max-w-[400px] shadow-md mx-auto lg:mx-0">
+    <div className="flex flex-col w-full max-w-[400px] shadow-md mx-auto lg:mx-0 cursor-pointer">
       <div className="max-h-[260px] group overflow-hidden rounded-t">
         <Image
          src={`https:${thumbnail?.src}`}
@@ -35,6 +35,7 @@ export default function ProjectCard({
           width={420}
           height={280}
           className="transition-all duration-200 group-hover:scale-105 "
+          style={{objectFit:"contain"}}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           priority={false}
         />
