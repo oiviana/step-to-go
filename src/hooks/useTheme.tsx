@@ -13,17 +13,6 @@ function useTheme(): [boolean, () => void] {
   const [themeDark, setThemeDark] = useState<boolean>(getInitialTheme()); 
 
   useEffect(() => {
-    if (themeDark) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  }, [themeDark]);
-
-
-  useEffect(() => {
     if (typeof window !== "undefined") {
       if (themeDark) {
         document.documentElement.classList.add("dark");
@@ -33,7 +22,7 @@ function useTheme(): [boolean, () => void] {
         localStorage.setItem("theme", "light");
       }
     }
-  }, []);
+  }, [themeDark]);
 
   const toggleTheme = () => {
     setThemeDark(!themeDark);
