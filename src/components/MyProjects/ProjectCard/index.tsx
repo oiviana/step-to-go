@@ -40,7 +40,7 @@ export default function ProjectCard({
           priority={false}
         />
       </div>
-      <div className="flex flex-col p-2 gap-3 rounded-b bg-white dark:bg-v-dark-900 border-t border-v-white-300">
+      <div className="flex flex-col p-2 gap-3 rounded-b bg-white dark:bg-v-dark-900 border-t border-v-white-300 dark:border-gray-500">
         <h3 className="text-lg lg:text-xl text-v-dark-bold dark:text-v-white-300 font-bold mb-1">
           {title}
         </h3>
