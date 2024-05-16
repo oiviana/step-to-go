@@ -57,6 +57,7 @@ export default function EmailForm() {
           {...register("name", { required: true, maxLength: 20 })}
           id="name"
           required
+          maxLength={45}
           className="p-2 rounded-md w-full !bg-transparent outline-0"
         />
       </fieldset>
@@ -72,6 +73,7 @@ export default function EmailForm() {
           {...register("email", { required: true })}
           id="email"
           required
+          maxLength={45}
           className="p-2 rounded-md w-full bg-transparent outline-0"
         />
       </fieldset>
@@ -87,6 +89,7 @@ export default function EmailForm() {
           id="message"
           rows={10}
           required
+          maxLength={800}
           className="p-2 rounded-md rounded-ee-none w-full bg-transparent outline-0"
         ></textarea>
       </fieldset>
