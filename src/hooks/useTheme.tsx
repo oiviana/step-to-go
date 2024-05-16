@@ -5,27 +5,12 @@ function useTheme(): [boolean, () => void] {
   const getInitialTheme = () => {
     if (typeof window !== "undefined") {
       const theme = localStorage.getItem("theme");
-      return (
-        theme === "dark" ||
-        (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
-      );
+      return theme === "dark";
     }
     return false;
   };
 
-  const [themeDark, setThemeDark] = useState<boolean>(getInitialTheme);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const theme = localStorage.getItem("theme");
-      if (
-        theme === "dark" ||
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-      ) {
-        setThemeDark(true);
-      }
-    }
-  }, []);
+  const [themeDark, setThemeDark] = useState<boolean>(getInitialTheme()); 
 
   useEffect(() => {
     if (themeDark) {
@@ -36,6 +21,19 @@ function useTheme(): [boolean, () => void] {
       localStorage.setItem("theme", "light");
     }
   }, [themeDark]);
+
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (themeDark) {
+        document.documentElement.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+        localStorage.setItem("theme", "light");
+      }
+    }
+  }, []);
 
   const toggleTheme = () => {
     setThemeDark(!themeDark);
