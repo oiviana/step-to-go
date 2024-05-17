@@ -42,7 +42,7 @@ export default function ProjectCard({
           priority={false}
         />
       </div>
-      <div className="flex flex-col p-2 gap-3 rounded-b bg-white dark:bg-v-dark-900 border-t border-v-white-300 dark:border-gray-500">
+      <div className="flex flex-col p-2 gap-3 rounded-b bg-white dark:bg-v-dark-900 border-t border-v-white-300 dark:border-gray-500 flex-1">
         <h3 className="text-lg lg:text-xl text-v-dark-bold dark:text-v-white-300 font-bold mb-1">
           {title}
         </h3>
@@ -51,7 +51,7 @@ export default function ProjectCard({
         </p>
         <span className="text-sm font-bold">{stackList}</span>
 
-        <button className={`text-xs lg:text-sm bg-v-white-500 dark:bg-v-dark-300 p-3 rounded shadow-sm ${!hasFinished && 'opacity-[0.50] cursor-default'}`}>
+        <button className={`text-xs lg:text-sm bg-v-white-500 dark:bg-v-dark-300 p-3 rounded shadow-sm mt-auto ${!hasFinished && 'opacity-[0.50] cursor-default'}`}>
           <Link className={`flex w-full h-full justify-center ${!hasFinished && 'opacity-[0.50] cursor-default'}`} href={`${hasFinished ? `/projects/${slug}` : `/#projects`} `} >{hasFinished ? translate("projects.button") : translate("projects.buttonNotFinished")}</Link>
         </button>
       </div>
