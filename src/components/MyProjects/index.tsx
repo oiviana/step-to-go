@@ -26,6 +26,7 @@ export default function MyProjects({ myProjects }: ComponentProjectProps) {
       subtitle={project.subtitle}
       description={project.description}
       hasDeploy={project.hasDeploy}
+      hasFinished={project.hasFinished}
       stack={project.technologies}
       key={index}
       slug={project.slug}

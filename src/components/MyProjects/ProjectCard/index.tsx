@@ -9,6 +9,7 @@ export interface ProjectCardProps {
   description: string;
   stack: string[];
   hasDeploy: boolean;
+  hasFinished: boolean;
   slug: string;
   codeUrl: string;
   deployUrl: string;
@@ -21,6 +22,7 @@ export default function ProjectCard({
   stack,
   slug,
   thumbnail,
+  hasFinished
 }: ProjectCardProps) {
 
   const stackList = stack.join(" - ");
@@ -49,8 +51,8 @@ export default function ProjectCard({
         </p>
         <span className="text-sm font-bold">{stackList}</span>
 
-        <button className="text-xs lg:text-sm bg-v-white-500 dark:bg-v-dark-300 p-3 rounded shadow-sm">
-          <Link className="flex w-full h-full justify-center" href={`/projects/${slug}`}>{translate("projects.button")}</Link>
+        <button className={`text-xs lg:text-sm bg-v-white-500 dark:bg-v-dark-300 p-3 rounded shadow-sm ${!hasFinished && 'opacity-[0.50] cursor-default'}`}>
+          <Link className={`flex w-full h-full justify-center ${!hasFinished && 'opacity-[0.50] cursor-default'}`} href={`${hasFinished ? `/projects/${slug}` : `/#projects`} `} >{hasFinished ? translate("projects.button") : translate("projects.buttonNotFinished")}</Link>
         </button>
       </div>
     </div>

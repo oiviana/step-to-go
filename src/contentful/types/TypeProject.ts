@@ -14,6 +14,7 @@ import type {
     thumbnail?: EntryFieldTypes.AssetLink;
     images?: EntryFieldTypes.AssetLink[];
     hasDeploy: EntryFieldTypes.Boolean;
+    hasFinished: EntryFieldTypes.Boolean;
     technologies: EntryFieldTypes.Symbol[];
     codeUrl: EntryFieldTypes.Symbol;
     deployUrl: EntryFieldTypes.Symbol;

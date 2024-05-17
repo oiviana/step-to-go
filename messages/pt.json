@@ -80,7 +80,8 @@
               }
         ],
         "projects" :{
-          "button": "Mais detalhes"
+          "button": "Mais detalhes",
+          "buttonNotFinished": "Em breve: Mais detalhes"
         },
         "contact":{
           "description":"Gostou do que viu por aqui? Entre em contato comigo por email e contrate meus serviços!",

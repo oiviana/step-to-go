@@ -79,7 +79,8 @@
       }
     ],
     "projects" :{
-      "button": "More details"
+      "button": "More details",
+      "buttonNotFinished": "Coming soon: More details"
     },
     "contact":{
       "description":"Did you like what you saw here? Contact me by email and hire my services!",
