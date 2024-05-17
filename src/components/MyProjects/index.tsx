@@ -79,7 +79,7 @@ export default function MyProjects({ myProjects }: ComponentProjectProps) {
       {isClient ? (
         <>
           <div
-            className={`grid grid-cols-1 md:grid-cols-2 min-[1230px]:grid-cols-3 xl:flex
+            className={`grid grid-cols-1 md:grid-cols-2 min-[1230px]:grid-cols-3 xl:flex h-[430px]
             ${fadeSlides ? "animate-vote duration-500" : ""} 
             ${
               currentItems.length % 2 === 0
