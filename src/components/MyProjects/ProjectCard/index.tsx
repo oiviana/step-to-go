@@ -29,7 +29,7 @@ export default function ProjectCard({
   const translate = useTranslations("Home")
 
   return (
-    <div className="flex flex-col w-full max-w-[400px] shadow-md mx-auto lg:mx-0 cursor-pointer">
+    <div className="flex flex-col w-full max-w-[400px] shadow-md mx-auto lg:mx-0 cursor-pointer h-[430px]">
       <div className="max-h-[230px] group overflow-hidden rounded-t">
         <Image
          src={`https:${thumbnail?.src}`}
