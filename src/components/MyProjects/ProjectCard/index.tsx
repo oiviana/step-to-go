@@ -28,7 +28,7 @@ export default function ProjectCard({
 
   return (
     <div className="flex flex-col w-full max-w-[400px] shadow-md mx-auto lg:mx-0 cursor-pointer">
-      <div className="max-h-[260px] group overflow-hidden rounded-t">
+      <div className="h-[260px] group overflow-hidden rounded-t">
         <Image
          src={`https:${thumbnail?.src}`}
           alt="Projeto em construção"
