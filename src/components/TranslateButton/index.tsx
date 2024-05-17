@@ -33,9 +33,9 @@ export default function TranslateButton() {
           size={30}
         />
       </button>
-      <div className={`${showDropdown ? 'flex' : 'hidden'} flex flex-col p-2 absolute right-0 top-[3.9rem] shadow-md rounded bg-v-white-500 dark:bg-v-dark-700 w-32 text-v-dark-bold dark:text-v-white-300 font-semibold`} ref={dropdownRef}>
+      <div className={`${showDropdown ? 'flex' : 'hidden'} flex flex-col p-2 absolute right-0 top-[3.9rem] shadow-md rounded bg-v-white-500 dark:bg-v-dark-500 md:dark:bg-v-dark-700 w-32 text-v-dark-bold dark:text-v-white-300 font-semibold`} ref={dropdownRef}>
         <BiSolidUpArrow
-        className="absolute right-0 bottom-[5rem] text-v-white-500 dark:text-v-dark-700"
+        className="absolute right-0 bottom-[5rem] text-v-white-500 dark:text-v-dark-500 md:dark:text-v-dark-700"
         size={25}
         />
       <Link className="p-1 text-center rounded mb-2 hover:bg-v-white-300 hover:dark:bg-v-dark-300 transition-colors" href={pathName} locale="pt" aria-label="botão de traduções" onClick={()=>setShowDropdown(false)}>Português</Link>
