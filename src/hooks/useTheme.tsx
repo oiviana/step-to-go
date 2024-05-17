@@ -1,16 +1,19 @@
 import { useEffect, useState } from "react";
 
 function useTheme(): [boolean, () => void] {
-  
   const getInitialTheme = () => {
     if (typeof window !== "undefined") {
       const theme = localStorage.getItem("theme");
-      return theme === "dark";
+      if (theme) {
+        return theme === "dark";
+      } else {
+        return window.matchMedia("(prefers-color-scheme: dark)").matches;
+      }
     }
-    return false;
+    return true;
   };
 
-  const [themeDark, setThemeDark] = useState<boolean>(getInitialTheme()); 
+  const [themeDark, setThemeDark] = useState<boolean>(getInitialTheme());
 
   useEffect(() => {
     if (typeof window !== "undefined") {
