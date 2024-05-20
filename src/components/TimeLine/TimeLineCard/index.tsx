@@ -26,7 +26,7 @@ export default function TimeLineCard({event, eventDate}:TimeLineCardProps) {
               size={18}/>
               {eventDate}
             </label>
-            <article className="max-h-[170px] overflow-hidden text-ellipsis line-clamp-[7] text-sm lg:text-base">{event}</article>
+            <article className="max-h-[210px] overflow-hidden text-ellipsis line-clamp-[9] text-xs lg:text-sm">{event}</article>
           </div>
         </div>
   );
