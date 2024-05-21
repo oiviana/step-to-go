@@ -22,41 +22,51 @@ export default function TechnologySlider() {
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: false,
-    variableWidth: true
+    variableWidth: true,
+   
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          centerMode: true,
+          
+        }
+      },
+    ]
   };
 
   return (
     <div className="slider-container h-[65px]">
       <Slider ref={sliderRef} {...settings}>
-        <span className="!flex !w-[132px] h-16 justify-start items-center text-v-dark-500 dark:text-v-white-500" title="React JS">
+        <span className="!flex !w-[132px] h-16 justify-center lg:justify-start items-center text-v-dark-500 dark:text-v-white-500" title="React JS">
           <FaReact
           size={50}/>
         </span>
-        <span className="!flex !w-[132px] h-16  justify-start items-center text-v-dark-500 dark:text-v-white-500" title="Typescript">
+        <span className="!flex !w-[132px] h-16  justify-center lg:justify-start items-center text-v-dark-500 dark:text-v-white-500" title="Typescript">
           <SiTypescript
           size={50}/>
         </span>
-        <span className="!flex !w-[132px] h-16  justify-start items-center text-v-dark-500 dark:text-v-white-500" title="Tailwind CSS">
+        <span className="!flex !w-[132px] h-16  justify-center lg:justify-start items-center text-v-dark-500 dark:text-v-white-500" title="Tailwind CSS">
           <SiTailwindcss
           size={50}/>
         </span>
-        <span className="!flex !w-[132px] h-16  justify-start items-center text-v-dark-500 dark:text-v-white-500" title="SQL">
+        <span className="!flex !w-[132px] h-16  justify-center lg:justify-start items-center text-v-dark-500 dark:text-v-white-500" title="SQL">
           <TbFileTypeSql
           size={50}/>
         </span>
-        <span className="!flex !w-[132px] h-16  justify-start items-center text-v-dark-500 dark:text-v-white-500" title="Next JS">
+        <span className="!flex !w-[132px] h-16  justify-center lg:justify-start items-center text-v-dark-500 dark:text-v-white-500" title="Next JS">
           <SiNextdotjs 
           size={50}/>
         </span>
-        <span className="!flex !w-[132px] h-16  justify-start items-center text-v-dark-500 dark:text-v-white-500" title="Node JS">
+        <span className="!flex !w-[132px] h-16  justify-center lg:justify-start items-center text-v-dark-500 dark:text-v-white-500" title="Node JS">
           <FaNodeJs 
           size={50}/>
         </span>
-        <span className="!flex !w-[132px] h-16  justify-start items-center text-v-dark-500 dark:text-v-white-500" title="GraphQL">
+        <span className="!flex !w-[132px] h-16  justify-center lg:justify-start items-center text-v-dark-500 dark:text-v-white-500" title="GraphQL">
           <GrGraphQl
           size={50}/>
         </span>
-        <span className="!flex !w-[132px] h-16  justify-start items-center text-v-dark-500 dark:text-v-white-500" title="GIT">
+        <span className="!flex !w-[132px] h-16  justify-center lg:justify-start items-center text-v-dark-500 dark:text-v-white-500" title="GIT">
           <FaGitAlt
           size={50}/>
         </span>
