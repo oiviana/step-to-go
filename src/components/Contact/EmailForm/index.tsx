@@ -111,7 +111,7 @@ export default function EmailForm() {
       </button>
       <Toaster
         toastOptions={{
-      
+          duration: 6000,
           error: {
             style: {
               background: 'red',
