@@ -30,14 +30,14 @@ export default function ProjectCard({
 
   return (
     <div className="flex flex-col w-full max-w-[400px] shadow-md mx-auto lg:mx-0 cursor-pointer h-[430px]">
-      <div className="max-h-[230px] group overflow-hidden rounded-t">
+      <div className="max-h-[230px] group overflow-hidden rounded-t flex">
         <Image
          src={`https:${thumbnail?.src}`}
           alt="Projeto em construção"
           width={400}
           height={230}
           className="transition-all duration-200 group-hover:scale-105 "
-          style={{objectFit:"contain"}}
+          style={{objectFit:"cover"}}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           priority={false}
         />
