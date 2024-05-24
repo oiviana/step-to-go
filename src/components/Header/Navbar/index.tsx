@@ -58,7 +58,7 @@ export default function Navbar() {
             />
           </button>
         </div>
-        <div className="flex flex-col gap-10 ml-3">
+        <div className="flex flex-col gap-10 ml-4">
           <li>
             <Link href="/#about" onClick={() => setShowMobileMenu(false)}>
               {translate(`navbar.0`)}
