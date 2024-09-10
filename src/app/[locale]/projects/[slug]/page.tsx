@@ -55,10 +55,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               {projectBySlug.title}
             </h1>
             <div className="flex gap-4 justify-center mt-4 md:mt-0">
+            {projectBySlug?.showRepo && (
               <button className="flex bg-v-dark-bold dark:bg-v-white-500 dark:text-v-dark-bold text-v-white-300 text-lg font-semibold py-2 px-3 gap-3 items-center rounded">
                 <FaCode size={18} />
                 <a href={projectBySlug.codeUrl} target="_blank">{translate("codebutton")}</a>
               </button>
+            )}
               {projectBySlug?.hasDeploy && (
                 <button className="flex bg-v-dark-bold dark:bg-v-white-500 dark:text-v-dark-bold text-v-white-300 text-lg font-semibold py-2 px-3 gap-3 items-center rounded">
                   <VscPreview size={18} />

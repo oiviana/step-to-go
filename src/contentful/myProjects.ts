@@ -17,6 +17,7 @@ export interface ProjectProps {
   images: ContentImage[] | null;
   hasDeploy: boolean;
   hasFinished: boolean;
+  showRepo: boolean;
   technologies: string[];
   codeUrl: string;
   deployUrl: string;
@@ -39,6 +40,7 @@ export function parseContentfulProject(
     images: parseContentfulContentImages(projectEntry.fields.images),
     hasDeploy: projectEntry.fields.hasDeploy,
     hasFinished: projectEntry.fields.hasFinished,
+    showRepo:projectEntry.fields.showRepo,
     codeUrl: projectEntry.fields.codeUrl,
     deployUrl: projectEntry.fields.deployUrl,
     technologies: projectEntry.fields.technologies,
