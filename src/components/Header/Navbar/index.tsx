@@ -8,6 +8,7 @@ import Logo from "../../Logo";
 import ThemeButton from "../../ThemeButton";
 import { useTranslations } from "next-intl";
 import TranslateButton from "@/components/TranslateButton";
+import DesktopItems from "./DesktopItems";
 
 export default function Navbar() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -84,7 +85,7 @@ export default function Navbar() {
           </div>
         </div>
       </ul>
-      <ul className="hidden md:flex text-v-dark-500 dark:text-v-white-500 items-center gap-8 md:text-lg lg:gap-24">
+      {/* <ul className="hidden md:flex text-v-dark-500 dark:text-v-white-500 items-center gap-8 md:text-lg lg:gap-24">
         <li className="hover:text-black hover:dark:text-v-white-900 transition-colors">
           <Link href="/#about">{translate(`navbar.0`)}</Link>
         </li>
@@ -97,7 +98,8 @@ export default function Navbar() {
         <li className="hover:text-black hover:dark:text-v-white-900 transition-colors">
           <Link href="/#contact">{translate(`navbar.3`)}</Link>
         </li>
-      </ul>
+      </ul> */}
+      <DesktopItems/>
     </nav>
   );
 }
