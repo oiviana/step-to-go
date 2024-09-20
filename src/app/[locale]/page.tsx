@@ -7,19 +7,21 @@ import MyProjects from "../../components/MyProjects";
 import Contact from "../../components/Contact";
 import { fetchProjects } from "@/contentful/myProjects";
 import { useLocale } from "next-intl";
+import Main from "@/components/Main";
 
 export default async function Home() {
   const locale = useLocale();
   const getProjects = await fetchProjects({ locale: locale });
   return (
-    <>
-      <Header />
-      <HomeSlider />
-      <Hero />
-      <TimeLine />
-      <MyProjects myProjects={getProjects} />
-      <Contact />
-      <Footer />
-    </>
+    <Main/>
+    // <>
+    //   <Header />
+    //   {/* <HomeSlider /> */}
+    //   {/* <Hero />
+    //   <TimeLine /> */}
+    //   {/* <MyProjects myProjects={getProjects} />
+    //   <Contact /> */}
+    //   {/* <Footer /> */}
+    // </>
   );
 }
