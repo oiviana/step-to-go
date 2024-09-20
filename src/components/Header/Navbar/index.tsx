@@ -80,7 +80,6 @@ export default function Navbar() {
             </Link>
           </li>
           <div className="flex gap-2">
-            <ThemeButton />
             <TranslateButton />
           </div>
         </div>
