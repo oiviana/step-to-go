@@ -1,3 +1,9 @@
+import LayoutSection from "@/components/LayoutSection";
+
 export default function Projects() {
-  return <h2>Projects</h2>;
+  return (
+    <LayoutSection>
+      <h2>Projects</h2>
+    </LayoutSection>
+  );
 }
