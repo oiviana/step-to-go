@@ -6,4 +6,15 @@ html{
   scroll-behavior: smooth;
 }
 
+.section-scroll::-webkit-scrollbar {
+  width: 6px; /* Largura da barra de rolagem */
+}
 
+.section-scroll::-webkit-scrollbar-track {
+  background: #2b2836 ; /* Largura da barra de rolagem */
+}
+
+.section-scroll::-webkit-scrollbar-thumb {
+  background: #3d3a4a;
+  border-radius: 10px;
+}
