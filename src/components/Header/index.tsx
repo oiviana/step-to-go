@@ -6,7 +6,7 @@ import TranslateButton from "../TranslateButton";
 export default function Header() {
   return (
     <>
-      <header className="w-100 flex flex-col px-2 shadow w-full max-w-[1170px] mx-auto border-b-2 border-v-dark-500 sticky bg-slate-400">
+      <header className="w-100 flex flex-col px-2 shadow w-full max-w-[1170px] mx-auto  sticky">
         <div className="w-full justify-between ">
           <Navbar />
         </div>
