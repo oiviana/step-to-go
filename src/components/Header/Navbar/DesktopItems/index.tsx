@@ -14,12 +14,12 @@ export default function DesktopItems() {
     }
 
   return (
-    <ul className="hidden md:flex text-v-dark-500 dark:text-v-white-500 items-center gap-8 md:text-lg lg:gap-24">
-      <li className={`transition-colors cursor-pointer  ${activeSection === 'about' && 'text-v-green'}`}
+    <ul className="hidden md:flex text-v-white-500 items-center gap-8 md:text-lg lg:gap-20 font-semibold text-base">
+      <li className={`transition-colors cursor-pointer  ${activeSection === 'about' && 'text-v-green'} min-w-[104px]`}
       onClick={() => handleSetSection("about")}>
-        Sobre mim
+        Carreira
       </li>
-      <li className={`transition-colors cursor-pointer  ${activeSection === 'projects' && 'text-v-green'}`}
+      <li className={`transition-colors cursor-pointer  ${activeSection === 'projects' && 'text-v-green'} min-w-[104px]`}
        onClick={() => handleSetSection("projects")}>
         Projetos
       </li>
