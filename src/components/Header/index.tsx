@@ -7,20 +7,23 @@ import Logo from "../Logo";
 import TextLogo from "../Logo/TextLogo";
 import { useState } from "react";
 import MobileHamburguer from "./MobileHamburguer";
+import { useNavigationPage } from "@/utils/Providers";
 
 export default function Header() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const {setPage} = useNavigationPage()
   return (
     <header className="w-100 flex flex-col px-4 lg:px-0 w-full max-w-[1170px] mx-auto fixed lg:sticky py-4 lg:py-0 bg-v-dark-test lg:h-[74px]">
       <div className="flex items-center h-full">
         <div className="w-full justify-between items-center h-full hidden lg:flex">
           <div className="flex w-full justify-between items-center">
             <Link
-              href="/"
+              href="#"
               className=" w-full md:max-w-44 flex gap-4"
               aria-label="Logo do site"
+              onClick={()=>{setPage('hero')}}
             >
-              <Logo width={100} height={53}/>
+              <Logo width={95} height={45}/>
               <TextLogo width={150} height={30}/>
             </Link>
           </div>
@@ -37,7 +40,7 @@ export default function Header() {
         <div className="flex w-full justify-between items-center">
           <Link
             href="/"
-            className=" w-full md:max-w-44  flex gap-4"
+            className=" w-full md:max-w-44 flex gap-4"
             aria-label="Logo do site"
           >
             <Logo width={80} height={42}/>
