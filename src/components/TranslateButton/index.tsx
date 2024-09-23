@@ -29,7 +29,7 @@ export default function TranslateButton() {
       aria-label="Botão de tradução"
       >
         <IoLanguage
-          className="text-[#b6fa73] hover:text-v-dark-300 hover:dark:text-v-white-900 transition-colors"
+          className="text-v-green transition-colors"
           size={30}
         />
       </button>
