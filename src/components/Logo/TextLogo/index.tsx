@@ -1,13 +1,18 @@
 import Image from "next/image";
 import React from "react";
 
-function TextLogo() {
+export type LogoSizeProps = {
+  width: number;
+  height: number;
+}
+
+function TextLogo({ width, height }:LogoSizeProps) {
   return (
    <Image
    src="/step-text.png"
    alt="Logo do site"
-   width={150}
-   height={30}
+   width={width}
+   height={height}
    className="object-contain"
    />
   );

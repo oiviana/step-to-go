@@ -1,13 +1,14 @@
 import Image from "next/image";
 import React from "react";
+import { LogoSizeProps } from "./TextLogo";
 
-function Logo() {
+function Logo({width, height }:LogoSizeProps) {
   return (
    <Image
    src="/step-to-go-logo.png"
    alt="Logo do site"
-   width={100}
-   height={53}
+   width={width}
+   height={height}
    />
   );
 }
