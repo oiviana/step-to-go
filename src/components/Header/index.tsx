@@ -17,7 +17,7 @@ export default function Header() {
           <div className="flex w-full justify-between items-center">
             <Link
               href="/"
-              className=" w-full md:max-w-44  flex gap-4"
+              className=" w-full md:max-w-44 flex gap-4"
               aria-label="Logo do site"
             >
               <Logo width={100} height={53}/>
@@ -45,7 +45,7 @@ export default function Header() {
           </Link>
         </div>
         <button
-          className="flex md:hidden"
+          className="flex lg:hidden"
           onClick={() => setShowMobileMenu(!showMobileMenu)}
           aria-label="Abrir menu"
         >
