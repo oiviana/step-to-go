@@ -17,9 +17,9 @@
             "Conheça meus projetos e minhas habilidades!"
         ],
         "hero":{
-            "description":"Sou apaixonado por tecnologia, com mais de 5 anos de experiência em desenvolvimento. Criei esse site para mostrar o que faço e para iniciar um projeto de aprendizado compartilhado na área de programação!",
+            "description":"Sou desenvolvedor de software e entusiasta de tecnologia ha mais de 5 anos. Aqui compartilho dos projetos que desenvolvi e de ideas para ajudar outros desenvolvedor que estão iniciando suas jornadas.",
             "technologies":"Tecnologias que utilizo:",
-            "button":"Veja meu currículo"
+            "button":"Currículo"
         },
         "timeline":[
             {
