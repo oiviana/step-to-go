@@ -9,7 +9,7 @@ interface NavigationContextProps {
 export const NavigationContext = createContext<NavigationContextProps | undefined>(undefined);
 
 export function NavigationProvider({ children }: { children: React.ReactNode }) {
-  const [page, setPage] = useState('');
+  const [page, setPage] = useState('hero');
 
   return (
     <NavigationContext.Provider value={{ page, setPage }}>
