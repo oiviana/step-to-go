@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { Link, usePathname } from "../../../navigation";
+import { Link, usePathname } from "../../../../navigation";
 import { IoLanguage } from "react-icons/io5";
 import { BiSolidUpArrow } from "react-icons/bi";
 
