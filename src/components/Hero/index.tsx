@@ -3,14 +3,15 @@ import TitleSection from "../TitleSection";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { TiDocumentText } from "react-icons/ti";
+import StackSlider from "../ui/StackSlider";
 
 export default function Hero() {
   const translate = useTranslations("Home");
   return (
     <LayoutSection>
-          <div className=" flex flex-col items-center justify-center lg:mx-0 w-full">
+          <div className="flex flex-col items-center justify-center lg:mx-0 w-full">
             <Image
-              src="/hero.png"
+              src="/hero-img.png"
               width={250}
               height={250}
               alt="Lucas Viana"
@@ -30,6 +31,9 @@ export default function Hero() {
               {translate("hero.button")}
             </a>
           </div>
+          {/* <div>
+          <StackSlider/>
+          </div> */}
     </LayoutSection>
   );
 }
