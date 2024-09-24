@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import TranslateButton from "@/components/TranslateButton";
+import TranslateButton from "../../ui/TranslateButton";
 import DesktopItems from "./DesktopItems";
 
 type NavbarProps = {

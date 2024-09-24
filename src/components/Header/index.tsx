@@ -1,13 +1,14 @@
 "use client";
 
 import Navbar from "./Navbar";
-import TranslateButton from "../TranslateButton";
+import TranslateButton from "../ui/TranslateButton";
 import Link from "next/link";
 import Logo from "../Logo";
 import TextLogo from "../Logo/TextLogo";
 import { useState } from "react";
-import MobileHamburguer from "./MobileHamburguer";
+import MobileHamburguer from "../ui/MobileHamburguer";
 import { useNavigationPage } from "@/utils/Providers";
+import GithubButton from "../ui/GithubButton";
 
 export default function Header() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -32,7 +33,8 @@ export default function Header() {
           showMobileMenu={showMobileMenu}
           setShowMenu={setShowMobileMenu}
         />
-        <div className="hidden lg:flex">
+        <div className="hidden lg:flex gap-6">
+          <GithubButton/>
           <TranslateButton />
         </div>
       </div>
