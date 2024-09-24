@@ -22,9 +22,9 @@ export default function Hero() {
               {translate("hero.description")}
             </p>
             <a
-              href={process.env.CV_BUTTON_URL}
+              href={process.env.CV_BUTTON_URL ?? 'https://drive.google.com/file/d/1jkeQaAF704JYjthMARTiJPVwI9qobfXR/view?usp=drive_link'}
               target="_blank"
-              className="w-[214px] p-3 h-[60px] flex justify-center gap-2 items-center mt-3 rounded-md  shadow-md font-semibold bg-transparent text-v-green border-2 border-v-green transition-colors"
+              className="green-light w-[214px] p-3 h-[60px] flex justify-center gap-2 items-center mt-3 rounded-md  shadow-md font-semibold bg-transparent text-v-green border-2 border-v-green transition-colors"
             >
               <TiDocumentText className="text-v-green" size={30} />
               {translate("hero.button")}
