@@ -11,10 +11,16 @@
 
 
 .section-scroll::-webkit-scrollbar-thumb {
-  background: #3d3a4a;
+  background: #141217;
   border-radius: 10px;
+  transition: background-color 0.8s ease-in-out;
 }
 
+.section-scroll.scrolling::-webkit-scrollbar-thumb {
+  background: #3d3a4a;
+  transition: background-color 0.8s ease-in-out;
+  
+}
 
 /* light effect in hero button */
 
