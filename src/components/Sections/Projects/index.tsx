@@ -5,6 +5,7 @@ import { fetchProjects, ProjectProps } from "@/contentful/myProjects";
 
 import { useState, useEffect } from "react";
 import StackSlider from "@/components/ui/StackSlider";
+import ProjectsBanner from "./ProjectsBanner";
 
 export default function Projects() {
   const locale = useLocale();
@@ -21,13 +22,7 @@ export default function Projects() {
 
   return (
     <LayoutSection>
-      <div>
-        <h1>Desenvolver e inovar!</h1>
-        <p>
-          Ao longo dos últimos 4 anos, tenho contribuído ativamente para
-          diversos projetos com foco na web.
-        </p>
-      </div>
+      <ProjectsBanner/>
       <StackSlider />
       {/* <div>
         {projects ? (
