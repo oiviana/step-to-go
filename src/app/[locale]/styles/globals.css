@@ -11,15 +11,13 @@
 
 
 .section-scroll::-webkit-scrollbar-thumb {
-  background: #141217;
+  background-color: #141217;
   border-radius: 10px;
-  transition: background-color 0.8s ease-in-out;
+  transition: background-color 2s ease-in-out;
 }
 
 .section-scroll.scrolling::-webkit-scrollbar-thumb {
-  background: #3d3a4a;
-  transition: background-color 0.8s ease-in-out;
-  
+  background-color: #3d3a4a;
 }
 
 /* light effect in hero button */
