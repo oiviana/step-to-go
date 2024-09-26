@@ -1,4 +1,5 @@
 "use client";
+
 import { useState, useEffect} from "react";
 import LayoutSection from "../LayoutSection";
 import TitleSection from "../TitleSection";
@@ -75,8 +76,7 @@ export default function MyProjects({ myProjects }: ComponentProjectProps) {
   }, [currentPage]); 
 
   return (
-    <LayoutSection>
-      <TitleSection title={translate("sectiontitles.2.title")} id="projects" />
+    <>
       {isClient ? (
         <>
           <div
@@ -101,7 +101,7 @@ export default function MyProjects({ myProjects }: ComponentProjectProps) {
         <SkeletonGrid/>
       )}
 
-    </LayoutSection>
+    </>
   );
 }
 
