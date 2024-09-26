@@ -2,6 +2,26 @@
   "Header": {
     "navbar": ["About", "Trajectory", "Projects", "Contact"]
   },
+  "timeline": [
+    {
+      "month":"fevereiro",
+      "year":"2016",
+      "title":"Curso técnico de informática",
+      "event":"Iniciei meu curso técnico e tive meu primeiro contato com programação meu curso técnico e tive meu primeiro contato com programação."
+      },
+      {
+        "month":"fevereiro",
+        "year":"2016",
+        "title":"Curso técnico de informática",
+        "event":"Iniciei meu curso técnico e tive meu primeiro contato com programação meu curso técnico e tive meu primeiro contato com programação."
+        },
+        {
+          "month":"fevereiro",
+          "year":"2016",
+          "title":"Curso técnico de informática",
+          "event":"Iniciei meu curso técnico e tive meu primeiro contato com programação meu curso técnico e tive meu primeiro contato com programação."
+          }
+  ],
   "Home": {
     "sectiontitles": [
       {"title":"Nice to meet you, my name is Lucas Viana!"},
@@ -20,64 +40,7 @@
       "technologies": "Technologies that i use:",
       "button": "See my resume"
     },
-    "timeline": [
-      {
-        "date": "Feb 2016",
-        "event": "I started my technical course and had my first contact with programming."
-      },
-      {
-        "date": "Apr 2016",
-        "event": "I started my studies in HTML, CSS and programming logic by developing pseudocodes and flowcharts."
-      },
-      {
-        "date": "Mar 2017",
-        "event": "I had my first contact with the Java language. I started object oriented with Java and created my first web projects with PHP."
-      },
-      {
-        "date": "Sep 2017",
-        "event": "I created my first relational databases in MySQL. I presented my first web project with HTML, PHP and MySQL."
-      },
-      {
-        "date": "Apr 2018",
-        "event": "I created my first projects with C# and deepened my studies in Javascript."
-      },
-      {
-        "date": "Nov 2018",
-        "event": "I presented my undergraduate project. A web application for event management. I graduated as a computer technician."
-      },
-      {
-        "date": "Aug 2019",
-        "event": "I started my degree in Systems Analysis and Development. I revisited the content I had already studied and also learned advanced programming content."
-      },
-      {
-        "date": "Jul 2021",
-        "event": "I got my first job in the area, at the time as a QA. After that, I moved to another area within the company, becoming a development intern."
-      },
-      {
-        "date": "May 2022",
-        "event": "I worked on projects such as C&A, Chatuba and Obramax, building applications based on ReactJS and VTEX IO."
-      },
-      {
-        "date": "Jun 2022",
-        "event": "I developed my undergraduated project in college, an internship application, built with React Native, NodeJS and MySQL"
-      },
-      {
-        "date": "Jul 2022",
-        "event": "After the successful presentation of my project, I graduated as a Systems Analyst and Developer!"
-      },
-      {
-        "date": "Feb 2023",
-        "event": "I had my first contact with the Jamstack and Headless CMS architecture working on the Plurix project and also Vivara."
-      },
-      {
-        "date": "Jan 2024",
-        "event": "At Adaptio, I learned the Deno Fresh framework and developed a product page for the 'Aviator' shirt store."
-      },
-      {
-        "date": "Currently",
-        "event": "Studying hard and looking for new opportunities in the market!!!"
-      }
-    ],
+
     "projects" :{
       "button": "More details",
       "buttonNotFinished": "Coming soon: More details"

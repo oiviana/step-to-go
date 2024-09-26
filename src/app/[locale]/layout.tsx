@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono, Montserrat } from "next/font/google";
 import "./styles/globals.css";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, useMessages } from "next-intl";
@@ -10,6 +10,8 @@ const mainFontFamily = JetBrains_Mono({
   display: "swap",
   preload: true,
 });
+
+
 
 export const metadata: Metadata = {
   title: "Step to Go",

@@ -1,54 +1,47 @@
 import LayoutSection from "@/components/LayoutSection";
+import { useTranslations } from "next-intl";
+import { Montserrat, Roboto, Inter } from "next/font/google";
+import { FaDotCircle } from "react-icons/fa";
+
+const secondaryFontFamily = Inter({
+  display: "swap",
+  weight: "500",
+  subsets: ["latin"],
+});
 
 export default function About() {
+  const translate = useTranslations();
+  const timeline = translate.raw("timeline");
+
+  const timelineList = timeline.map((item: any, index: number) => (
+    <li className=" flex flex-col lg:flex-row mb-[3.5rem] lg:mb-[10rem]">
+      <div className="flex lg:relative mb-6 lg:mb-0">
+        <FaDotCircle
+          size={15}
+          className="text-v-green absolute right-[-12px] top-[4px] hidden lg:flex"
+        />
+        <div className="flex flex-col lg:w-[200px] text-v-green  pr-4 lg:pr-0">
+          <span className="text-base lg:text-lg">{item.month}</span>
+          <span className="text-2xl lg:text-4xl font-bold ">{item.year}</span>
+        </div>
+        <h2 className="lg:w-[290px] text-center border-t-0 lg:border-t-2 border-l-2 lg:border-l-0 border-v-dark-500 lg:border-v-green pt-[2px] lg:pt-4 pl-4 lg:pl-0 text-lg lg:text-xl font-semibold lg:mt-[10px]">
+          {item.title}
+        </h2>
+      </div>
+      <div
+        className={`lg:pl-12 text-justify  leading-8 text-v-white-900 ${secondaryFontFamily.className} lg:pr-1`}
+      >
+        {item.event}
+      </div>
+      <div className="bg-v-dark-500 h-[2px] w-[100%] mx-auto mt-8 lg:hidden"></div>
+    </li>
+  ));
+
   return (
     <LayoutSection>
-      <div className="text-[60px] text-black">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum. Why do we use it? It is a long established fact that a
-        reader will be distracted by the readable content of a page when looking
-        at its layout. The point of using Lorem Ipsum is that it has a
-        more-or-less normal distribution of letters, as opposed to using
-        'Content here, content here', making it look like readable English. Many
-        desktop publishing packages and web page editors now use Lorem Ipsum as
-        their default model text, and a search for 'lorem ipsum' will uncover
-        many web sites still in their infancy. Various versions have evolved
-        over the years, sometimes by accident, sometimes on purpose (injected
-        humour and the like). Where does it come from? Contrary to popular
-        belief, Lorem Ipsum is not simply random text. It has roots in a piece
-        of classical Latin literature from 45 BC, making it over 2000 years old.
-        Richard McClintock, a Latin professor at Hampden-Sydney College in
-        Virginia, looked up one of the more obscure Latin words, consectetur,
-        from a Lorem Ipsum passage, and going through the cites of the word in
-        classical literature, discovered the undoubtable source. Lorem Ipsum
-        comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
-        Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
-        This book is a treatise on the theory of ethics, very popular during the
-        Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-        amet..", comes from a line in section 1.10.32. The standard chunk of
-        Lorem Ipsum used since the 1500s is reproduced below for those
-        interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et
-        Malorum" by Cicero are also reproduced in their exact original form,
-        accompanied by English versions from the 1914 translation by H. Rackham.
-        Where can I get some? There are many variations of passages of Lorem
-        Ipsum available, but the majority have suffered alteration in some form,
-        by injected humour, or randomised words which don't look even slightly
-        believable. If you are going to use a passage of Lorem Ipsum, you need
-        to be sure there isn't anything embarrassing hidden in the middle of
-        text. All the Lorem Ipsum generators on the Internet tend to repeat
-        predefined chunks as necessary, making this the first true generator on
-        the Internet. It uses a dictionary of over 200 Latin words, combined
-        with a handful of model sentence structures, to generate Lorem Ipsum
-        which looks reasonable. The generated Lorem Ipsum is therefore always
-        free from repetition, injected humour, or non-characteristic words etc.
-      </div>
+      <ul className="w-full">
+        {timelineList}
+      </ul>
     </LayoutSection>
   );
 }
