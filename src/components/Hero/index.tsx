@@ -31,9 +31,9 @@ export default function Hero() {
               {translate("hero.button")}
             </a>
           </div>
-          <div>
+          {/* <div>
           <StackSlider/>
-          </div>
+          </div> */}
     </LayoutSection>
   );
 }
