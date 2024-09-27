@@ -18,7 +18,7 @@ export default function Hero() {
               className="rounded-full border-4 border-v-dark-300"
               priority={true}
             />
-            <TitleSection id="test" title="Olá me chamo Lucas Viana" />
+            <TitleSection id="test" title={translate("hero.title")} />
             <p className="leading-9 text-center py-4 max-w-[650px]">
               {translate("hero.description")}
             </p>
