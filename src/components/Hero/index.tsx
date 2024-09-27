@@ -11,7 +11,7 @@ export default function Hero() {
     <LayoutSection>
           <div className="flex flex-col items-center justify-center lg:mx-0 w-full">
             <Image
-              src="/hero-img.png"
+              src="/hero-img-1.png"
               width={250}
               height={250}
               alt="Lucas Viana"
