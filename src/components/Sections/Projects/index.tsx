@@ -22,15 +22,19 @@ export default function Projects() {
 
   return (
     <LayoutSection>
-      <ProjectsBanner/>
-      <StackSlider />
-      {/* <div>
+      <div className="flex flex-col">
+
+
+      {/* <ProjectsBanner/> */}
+            <div>
         {projects ? (
           <MyProjects myProjects={projects} />
         ) : (
           <p>Carregando projetos...</p>
         )}
-      </div> */}
+      </div>
+      <StackSlider />
+      </div>
     </LayoutSection>
   );
 }
