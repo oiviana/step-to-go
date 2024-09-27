@@ -9,6 +9,7 @@ import { useState } from "react";
 import MobileHamburguer from "../ui/MobileHamburguer";
 import { useNavigationPage } from "@/utils/Providers";
 import GithubButton from "../ui/GithubButton";
+import LinkedinButton from "../ui/LinkedinButton";
 
 export default function Header() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -16,7 +17,7 @@ export default function Header() {
   return (
     <header className="w-100 flex flex-col px-4 lg:px-0 w-full max-w-[1170px] mx-auto fixed lg:sticky py-4 lg:py-0 bg-v-dark-test lg:h-[74px]">
       <div className="flex items-center h-full">
-        <div className="w-full justify-between items-center h-full hidden lg:flex">
+        <div className="w-full justify-between items-center h-full hidden lg:flex ">
           <div className="flex w-full justify-between items-center">
             <Link
               href="#"
@@ -33,7 +34,8 @@ export default function Header() {
           showMobileMenu={showMobileMenu}
           setShowMenu={setShowMobileMenu}
         />
-        <div className="hidden lg:flex gap-6">
+        <div className="hidden lg:flex gap-6 lg:ml-5">
+          <LinkedinButton/>
           <GithubButton/>
           <TranslateButton />
         </div>
@@ -41,9 +43,13 @@ export default function Header() {
       <div className="w-full justify-between items-center h-full flex lg:hidden">
         <div className="flex w-full justify-between items-center">
           <Link
-            href="/"
+            href="#"
             className=" w-full md:max-w-44 flex gap-4"
             aria-label="Logo do site"
+            onClick={()=>{{
+              setPage('hero')
+              setShowMobileMenu(false)
+            }}}
           >
             <Logo width={80} height={42}/>
             <TextLogo width={112} height={17}/>

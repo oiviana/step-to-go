@@ -23,14 +23,14 @@ export default function TranslateButton() {
   }, []);
 
   return (
-    <div className="px-2 relative">
+    <div className="relative">
       <button
       onClick={()=> setShowDropdown(!showDropdown)} 
       aria-label="Botão de tradução"
       >
         <IoLanguage
           className="text-v-green transition-colors"
-          size={30}
+          size={25}
         />
       </button>
       <div className={`${showDropdown ? 'flex' : 'hidden'} flex flex-col p-2 absolute right-0 top-[3.9rem] shadow-md rounded bg-v-white-500 dark:bg-v-dark-500 md:dark:bg-v-dark-700 w-32 text-v-dark-bold dark:text-v-white-300 font-semibold`} ref={dropdownRef}>
