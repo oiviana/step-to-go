@@ -28,7 +28,7 @@
 
 
 .green-light:hover {
-  box-shadow: 0 0 5px rgba(158, 230, 85, 0.7), 0 0 10px rgba(158, 230, 85, 0.7), 0 0 15px rgba(158, 230, 85, 0.7);
+  box-shadow: 0 0 5px rgba(158, 230, 85, 0.7), 0 0 10px rgba(158, 230, 85, 0.7), 0 0 10px rgba(158, 230, 85, 0.7);
 }
 
 
