@@ -38,19 +38,21 @@
   from {
     transform: translateX(0);
   }
-  to{
+
+  to {
     transform: translateX(-100%);
   }
 }
 
-.stack-slider{
+.stack-slider {
   animation: 25s slide infinite linear;
 }
-.stack-slider:hover{
+
+.stack-slider:hover {
   animation-play-state: paused;
 }
 
-.stack-slider-container:before{
+.stack-slider-container:before {
   position: absolute;
   left: 0;
   top: 0;
@@ -60,23 +62,59 @@
   content: "";
   z-index: 10;
 }
+
 .stack-slider-container:before,
-.stack-slider-container:after{
+.stack-slider-container:after {
   position: absolute;
   top: 0;
-  width: 140px;
+  width: 100px;
   height: 100%;
   content: "";
   z-index: 10;
 }
 
-.stack-slider-container:before{
+@media only screen and (min-width: 1024px) {
+
+  .stack-slider-container:before,
+  .stack-slider-container:after {
+    width: 140px;
+  }
+}
+
+.stack-slider-container:before {
   left: 0;
   background: linear-gradient(to left, transparent, #141217);
 
 }
-.stack-slider-container:after{
+
+.stack-slider-container:after {
   right: 0;
   background: linear-gradient(to right, transparent, #141217);
 
+}
+
+.wave-container svg path {
+  animation: waveOscillation 8s ease-in-out infinite;
+}
+
+@keyframes waveOscillation {
+  0% {
+    d: path("M0,224L40,208C80,192,160,160,240,160C320,160,400,192,480,224C560,256,640,288,720,277.3C800,267,880,213,960,165.3C1040,117,1120,75,1200,74.7C1280,75,1360,117,1400,138.7L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z");
+  }
+
+  25% {
+    d: path("M0,210L40,190C80,170,160,140,240,145C320,150,400,185,480,215C560,245,640,265,720,255C800,245,880,195,960,150C1040,105,1120,65,1200,70C1280,75,1360,110,1400,130L1440,140L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z");
+  }
+
+  50% {
+    d: path("M0,240L40,220C80,200,160,170,240,175C320,180,400,215,480,245C560,275,640,295,720,285C800,275,880,225,960,180C1040,135,1120,95,1200,100C1280,105,1360,140,1400,160L1440,170L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z");
+  }
+
+  75% {
+    d: path("M0,220L40,200C80,180,160,150,240,160C320,170,400,210,480,240C560,270,640,290,720,280C800,270,880,220,960,175C1040,130,1120,90,1200,95C1280,100,1360,130,1400,150L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z");
+  }
+
+  100% {
+    d: path("M0,224L40,208C80,192,160,160,240,160C320,160,400,192,480,224C560,256,640,288,720,277.3C800,267,880,213,960,165.3C1040,117,1120,75,1200,74.7C1280,75,1360,117,1400,138.7L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z");
+  }
 }

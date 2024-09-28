@@ -15,6 +15,7 @@ const config: Config = {
         'v-dark-test': '#141217',
         'v-dark-900': '#1D1A26',
         'v-dark-bold': '#17151e',
+        'v-purple-light':'#8b7bea',
         'v-purple':'#654fe3',
         'v-green':'#9ee655',
         'v-white-300': '#f2f2f2',

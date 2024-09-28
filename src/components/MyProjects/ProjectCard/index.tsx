@@ -35,7 +35,7 @@ export default function ProjectCard({
             src={`https:${thumbnail?.src}`}
             alt="Projeto em construção"
             width={400}
-            height={230}
+            height={200}
             className="transition-all duration-200 group-hover:scale-105 "
             style={{ objectFit: "contain" }}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

@@ -23,17 +23,18 @@ export default function Projects() {
   return (
     <LayoutSection>
       <div className="flex flex-col">
-
-
-      {/* <ProjectsBanner/> */}
-            <div>
-        {projects ? (
-          <MyProjects myProjects={projects} />
-        ) : (
-          <p>Carregando projetos...</p>
-        )}
-      </div>
-      <StackSlider />
+        <ProjectsBanner />
+        <h2 className="text-center lg:text-left text-base lg:text-xl">
+          Algumas tecnologias que eu já utilizei ou utilizo em meus projetos:
+        </h2>
+        <StackSlider />
+        <div>
+          {projects ? (
+            <MyProjects myProjects={projects} />
+          ) : (
+            <p>Carregando projetos...</p>
+          )}
+        </div>
       </div>
     </LayoutSection>
   );

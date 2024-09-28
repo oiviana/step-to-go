@@ -78,7 +78,10 @@ export default function MyProjects({ myProjects }: ComponentProjectProps) {
   return (
     <>
       {isClient ? (
-        <>
+        <div className="mt-[4rem]">
+           <h2 className="text-center lg:text-left text-base lg:text-xl mb-8">
+          Confira alguns projetos que já desenvolvi:
+        </h2>
           <div
             className={`grid grid-cols-1 md:grid-cols-2 min-[1230px]:grid-cols-3 xl:flex h-[430px]
             ${fadeSlides ? "animate-vote duration-500" : ""} 
@@ -96,7 +99,7 @@ export default function MyProjects({ myProjects }: ComponentProjectProps) {
             setCurrentPage={setCurrentPage}
             itemsPerPage={itemsPerPage}
           />
-        </>
+        </div>
       ) : (
         <SkeletonGrid/>
       )}
