@@ -24,8 +24,8 @@ export default function DesktopItems() {
        onClick={() => handleSetSection("projects")}>
          {translate(`navbar.1`)}
       </li>
-      <li className={`transition-colors cursor-pointer  ${activeSection === 'projects' && activeSection === page && 'text-v-green'} min-w-[104px]`}
-       onClick={() => handleSetSection("projects")}>
+      <li className={`transition-colors cursor-pointer  ${activeSection === 'contact' && activeSection === page && 'text-v-green'} min-w-[104px]`}
+       onClick={() => handleSetSection("contact")}>
         {translate(`navbar.2`)}
       </li>
     </ul>

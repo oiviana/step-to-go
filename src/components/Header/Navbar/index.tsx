@@ -38,6 +38,14 @@ export default function Navbar({showMobileMenu, setShowMenu}:NavbarProps) {
           >
             {translate(`navbar.1`)}
           </li>
+          <li
+          onClick={() => {
+            setPage('contact')
+            setShowMenu(false)
+          }}
+          >
+            {translate(`navbar.2`)}
+          </li>
           <div className="flex gap-2">
             <TranslateButton />
           </div>
