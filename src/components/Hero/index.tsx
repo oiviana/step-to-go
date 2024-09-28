@@ -15,7 +15,7 @@ export default function Hero() {
               width={250}
               height={250}
               alt="Lucas Viana"
-              className="rounded-full border-4 border-v-dark-300"
+              className="rounded-full border-4 border-v-dark-500"
               priority={true}
             />
             <TitleSection id="test" title={translate("hero.title")} />
@@ -31,9 +31,6 @@ export default function Hero() {
               {translate("hero.button")}
             </a>
           </div>
-          {/* <div>
-          <StackSlider/>
-          </div> */}
     </LayoutSection>
   );
 }
