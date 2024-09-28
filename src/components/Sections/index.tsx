@@ -1,5 +1,6 @@
 "use client"
 import { useNavigationPage } from "../../utils/Providers";
+import Contact from "./Contact";
 import Hero from "../Hero";
 import About from "./About";
 import Projects from "./Projects";
@@ -15,6 +16,8 @@ switch (page) {
         return <Hero/>;
     case 'projects':
       return <Projects/>;
+      case 'contact':
+        return <Contact/>;
     default:
       return <Hero/>;
   }

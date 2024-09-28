@@ -42,10 +42,10 @@ export default function EmailForm() {
 
   return (
     <form
-      className="max-w-[480px] flex flex-col gap-8  py-12"
+      className="w-full max-w-[450px] flex flex-col gap-8  py-12 mx-auto"
       onSubmit={handleSubmit(handleSendEmail)}
     >
-      <fieldset className="relative border-2 bg-white  dark:bg-v-dark-300 border-v-white-900 dark:border-slate-400 rounded-md group">
+      <fieldset className="relative border-2 bg-v-dark-test border-v-green rounded-md group">
         <label htmlFor="name" className="sr-only">
           Nome
         </label>
@@ -61,7 +61,7 @@ export default function EmailForm() {
           className="p-2 rounded-md w-full !bg-transparent outline-0"
         />
       </fieldset>
-      <fieldset className="relative border-2 bg-white  dark:bg-v-dark-300 border-v-white-900 dark:border-slate-400 rounded-md ">
+      <fieldset className="relative border-2 bg-v-dark-test border-v-green rounded-md ">
         <label htmlFor="email" className="sr-only">
           Email
         </label>
@@ -77,7 +77,7 @@ export default function EmailForm() {
           className="p-2 rounded-md w-full bg-transparent outline-0"
         />
       </fieldset>
-      <fieldset className="relative border-2 bg-white  dark:bg-v-dark-300 border-v-white-900 dark:border-slate-400 rounded-md rounded-ee-none">
+      <fieldset className="relative border-2 bg-v-dark-test border-v-green rounded-md rounded-ee-none">
         <label htmlFor="message" className="sr-only">
           Mensagem
         </label>
@@ -87,7 +87,7 @@ export default function EmailForm() {
         <textarea
           {...register("message", { required: true, maxLength: 20 })}
           id="message"
-          rows={10}
+          rows={6}
           required
           maxLength={800}
           className="p-2 rounded-md rounded-ee-none w-full bg-transparent outline-0"
