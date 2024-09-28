@@ -33,6 +33,10 @@ export const sliderMock = [
     techName: "PostgreSQL",
   },
   {
+    techImg: "/stack-slider/stack-slide-node.png",
+    techName: "NodeJS",
+  },
+  {
     techImg: "/stack-slider/stack-slide-csharp.png",
     techName: "C#",
   },
