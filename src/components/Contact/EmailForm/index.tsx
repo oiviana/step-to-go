@@ -42,10 +42,10 @@ export default function EmailForm() {
 
   return (
     <form
-      className="w-full max-w-[450px] flex flex-col gap-8  py-12 mx-auto"
+      className="w-full max-w-[450px] flex flex-col gap-8"
       onSubmit={handleSubmit(handleSendEmail)}
     >
-      <fieldset className="relative border-2 bg-v-dark-test border-v-green rounded-md group">
+      <fieldset className="border-2 bg-v-dark-test border-v-green rounded-md group">
         <label htmlFor="name" className="sr-only">
           Nome
         </label>
@@ -61,7 +61,7 @@ export default function EmailForm() {
           className="p-2 rounded-md w-full !bg-transparent outline-0"
         />
       </fieldset>
-      <fieldset className="relative border-2 bg-v-dark-test border-v-green rounded-md ">
+      <fieldset className="border-2 bg-v-dark-test border-v-green rounded-md ">
         <label htmlFor="email" className="sr-only">
           Email
         </label>
@@ -77,7 +77,7 @@ export default function EmailForm() {
           className="p-2 rounded-md w-full bg-transparent outline-0"
         />
       </fieldset>
-      <fieldset className="relative border-2 bg-v-dark-test border-v-green rounded-md rounded-ee-none">
+      <fieldset className="border-2 bg-v-dark-test border-v-green rounded-md rounded-ee-none">
         <label htmlFor="message" className="sr-only">
           Mensagem
         </label>
@@ -87,7 +87,7 @@ export default function EmailForm() {
         <textarea
           {...register("message", { required: true, maxLength: 20 })}
           id="message"
-          rows={6}
+          rows={5}
           required
           maxLength={800}
           className="p-2 rounded-md rounded-ee-none w-full bg-transparent outline-0"
@@ -95,7 +95,7 @@ export default function EmailForm() {
       </fieldset>
       <button
         type="submit"
-        className="p-4 h-[50px] cursor-pointer flex items-center justify-center w-full max-w-[180px] mx-auto leading-3 lg:mx-0 rounded-md shadow-md font-semibold bg-v-dark-900 dark:bg-v-white-500 text-v-white-300 dark:text-v-dark-bold hover:bg-v-dark-500 hover:dark:bg-v-white-900 transition-colors"
+        className="p-4 h-[50px] cursor-pointer flex items-center justify-center w-full max-w-[450px] mx-auto leading-3 lg:mx-0 rounded-md shadow-md font-semibold bg-v-green text-v-dark-test uppercase transition-colors"
       >
         {formLoading ? (
           <MoonLoader
