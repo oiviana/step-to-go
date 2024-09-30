@@ -5,9 +5,9 @@ import ProjectCard from "./ProjectCard";
 import { MdArrowForwardIos } from "react-icons/md";
 import { MdArrowBackIosNew } from "react-icons/md";
 import { ProjectProps } from "@/contentful/myProjects";
-import { useTranslations } from "next-intl";
 import SkeletonGrid from "./SkeletonGrid";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 interface ComponentProjectProps {
   myProjects: ProjectProps[];
@@ -18,7 +18,6 @@ export default function MyProjects({ myProjects }: ComponentProjectProps) {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [itemsPerPage, setItemsPerPage] = useState<number>(1);
   const [fadeSlides, setFadeSlides] = useState<boolean>(false);
-  const translate = useTranslations("Home")
 
   const projectCards = myProjects.map((project, index) => (
     <ProjectCard
@@ -39,6 +38,7 @@ export default function MyProjects({ myProjects }: ComponentProjectProps) {
   const lasItemIndex = currentPage * itemsPerPage;
   const firstItemIndex = lasItemIndex - itemsPerPage;
   const currentItems = projectCards.slice(firstItemIndex, lasItemIndex);
+  const translate = useTranslations("Projects");
 
   useEffect(() => {
     setIsClient(true);
@@ -79,7 +79,7 @@ export default function MyProjects({ myProjects }: ComponentProjectProps) {
       {isClient ? (
         <div className="mt-[4rem]">
            <h2 className="text-center lg:text-left text-base lg:text-xl mb-8">
-          Confira alguns projetos que já desenvolvi:
+           {translate("projectTitle")}
         </h2>
           <div
             className={`grid grid-cols-1 md:grid-cols-2 min-[1230px]:grid-cols-3 xl:flex h-[430px]

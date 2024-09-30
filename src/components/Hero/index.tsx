@@ -6,7 +6,7 @@ import { TiDocumentText } from "react-icons/ti";
 import { motion } from 'framer-motion';
 
 export default function Hero() {
-  const translate = useTranslations("Home");
+  const translate = useTranslations("Hero");
   return (
     <LayoutSection>
       <motion.div
@@ -24,9 +24,9 @@ export default function Hero() {
             className="rounded-full border-4 border-v-dark-500"
             priority={true}
           />
-          <TitleSection id="test" title={translate("hero.title")} />
+          <TitleSection id="test" title={translate("title")} />
           <p className="leading-9 text-center py-4 max-w-[650px]">
-            {translate("hero.description")}
+            {translate("description")}
           </p>
           <a
             href={process.env.CV_BUTTON_URL ?? 'https://drive.google.com/file/d/1jkeQaAF704JYjthMARTiJPVwI9qobfXR/view?usp=drive_link'}
@@ -34,7 +34,7 @@ export default function Hero() {
             className="green-light w-[214px] p-3 h-[60px] flex justify-center gap-2 items-center mt-3 rounded-md  shadow-md font-semibold bg-transparent text-v-green border-2 border-v-green transition-colors"
           >
             <TiDocumentText className="text-v-green" size={30} />
-            {translate("hero.button")}
+            {translate("button")}
           </a>
         </div>
       </motion.div>

@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export default function ProjectsBanner() {
+  const translate = useTranslations("Projects")
+
   return (
     <div className="h-[15rem] lg:h-[20rem] mb-[6rem] flex relative rounded-2xl overflow-hidden wave-content z-[-1]">
       <div className="flex flex-col text-center lg:text-left">
@@ -8,14 +11,13 @@ export default function ProjectsBanner() {
              initial={{ opacity: 0, y: -20 }} 
              animate={{ opacity: 1, y: 0 }} 
              transition={{ duration: 0.7 }}>
-          Desenvolver e inovar!
+          {translate("bannerTitle")}
         </motion.h1>
         <motion.p className="text-v-white-900 text-lg lg:text-2xl font-semibold max-w-[800px]"
             initial={{ opacity: 0, y: -40 }} 
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 1.0 }}>
-          Ao longo dos últimos 4 anos, tenho contribuído ativamente para
-          diversos projetos com foco na web.
+           {translate("bannerSubtitle")}
         </motion.p>
       </div>
       <div className="w-full wave-container absolute bottom-0 z-[-2] ">

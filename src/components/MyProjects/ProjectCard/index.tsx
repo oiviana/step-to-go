@@ -25,7 +25,7 @@ export default function ProjectCard({
   hasFinished,
 }: ProjectCardProps) {
 
-  const translate = useTranslations("Home");
+  const translate = useTranslations("Projects");
 
   return (
     <div className="flex flex-col w-full max-w-[360px] shadow-md mx-auto lg:mx-0 cursor-pointer h-[430px] bg-v-dark-700 rounded-lg">
@@ -69,8 +69,8 @@ export default function ProjectCard({
             href={`${hasFinished ? `/projects/${slug}` : `/#projects`} `}
           >
             {hasFinished
-              ? translate("projects.button")
-              : translate("projects.buttonNotFinished")}
+              ? translate("button")
+              : translate("buttonNotFinished")}
           </Link>
         </button>
       </div>

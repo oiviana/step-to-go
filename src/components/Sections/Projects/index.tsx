@@ -1,6 +1,6 @@
 import LayoutSection from "@/components/LayoutSection";
 import MyProjects from "@/components/MyProjects";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { fetchProjects, ProjectProps } from "@/contentful/myProjects";
 
 import { motion, useInView } from 'framer-motion';
@@ -9,6 +9,7 @@ import StackSlider from "@/components/ui/StackSlider";
 import ProjectsBanner from "./ProjectsBanner";
 
 export default function Projects() {
+  const translate = useTranslations("Projects");
   const locale = useLocale();
   const [projects, setProjects] = useState<ProjectProps[]>();
   const ref = useRef(null);
@@ -27,7 +28,7 @@ export default function Projects() {
       <div className="flex flex-col">
         <ProjectsBanner />
         <h2 className="text-center lg:text-left text-base lg:text-xl">
-          Algumas tecnologias que eu já utilizei ou utilizo em meus projetos:
+          {translate("stackTitle")}
         </h2>
         <StackSlider />
         <motion.div
