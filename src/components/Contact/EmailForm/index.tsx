@@ -95,7 +95,7 @@ export default function EmailForm() {
       </fieldset>
       <button
         type="submit"
-        className="p-4 h-[50px] cursor-pointer flex items-center justify-center w-full max-w-[450px] mx-auto leading-3 lg:mx-0 rounded-md shadow-md font-semibold bg-v-green text-v-dark-test uppercase transition-colors"
+        className="p-4 h-[50px] cursor-pointer flex items-center justify-center w-full max-w-[450px] mx-auto leading-3 lg:mx-0 rounded-md shadow-md font-semibold bg-v-green hover:bg-[#b3eb7a] text-v-dark-test uppercase transition-colors"
       >
         {formLoading ? (
           <MoonLoader
