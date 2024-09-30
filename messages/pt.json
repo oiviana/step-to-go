@@ -66,31 +66,37 @@
                           "event":"Trabalhei na empresa dna360 como desenvolvedor web focado nas plataformas VTEX, Wake commerce e Deco.cx."
                           }
   ],
-    "Home":{
-        "hero":{
-          "title":"Olá, me chamo Lucas Viana!",
-            "description":"Sou desenvolvedor de software e entusiasta de tecnologia ha mais de 5 anos. Aqui compartilho dos projetos que desenvolvi e de ideas para ajudar outros desenvolvedores que estão iniciando suas jornadas.",
-            "technologies":"Tecnologias que utilizo:",
-            "button":"Currículo"
-        },
-        "projects" :{
-          "button": "Mais detalhes",
-          "buttonNotFinished": "Em breve: Mais detalhes"
-        },
-        "contact":{
-          "description":"Gostou do que viu por aqui? Entre em contato comigo por email e contrate meus serviços!",
-          "whatsapp":"Você também pode entrar em contato pessoalmente comigo, via WhatsApp!",
-          "contacts":"Redes de contato:",
-          "form":{
-            "nameLabel":"Nome:",
-            "emailLabel":"Email:",
-            "messageLabel":"Mensagem:",
-            "button":"Enviar",
-            "success":"Obrigado por entrar em contato, retorno assim que possível :)",
-            "error": "Houve um problema, tente novamente mais tarde :("
-          }
-        }
+  "Hero":{
+    "title":"Olá, me chamo Lucas Viana!",
+      "description":"Sou desenvolvedor de software e entusiasta de tecnologia ha mais de 5 anos. Aqui compartilho dos projetos que desenvolvi e de ideas para ajudar outros desenvolvedores que estão iniciando suas jornadas.",
+      "technologies":"Tecnologias que utilizo:",
+      "button":"Currículo"
+  },
+  "Projects" :{
+    "bannerTitle":"Desenvolver e inovar!",
+    "bannerSubtitle":"Ao longo dos últimos 4 anos, tenho contribuído ativamente para diversos projetos com foco na web.",
+    "stackTitle":"Algumas tecnologias que eu já utilizei ou utilizo em meus projetos:",
+    "projectTitle":"Confira alguns projetos que já desenvolvi: ",
+    "button": "Mais detalhes",
+    "buttonNotFinished": "Em breve: Mais detalhes"
+  },
+  "Contact":{
+    "title":"Entre em contato!",
+    "subtitle":"Estou disponível para novas oportunidades. Vamos conversar para trabalharmos juntos!",
+    "jobs":{
+      "first":"Desenvolvimento Web e Mobile",
+      "second":"Consultoria e manutenção de hardware",
+      "third":"Criação de layouts e interfaces"
     },
+    "form":{
+      "nameLabel":"Nome:",
+      "emailLabel":"Email:",
+      "messageLabel":"Mensagem:",
+      "button":"Enviar",
+      "success":"Obrigado por entrar em contato, retorno assim que possível :)",
+      "error": "Houve um problema, tente novamente mais tarde :("
+    }
+  },
     "Footer":{
       "links": ["Sobre", "Trajetória", "Projetos", "Contato"],
       "description":"Estou disponível para novas oportunidades. Entre em contato para trabalharmos juntos!",
