@@ -27,7 +27,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
     };
 
     fetchData();
-  }, [locale]);
+  }, [locale, params.slug]);
 
 
 
