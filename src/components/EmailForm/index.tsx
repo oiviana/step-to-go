@@ -12,7 +12,7 @@ export interface EmailFormProps {
 
 export default function EmailForm() {
   const { handleSubmit, register, reset } = useForm<EmailFormProps>();
-  const translate = useTranslations("Home");
+  const translate = useTranslations("Contact");
   const [formLoading, setFormLoading] = useState<boolean>(false);
 
   const handleSendEmail: SubmitHandler<EmailFormProps> = async (data) => {
@@ -29,12 +29,12 @@ export default function EmailForm() {
       if (!response.ok) {
         throw new Error("Erro ao enviar e-mail");
       }
-      toast.success(translate("contact.form.success"))
+      toast.success(translate("form.success"))
       const responseData = await response.json();
       console.info(responseData);
     } catch (error) {
       console.error("Erro ao enviar e-mail:", error);
-      toast.error(translate("contact.form.error"))
+      toast.error(translate("form.error"))
     }
     setFormLoading(false);
     reset();
@@ -50,7 +50,7 @@ export default function EmailForm() {
           Nome
         </label>
         <legend className="text-base md:text-lg font-bold  ml-4 px-3 tracking-wider !leading-[14px]">
-          {translate("contact.form.nameLabel")}
+          {translate("form.nameLabel")}
         </legend>
         <input
           type="text"
@@ -66,7 +66,7 @@ export default function EmailForm() {
           Email
         </label>
         <legend className="text-base md:text-lg font-bold  ml-4 px-3 tracking-wider !leading-[14px]">
-          {translate("contact.form.emailLabel")}
+          {translate("form.emailLabel")}
         </legend>
         <input
           type="email"
@@ -82,7 +82,7 @@ export default function EmailForm() {
           Mensagem
         </label>
         <legend className="text-base md:text-lg font-bold  ml-4 px-3 tracking-wider !leading-[14px]">
-          {translate("contact.form.messageLabel")}
+          {translate("form.messageLabel")}
         </legend>
         <textarea
           {...register("message", { required: true, maxLength: 20 })}
@@ -106,7 +106,7 @@ export default function EmailForm() {
 
           />
         ) : (
-          translate("contact.form.button")
+          translate("form.button")
         )}
       </button>
       <Toaster
