@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono, Montserrat } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./styles/globals.css";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, useMessages } from "next-intl";
@@ -7,8 +7,7 @@ import { NavigationProvider } from "../../utils/Providers";
 
 const mainFontFamily = JetBrains_Mono({
   subsets: ["latin"],
-  display: "swap",
-  preload: true,
+  display: "swap"
 });
 
 

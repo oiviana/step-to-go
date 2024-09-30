@@ -1,5 +1,4 @@
 import ProjectSlider from "@/components/ProjectDetails/ProjectSlider";
-import ThemeButton from "@/components/ThemeButton";
 import { fetchProjectsBySlug } from "@/contentful/myProjects";
 import { ProjectProps } from "@/contentful/myProjects";
 import { useLocale } from "next-intl";

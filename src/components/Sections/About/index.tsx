@@ -1,6 +1,6 @@
 import LayoutSection from "@/components/LayoutSection";
 import { useTranslations } from "next-intl";
-import { Montserrat, Roboto, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import { FaDotCircle } from "react-icons/fa";
 
 const secondaryFontFamily = Inter({
