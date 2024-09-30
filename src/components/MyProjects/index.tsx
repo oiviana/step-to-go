@@ -1,14 +1,13 @@
 "use client";
 
 import { useState, useEffect} from "react";
-import LayoutSection from "../LayoutSection";
-import TitleSection from "../TitleSection";
 import ProjectCard from "./ProjectCard";
 import { MdArrowForwardIos } from "react-icons/md";
 import { MdArrowBackIosNew } from "react-icons/md";
 import { ProjectProps } from "@/contentful/myProjects";
 import { useTranslations } from "next-intl";
 import SkeletonGrid from "./SkeletonGrid";
+import React from "react";
 
 interface ComponentProjectProps {
   myProjects: ProjectProps[];

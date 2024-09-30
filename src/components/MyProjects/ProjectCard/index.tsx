@@ -24,7 +24,7 @@ export default function ProjectCard({
   thumbnail,
   hasFinished,
 }: ProjectCardProps) {
-  const stackList = stack.join(" - ");
+
   const translate = useTranslations("Home");
 
   return (
@@ -51,8 +51,8 @@ export default function ProjectCard({
           {subtitle}
         </p>
         <div className="flex gap-2 flex-wrap">
-          {stack.map((item) => (
-            <span className="text-xs text-v-green font-semibold border-[1px] border-v-green rounded-md p-1">
+          {stack.map((item, index) => (
+            <span className="text-xs text-v-green font-semibold border-[1px] border-v-green rounded-md p-1" key={index}>
               {item}
             </span>
           ))}

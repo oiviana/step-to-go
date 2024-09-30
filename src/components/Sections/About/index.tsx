@@ -14,7 +14,7 @@ export default function About() {
   const timeline = translate.raw("timeline");
 
   const timelineList = timeline.map((item: any, index: number) => (
-    <li className=" flex flex-col lg:flex-row mb-[3.5rem] lg:mb-[10rem]">
+    <li className=" flex flex-col lg:flex-row mb-[3.5rem] lg:mb-[10rem]" key={index}>
       <div className="flex lg:relative mb-6 lg:mb-0">
         <FaDotCircle
           size={15}

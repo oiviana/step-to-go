@@ -2,8 +2,8 @@ import Image from "next/image";
 import { sliderMock } from "./mock";
 
 export default function StackSlider() {
-  const sliderItems = sliderMock.map((item) => (
-    <li className="w-[150px] lg:w-[200px] h-[105px] flex flex-col items-center flex-shrink-0 gap-3  font-bold lg:text-xl text-v-purple ">
+  const sliderItems = sliderMock.map((item, index) => (
+    <li className="w-[150px] lg:w-[200px] h-[105px] flex flex-col items-center flex-shrink-0 gap-3  font-bold lg:text-xl text-v-purple" key={index}>
       <Image src={item.techImg} alt={item.techName} width={65} height={65} />
       <span>{item.techName}</span>
     </li>
