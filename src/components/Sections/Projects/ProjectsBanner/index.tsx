@@ -1,14 +1,22 @@
+import { motion } from "framer-motion";
+
 export default function ProjectsBanner() {
   return (
     <div className="h-[15rem] lg:h-[20rem] mb-[6rem] flex relative rounded-2xl overflow-hidden wave-content z-[-1]">
       <div className="flex flex-col text-center lg:text-left">
-        <h1 className="text-2xl lg:text-4xl text-v-green font-bold mb-8">
+        <motion.h1 className="text-2xl lg:text-4xl text-v-green font-bold mb-8"
+             initial={{ opacity: 0, y: -20 }} 
+             animate={{ opacity: 1, y: 0 }} 
+             transition={{ duration: 0.7 }}>
           Desenvolver e inovar!
-        </h1>
-        <p className="text-v-white-900 text-lg lg:text-2xl font-semibold max-w-[800px]">
+        </motion.h1>
+        <motion.p className="text-v-white-900 text-lg lg:text-2xl font-semibold max-w-[800px]"
+            initial={{ opacity: 0, y: -40 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 1.0 }}>
           Ao longo dos últimos 4 anos, tenho contribuído ativamente para
           diversos projetos com foco na web.
-        </p>
+        </motion.p>
       </div>
       <div className="w-full wave-container absolute bottom-0 z-[-2] ">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

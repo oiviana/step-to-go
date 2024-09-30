@@ -3,14 +3,16 @@ import MyProjects from "@/components/MyProjects";
 import { useLocale } from "next-intl";
 import { fetchProjects, ProjectProps } from "@/contentful/myProjects";
 
-import { useState, useEffect } from "react";
+import { motion, useInView } from 'framer-motion';
+import { useEffect, useState, useRef } from 'react';
 import StackSlider from "@/components/ui/StackSlider";
 import ProjectsBanner from "./ProjectsBanner";
 
 export default function Projects() {
   const locale = useLocale();
   const [projects, setProjects] = useState<ProjectProps[]>();
-
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
   useEffect(() => {
     const fetchData = async () => {
       const getProjects = await fetchProjects({ locale: locale });
@@ -28,13 +30,20 @@ export default function Projects() {
           Algumas tecnologias que eu já utilizei ou utilizo em meus projetos:
         </h2>
         <StackSlider />
-        <div>
-          {projects ? (
-            <MyProjects myProjects={projects} />
-          ) : (
-            <p>Carregando projetos...</p>
-          )}
-        </div>
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, translateY: 30 }}
+          animate={isInView ? { opacity: 1, translateY: 0 } : { opacity: 0, translateY: 80 }}
+          transition={{ duration: 1.3 }}
+        >
+          <div>
+            {projects ? (
+              <MyProjects myProjects={projects} />
+            ) : (
+              <p>Carregando projetos...</p>
+            )}
+          </div>
+        </motion.div>
       </div>
     </LayoutSection>
   );

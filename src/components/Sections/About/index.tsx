@@ -1,4 +1,5 @@
 import LayoutSection from "@/components/LayoutSection";
+import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Inter } from "next/font/google";
 import { FaDotCircle } from "react-icons/fa";
@@ -14,7 +15,13 @@ export default function About() {
   const timeline = translate.raw("timeline");
 
   const timelineList = timeline.map((item: any, index: number) => (
-    <li className=" flex flex-col lg:flex-row mb-[3.5rem] lg:mb-[10rem]" key={index}>
+    <motion.li 
+    className=" flex flex-col lg:flex-row mb-[3.5rem] lg:mb-[10rem] z-[-1]" 
+    key={index}
+    initial={{ opacity: 0, x: -50 }} // Começa fora da tela à esquerda
+    animate={{ opacity: 1, x: 0 }} // Termina na posição original
+    transition={{ duration: 0.5, delay: index * 0.1 }}
+    >
       <div className="flex lg:relative mb-6 lg:mb-0">
         <FaDotCircle
           size={15}
@@ -34,7 +41,7 @@ export default function About() {
         {item.event}
       </div>
       <div className="bg-v-dark-500 h-[2px] w-[100%] mx-auto mt-8 lg:hidden"></div>
-    </li>
+      </motion.li>
   ));
 
   return (
