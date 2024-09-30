@@ -5,6 +5,8 @@ import { useTranslations } from "next-intl";
 import TranslateButton from "../../ui/TranslateButton";
 import DesktopItems from "./DesktopItems";
 import { useNavigationPage } from "@/utils/Providers";
+import GithubButton from "@/components/ui/GithubButton";
+import LinkedinButton from "@/components/ui/LinkedinButton";
 
 type NavbarProps = {
   showMobileMenu: boolean
@@ -46,7 +48,9 @@ export default function Navbar({showMobileMenu, setShowMenu}:NavbarProps) {
           >
             {translate(`navbar.2`)}
           </li>
-          <div className="flex gap-2">
+          <div className="flex gap-8">
+            <LinkedinButton/>
+            <GithubButton/>
             <TranslateButton />
           </div>
         </div>
