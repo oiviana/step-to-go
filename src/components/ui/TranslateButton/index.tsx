@@ -33,7 +33,7 @@ export default function TranslateButton() {
           size={25}
         />
       </button>
-      <div className={`${showDropdown ? 'flex' : 'hidden'} flex flex-col p-2 absolute right-0 top-[2.9rem] shadow-md rounded bg-v-white-500 dark:bg-v-dark-500 md:dark:bg-v-dark-700 w-32 text-v-dark-bold dark:text-v-white-300 font-semibold`} ref={dropdownRef}>
+      <div className={`${showDropdown ? 'flex' : 'hidden'} flex flex-col p-2 absolute right-0 top-[2.9rem] shadow-md rounded bg-v-dark-700 w-32 text-v-white-300 font-semibold`} ref={dropdownRef}>
         <BiSolidUpArrow
         className="absolute right-0 bottom-[5.1rem] text-v-dark-700"
         size={25}
