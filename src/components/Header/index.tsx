@@ -15,7 +15,7 @@ export default function Header() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const {setPage} = useNavigationPage()
   return (
-    <header className="w-100 flex flex-col px-4 lg:px-0 w-full max-w-[1170px] mx-auto fixed lg:sticky py-4 lg:py-0 bg-v-dark-test lg:h-[74px]">
+    <header className="w-100 flex flex-col px-4 lg:px-0 w-full max-w-[1170px] mx-auto fixed z-50 lg:sticky py-4 lg:py-0 bg-v-dark-test lg:h-[74px]">
       <div className="flex items-center h-full">
         <div className="w-full justify-between items-center h-full hidden lg:flex ">
           <div className="flex w-full justify-between items-center">
@@ -40,7 +40,7 @@ export default function Header() {
           <TranslateButton />
         </div>
       </div>
-      <div className="w-full justify-between items-center h-full flex lg:hidden">
+      <div className="w-full justify-between items-center h-full flex lg:hidden ">
         <div className="flex w-full justify-between items-center">
           <Link
             href="#"
