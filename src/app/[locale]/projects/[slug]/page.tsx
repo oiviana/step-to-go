@@ -39,7 +39,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   }
 
   return (
-    <div className="max-w-[1170px] mx-auto px-2 flex flex-col gap-4">
+    <div className="max-w-[1210px] mx-auto px-2 flex flex-col gap-4">
       <header className="flex py-3 shadow-xl mt-3 px-2 dark:text-v-white-300">
         <Link
           href="/"
@@ -52,18 +52,23 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           {translate("title")}
         </h2>
       </header>
+      <div className="lg:flex lg:gap-2">
       <section className="mb-5 ">
         <div className="h-[400px] lg:h-[800px] w-full">
-          <ProjectSlider images={project.images} />
+          <ProjectSlider images={project.images} mobileImages={project.mobileImages} />
         </div>
       </section>
-      <section>
-        <div className="flex flex-col shadow-lg py-6 md:p-6 gap-4 bg-v-white-900 min-h-[450px] w-full rounded-t-md bg-gradient-to-b dark:from-v-dark-700 from-10% dark:via-v-dark-900 via-40% dark:to-v-dark-bold to-80% px-2 dark:text-v-white-300">
+      <section className="lg:max-w-[410px]">
+        <div className="flex flex-col shadow-lg py-6 md:p-6 gap-4 w-full  px-2 text-v-white-300">
           <div className="flex justify-center md:justify-between flex-col md:flex-row">
-            <h1 className="text-xl md:text-3xl font-bold text-center lg:text-left">
+            <h1 className="text-xl md:text-2xl font-bold text-center lg:text-left">
               {project.title}
             </h1>
-            <div className="flex gap-4 justify-center mt-4 md:mt-0">
+          </div>
+          <span className="text-slate-600 dark:text-slate-500">
+            {translate("tech")} {stackList}
+          </span>
+          <div className="flex gap-4 justify-center mt-4 md:mt-0">
               <button className="flex bg-v-dark-bold dark:bg-v-white-500 dark:text-v-dark-bold text-v-white-300 text-lg font-semibold py-2 px-3 gap-3 items-center rounded">
                 <FaCode size={18} />
                 <a href={project.codeUrl} target="_blank">{translate("codebutton")}</a>
@@ -75,17 +80,13 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 </button>
               )}
             </div>
-          </div>
-          <span className="text-slate-600 dark:text-slate-500">
-            {translate("tech")} {stackList}
-          </span>
-
           <article className="mt-8 !leading-[40px] text-sm md:text-md !font-normal">
             <b>{translate("description")} </b>
             {project.description}
           </article>
         </div>
       </section>
+      </div>
     </div>
   );
 }
