@@ -13,6 +13,7 @@ import type {
     slug: EntryFieldTypes.Symbol;
     thumbnail?: EntryFieldTypes.AssetLink;
     images?: EntryFieldTypes.AssetLink[];
+    mobileImages?: EntryFieldTypes.AssetLink[];
     hasDeploy: EntryFieldTypes.Boolean;
     hasFinished: EntryFieldTypes.Boolean;
     technologies: EntryFieldTypes.Symbol[];
