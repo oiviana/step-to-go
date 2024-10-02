@@ -119,10 +119,43 @@
   }
 }
 
-.contact-services li{
+.contact-services li {
   transition: transform 0.3s ease-in-out;
 }
 
 .contact-services li:hover {
   transform: translateY(-8px);
+}
+
+.image-gallery-slide img.image-gallery-image {
+  object-fit: none;
+  height: 50vh !important;
+}
+
+:fullscreen .image-gallery-slide img.image-gallery-image {
+  height: auto !important;
+}
+
+@media only screen and (min-width: 1024px) {
+  .image-gallery-slide img.image-gallery-image {
+    width: 780px;
+    height: 430px;
+    object-fit: contain;
+  }
+
+  :fullscreen .image-gallery-slide img.image-gallery-image {
+    height: 100vh !important;
+    width: 100vw !important;
+  }
+}
+
+.image-gallery-content .image-gallery-svg{
+  stroke: #9ee655;
+}
+.image-gallery-content .image-gallery-thumbnail.active{
+  border-color: #9ee655;
+}
+
+.image-gallery-slide, .image-gallery-thumbnails{
+  background-color: #1D1A26;
 }
