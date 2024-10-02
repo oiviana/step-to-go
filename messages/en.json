@@ -103,7 +103,7 @@
   },
   "ProjectDetails":{
     "return": "Back",
-    "title": "Project Details",
+    "title": "About the project",
     "tech": "Technologies:",
     "description": "Description:",
     "codebutton": "Code"
