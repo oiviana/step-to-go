@@ -72,10 +72,12 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             {project.description}
           </article>
           <div className="flex gap-4 justify-center mt-4 md:mt-0 lg:justify-start">
+          {project?.showRepo && (
               <button className="flex w-32 justify-center bg-v-green hover:bg-[#b3eb7a] transition-colors text-v-dark-test text-base font-semibold py-2 px-3 gap-3 items-center rounded">
                 <FaCode size={18} />
                 <a href={project.codeUrl} target="_blank">{translate("codebutton")}</a>
               </button>
+          )}
               {project?.hasDeploy && (
                 <button className="flex w-32 justify-center bg-v-green hover:bg-[#b3eb7a] transition-colors text-v-dark-test text-base font-semibold py-2 px-3 gap-3 items-center rounded ">
                   <VscPreview size={18} />
