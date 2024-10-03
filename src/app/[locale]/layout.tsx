@@ -3,12 +3,14 @@ import { JetBrains_Mono } from "next/font/google";
 import "./styles/globals.css";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, useMessages } from "next-intl";
+import { NavigationProvider } from "../../utils/Providers";
 
 const mainFontFamily = JetBrains_Mono({
   subsets: ["latin"],
-  display: "swap",
-  preload: true,
+  display: "swap"
 });
+
+
 
 export const metadata: Metadata = {
   title: "Step to Go",
@@ -19,7 +21,6 @@ export const metadata: Metadata = {
 };
 
 const locales = ["en", "pt"];
-
 
 export default function RootLayout({
   children,
@@ -34,11 +35,11 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <NextIntlClientProvider locale={locale} messages={messages}>
-        <body
-          className={`${mainFontFamily.className} bg-v-white-500 dark:bg-v-dark-500`}
-        >
-          {children}
-        </body>
+        <NavigationProvider>
+          <body className={`${mainFontFamily.className} bg-v-dark-test`}>
+            {children}
+          </body>
+        </NavigationProvider>
       </NextIntlClientProvider>
     </html>
   );

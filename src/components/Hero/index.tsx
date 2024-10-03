@@ -1,46 +1,43 @@
 import LayoutSection from "../LayoutSection";
 import TitleSection from "../TitleSection";
-import TechnologySlider from "./TechnologySlider";
 import Image from "next/image";
-import {useTranslations} from "next-intl"
+import { useTranslations } from "next-intl";
+import { TiDocumentText } from "react-icons/ti";
+import { motion } from 'framer-motion';
 
 export default function Hero() {
-  const translate = useTranslations("Home")
+  const translate = useTranslations("Hero");
   return (
     <LayoutSection>
-      <div className="relative">
-        <TitleSection title={translate("sectiontitles.0.title")} id="about"/>
-        <div className="flex flex-col-reverse lg:flex-row lg:justify-between">
-          <div className=" max-w-[40rem] mt-[2rem] lg:mt-0 sm:mx-auto lg:mx-0">
-            <p className="leading-9 text-center lg:text-left py-5 lg:py-0">
-         {translate("hero.description")}
-            </p>
-            <h3 className="text-xl py-6 text-center lg:text-left">{translate("hero.technologies")}</h3>
-            <TechnologySlider />
-          </div>
-          <div>
-            <div className="lg:absolute top-7 right-0 flex justify-center lg:mx-0">
-              <Image
-                src="/hero.png"
-                width={400}
-                height={400}
-                alt="Lucas Viana"
-                className="rounded-full"
-                priority={true}
-              />
-            </div>
-            <div className="bottom-[15rem] mt-2 lg:flex items-end lg:h-[378px] min-w-[300px] flex justify-center lg:justify-normal">
-              <a
-                href={process.env.CV_BUTTON_URL}
-                target="_blank"
-                className="w-[214px] p-5 h-[60px] flex  justify-center items-center rounded-md lg:absolute shadow-md font-semibold bg-v-dark-900 dark:bg-v-white-500 text-v-white-300 dark:text-v-dark-bold hover:bg-v-dark-500 hover:dark:bg-v-white-900 transition-colors"
-              >
-                {translate("hero.button")}
-              </a>
-            </div>
-          </div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <div className="flex flex-col items-center justify-center lg:mx-0 w-full">
+          <Image
+            src="/hero-img-1.png"
+            width={250}
+            height={250}
+            alt="Lucas Viana"
+            className="rounded-full border-4 border-v-dark-500"
+            priority={true}
+          />
+          <TitleSection id="test" title={translate("title")} />
+          <p className="leading-9 text-center py-4 max-w-[650px]">
+            {translate("description")}
+          </p>
+          <a
+            href={process.env.CV_BUTTON_URL ?? 'https://drive.google.com/file/d/1jkeQaAF704JYjthMARTiJPVwI9qobfXR/view?usp=drive_link'}
+            target="_blank"
+            className="green-light w-[214px] p-3 h-[60px] flex justify-center gap-2 items-center mt-3 rounded-md  shadow-md font-semibold bg-transparent text-v-green border-2 border-v-green transition-colors"
+          >
+            <TiDocumentText className="text-v-green" size={30} />
+            {translate("button")}
+          </a>
         </div>
-      </div>
+      </motion.div>
     </LayoutSection>
   );
 }
