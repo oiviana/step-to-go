@@ -15,6 +15,7 @@ import type {
     images?: EntryFieldTypes.AssetLink[];
     mobileImages?: EntryFieldTypes.AssetLink[];
     hasDeploy: EntryFieldTypes.Boolean;
+    showRepo: EntryFieldTypes.Boolean;
     hasFinished: EntryFieldTypes.Boolean;
     showRepo: EntryFieldTypes.Boolean;
     technologies: EntryFieldTypes.Symbol[];
