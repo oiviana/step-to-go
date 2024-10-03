@@ -1,99 +1,98 @@
 {
   "Header": {
-    "navbar": ["About", "Trajectory", "Projects", "Contact"]
+    "navbar": ["Career", "Projects", "Contact-me"]
   },
-  "Home": {
-    "sectiontitles": [
-      {"title":"Nice to meet you, my name is Lucas Viana!"},
-      {"title":"My trajectory"},
-      {"title":"My projects"},
-      {"title":"Get in touch"}
-    ],
-
-    "homeslider": [
-      "Intelligence is the ability to adapt to change",
-      "Science is a differential equation",
-      "Get to know my projects and my skills!"
-    ],
-    "hero": {
-      "description": "I love technology, with over 5 years of experience in development. I created this website to show what I can do and to start a shared learning project in the programming area!",
-      "technologies": "Technologies that i use:",
-      "button": "See my resume"
+  "timeline": [
+    {
+      "month":"february",
+      "year":"2016",
+      "title":"Start of the journey",
+      "event":"It all started in my IT technical course at ETEC in Atibaia, where I was able to learn programming logic, OOP, hardware maintenance and website and application development."
+      },
+      {
+        "month":"november",
+        "year":"2018",
+        "title":"First stage completed",
+        "event":"I completed my first training, as a computer technician! For this, I developed a full-stack web project with PHP and MySQL."
+        },
+        {
+          "month":"july",
+          "year":"2019",
+          "title":"Start of college",
+          "event":"I started my degree at FATEC in Bragança Paulista. Over these three years, I was able to deepen my knowledge about programming, design patterns, hardware and IT governance."
+          },
+          {
+            "month":"july",
+            "year":"2021",
+            "title":"First opportunity",
+            "event":"I started working in the technology area, at the time as a software quality analyst, it was 6 months of a lot of learning."
+            },
+            {
+              "month":"february",
+              "year":"2022",
+              "title":"Started as a developer",
+              "event":"I started my journey as a developer. I worked at Quality Digital developing web applications with a focus on e-commerce, using VTEX and ReactJS as a base, applying design patterns and agile methodologies rites."
+              },
+              {
+                "month":"july",
+                "year":"2022",
+                "title":"Systems Analyst",
+                "event":"As an undergraduate project, I developed an application in React Native and NodeJS to manage internship vacancies and graduated as a Systems Analyst!"
+                },
+                {
+                  "month":"february",
+                  "year":"2023",
+                  "title":"Jamstack and NextJS",
+                  "event":"I started working on Jamstack projects in VTEX's Headless architecture such as Plurix, Vivara stores and Tata supermarkets."
+                  },
+                  {
+                    "month":"january",
+                    "year":"2024",
+                    "title":"Getting to know Deco.cx",
+                    "event":"Working as a freelancer for the company Adaptio, I had my first contact with the Deco platform, developing a customized product page for the 'Aviator' store."
+                    },
+                    {
+                      "month":"may",
+                      "year":"2024",
+                      "title":"English course",
+                      "event":"I finished my first English course focused on conversation."
+                      },
+                      {
+                        "month":"june",
+                        "year":"2024",
+                        "title":"Web full-stack",
+                        "event":"I worked at the company dna360 as a web developer focused on the VTEX, Wake commerce and Deco.cx platforms."
+                        }
+  ],
+  "Hero": {
+    "title":"Nice to meet you, my name is Lucas Viana!",
+    "description": "I have been a software developer and technology enthusiast for over 5 years. Here I share the projects I developed and ideas to help other developers who are starting their journeys",
+    "technologies": "Technologies that i use:",
+    "button": "See my resume"
+  },
+  "Projects" :{
+    "bannerTitle":"Develop and innovate!",
+    "bannerSubtitle":"Over the past 4 years, I have actively contributed to several web-focused projects.",
+    "stackTitle":"Some technologies that I have already used or use in my projects:",
+    "projectTitle":"Check out some projects I have already developed:",
+    "button": "More details",
+    "buttonNotFinished": "Coming soon: More details"
+  },
+  "Contact":{
+    "title":"Get in touch!",
+    "subtitle":"I'm available for new opportunities. Let's talk to work together!",
+    "jobs":{
+      "first":"Web and Mobile Development",
+      "second":"Hardware consulting and maintenance",
+      "third":"Creating layouts and interfaces"
     },
-    "timeline": [
-      {
-        "date": "Feb 2016",
-        "event": "I started my technical course and had my first contact with programming."
-      },
-      {
-        "date": "Apr 2016",
-        "event": "I started my studies in HTML, CSS and programming logic by developing pseudocodes and flowcharts."
-      },
-      {
-        "date": "Mar 2017",
-        "event": "I had my first contact with the Java language. I started object oriented with Java and created my first web projects with PHP."
-      },
-      {
-        "date": "Sep 2017",
-        "event": "I created my first relational databases in MySQL. I presented my first web project with HTML, PHP and MySQL."
-      },
-      {
-        "date": "Apr 2018",
-        "event": "I created my first projects with C# and deepened my studies in Javascript."
-      },
-      {
-        "date": "Nov 2018",
-        "event": "I presented my undergraduate project. A web application for event management. I graduated as a computer technician."
-      },
-      {
-        "date": "Aug 2019",
-        "event": "I started my degree in Systems Analysis and Development. I revisited the content I had already studied and also learned advanced programming content."
-      },
-      {
-        "date": "Jul 2021",
-        "event": "I got my first job in the area, at the time as a QA. After that, I moved to another area within the company, becoming a development intern."
-      },
-      {
-        "date": "May 2022",
-        "event": "I worked on projects such as C&A, Chatuba and Obramax, building applications based on ReactJS and VTEX IO."
-      },
-      {
-        "date": "Jun 2022",
-        "event": "I developed my undergraduated project in college, an internship application, built with React Native, NodeJS and MySQL"
-      },
-      {
-        "date": "Jul 2022",
-        "event": "After the successful presentation of my project, I graduated as a Systems Analyst and Developer!"
-      },
-      {
-        "date": "Feb 2023",
-        "event": "I had my first contact with the Jamstack and Headless CMS architecture working on the Plurix project and also Vivara."
-      },
-      {
-        "date": "Jan 2024",
-        "event": "At Adaptio, I learned the Deno Fresh framework and developed a product page for the 'Aviator' shirt store."
-      },
-      {
-        "date": "Currently",
-        "event": "Studying hard and looking for new opportunities in the market!!!"
-      }
-    ],
-    "projects" :{
-      "button": "More details",
-      "buttonNotFinished": "Coming soon: More details"
-    },
-    "contact":{
-      "description":"Did you like what you saw here? Contact me by email and hire my services!",
-      "whatsapp":"You can also contact me personally, via WhatsApp!",
-      "contacts":"Contact networks:",
-      "form":{
-        "nameLabel":"Name:",
-        "emailLabel":"Email:",
-        "messageLabel":"Message:",
-        "button":"Send",
-        "success":"Thanks for getting in touch, I'll get back to you as soon as possible :)",
-        "error": "There was a problem, please try again later :("
-      }
+    "form":{
+      "nameLabel":"Name:",
+      "emailLabel":"Email:",
+      "messageLabel":"Message:",
+      "button":"Send",
+      "success":"Thanks for getting in touch, I'll get back to you as soon as possible :)",
+      "error": "There was a problem, please try again later :("
     }
   },
   "Footer":{
@@ -104,7 +103,7 @@
   },
   "ProjectDetails":{
     "return": "Back",
-    "title": "Project Details",
+    "title": "About the project",
     "tech": "Technologies:",
     "description": "Description:",
     "codebutton": "Code"

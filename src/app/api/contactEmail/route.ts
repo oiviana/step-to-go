@@ -1,5 +1,5 @@
 import { NextResponse, NextRequest } from "next/server";
-import { EmailFormProps } from "@/components/Contact/EmailForm";
+import { EmailFormProps } from "@/components/EmailForm";
 import { mailOptions, transporter } from "@/services/nodemailer";
 
 export async function POST(req: NextRequest) {

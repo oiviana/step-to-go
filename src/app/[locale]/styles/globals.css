@@ -2,8 +2,163 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
-  scroll-behavior: smooth;
+@import "~react-image-gallery/styles/css/image-gallery.css";
+/* scroll for the layout main sections */
+
+.section-scroll::-webkit-scrollbar {
+  width: 6px;
 }
 
 
+.section-scroll::-webkit-scrollbar-thumb {
+  background-color: #141217;
+  border-radius: 10px;
+  transition: background-color 2s ease-in-out;
+}
+
+.section-scroll.scrolling::-webkit-scrollbar-thumb {
+  background-color: #3d3a4a;
+}
+
+/* light effect in hero button */
+
+.green-light {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+
+.green-light:hover {
+  box-shadow: 0 0 5px rgba(158, 230, 85, 0.7), 0 0 10px rgba(158, 230, 85, 0.7), 0 0 10px rgba(158, 230, 85, 0.7);
+}
+
+
+/* stack slider animation */
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.stack-slider {
+  animation: 25s slide infinite linear;
+}
+
+.stack-slider:hover {
+  animation-play-state: paused;
+}
+
+.stack-slider-container:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130px;
+  height: 100%;
+  background: linear-gradient(to left, transparent, #141217);
+  content: "";
+  z-index: 10;
+}
+
+.stack-slider-container:before,
+.stack-slider-container:after {
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  content: "";
+  z-index: 10;
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .stack-slider-container:before,
+  .stack-slider-container:after {
+    width: 140px;
+  }
+}
+
+.stack-slider-container:before {
+  left: 0;
+  background: linear-gradient(to left, transparent, #141217);
+
+}
+
+.stack-slider-container:after {
+  right: 0;
+  background: linear-gradient(to right, transparent, #141217);
+
+}
+
+.wave-container svg path {
+  animation: waveOscillation 8s ease-in-out infinite;
+}
+
+@keyframes waveOscillation {
+  0% {
+    d: path("M0,224L40,208C80,192,160,160,240,160C320,160,400,192,480,224C560,256,640,288,720,277.3C800,267,880,213,960,165.3C1040,117,1120,75,1200,74.7C1280,75,1360,117,1400,138.7L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z");
+  }
+
+  25% {
+    d: path("M0,210L40,190C80,170,160,140,240,145C320,150,400,185,480,215C560,245,640,265,720,255C800,245,880,195,960,150C1040,105,1120,65,1200,70C1280,75,1360,110,1400,130L1440,140L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z");
+  }
+
+  50% {
+    d: path("M0,240L40,220C80,200,160,170,240,175C320,180,400,215,480,245C560,275,640,295,720,285C800,275,880,225,960,180C1040,135,1120,95,1200,100C1280,105,1360,140,1400,160L1440,170L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z");
+  }
+
+  75% {
+    d: path("M0,220L40,200C80,180,160,150,240,160C320,170,400,210,480,240C560,270,640,290,720,280C800,270,880,220,960,175C1040,130,1120,90,1200,95C1280,100,1360,130,1400,150L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z");
+  }
+
+  100% {
+    d: path("M0,224L40,208C80,192,160,160,240,160C320,160,400,192,480,224C560,256,640,288,720,277.3C800,267,880,213,960,165.3C1040,117,1120,75,1200,74.7C1280,75,1360,117,1400,138.7L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z");
+  }
+}
+
+.contact-services li {
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact-services li:hover {
+  transform: translateY(-8px);
+}
+
+.image-gallery-slide img.image-gallery-image {
+  object-fit: none;
+  height: 50vh !important;
+}
+
+:fullscreen .image-gallery-slide img.image-gallery-image {
+  height: auto !important;
+}
+
+@media only screen and (min-width: 1024px) {
+  .image-gallery-slide img.image-gallery-image {
+    width: 780px;
+    height: 430px;
+    object-fit: contain;
+  }
+
+  :fullscreen .image-gallery-slide img.image-gallery-image {
+    height: 100vh !important;
+    width: 100vw !important;
+  }
+}
+
+.image-gallery-content .image-gallery-svg{
+  stroke: #9ee655;
+}
+.image-gallery-content .image-gallery-thumbnail.active{
+  border-color: #9ee655;
+}
+
+.image-gallery-thumbnail:hover {
+  border: 4px solid #464158;
+}
+.image-gallery-slide, .image-gallery-thumbnails{
+  background-color: #1D1A26;
+}
