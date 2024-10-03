@@ -17,7 +17,6 @@ import type {
     hasDeploy: EntryFieldTypes.Boolean;
     showRepo: EntryFieldTypes.Boolean;
     hasFinished: EntryFieldTypes.Boolean;
-    showRepo: EntryFieldTypes.Boolean;
     technologies: EntryFieldTypes.Symbol[];
     codeUrl: EntryFieldTypes.Symbol;
     deployUrl: EntryFieldTypes.Symbol;
