@@ -128,7 +128,7 @@
 }
 
 .image-gallery-slide img.image-gallery-image {
-  object-fit: none;
+  object-fit: cover;
   height: 50vh !important;
 }
 
