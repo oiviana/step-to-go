@@ -45,9 +45,14 @@
 }
 
 .stack-slider {
-  animation: 25s slide infinite linear;
+  animation: 15s slide infinite linear;
 }
 
+@media only screen and (min-width: 1024px) {
+  .stack-slider {
+    animation: 35s slide infinite linear;
+  }
+}
 .stack-slider:hover {
   animation-play-state: paused;
 }

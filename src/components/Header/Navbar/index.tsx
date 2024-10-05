@@ -21,7 +21,7 @@ export default function Navbar({showMobileMenu, setShowMenu}:NavbarProps) {
       <ul
         className={`${
           showMobileMenu ? "fixed z-50" : "hidden"
-        } lg:hidden inset-y-0 left-0 top-16 w-full overflow-y-auto bg-v-dark-test flex flex-col gap-7 text-v-white-500 text-base px-3 pt-9`}
+        } lg:hidden inset-y-0 left-0 top-16 w-full overflow-y-auto bg-v-dark-test flex flex-col gap-7 text-v-white-500 text-base px-3 pt-16`}
       >
         <div className="flex flex-col gap-10 ml-3">
           <li
@@ -48,7 +48,7 @@ export default function Navbar({showMobileMenu, setShowMenu}:NavbarProps) {
           >
             {translate(`navbar.2`)}
           </li>
-          <div className="flex gap-8">
+          <div className="flex gap-8 mt-4">
             <LinkedinButton/>
             <GithubButton/>
             <TranslateButton />
