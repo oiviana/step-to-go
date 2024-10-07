@@ -1,6 +1,3 @@
-// import Link from "next/link";
-// import Logo from "../Logo";
-// import NextLogo from "../Logo/NextLogo";
 import { useTranslations } from "next-intl";
 
 export default function Footer() {
