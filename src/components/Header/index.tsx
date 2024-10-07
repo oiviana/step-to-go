@@ -44,7 +44,7 @@ export default function Header() {
         <div className="flex w-full justify-between items-center">
           <Link
             href="#"
-            className=" w-full md:max-w-44 flex gap-4"
+            className=" w-full max-w-48 flex gap-4"
             aria-label="Logo do site"
             onClick={()=>{{
               setPage('hero')

@@ -102,7 +102,7 @@ export default function EmailForm() {
             size={20}
             aria-label="Loading Spinner"
             data-testid="loader"
-            className="[&>*:nth-child(1)]:!bg-white [&>*:nth-child(2)]:!border-v-white-500 [&>*:nth-child(1)]:dark:!bg-black [&>*:nth-child(2)]:dark:!border-v-dark-700"
+            className=" [&>*:nth-child(1)]:dark:!bg-black [&>*:nth-child(2)]:dark:!border-v-dark-700"
 
           />
         ) : (
