@@ -29,7 +29,7 @@ export default function Hero() {
             {translate("description")}
           </p>
           <a
-            href={process.env.CV_BUTTON_URL ?? 'https://drive.google.com/file/d/11rGXp37xvs19eD2DwpygRKc6yu0_36Ta/view?usp=sharing'}
+            href={process.env.CV_BUTTON_URL ?? 'https://docs.google.com/document/d/122rk55BjaJI3KCUU1QmGmzLW4C22tRtHRUKzey0UB0c/edit?usp=sharing'}
             target="_blank"
             className="green-light w-[214px] p-3 h-[60px] flex justify-center gap-2 items-center mt-3 rounded-md  shadow-md font-semibold bg-transparent text-v-green border-2 border-v-green transition-colors"
           >
