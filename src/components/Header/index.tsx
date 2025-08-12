@@ -52,7 +52,7 @@ export default function Header() {
             }}}
           >
             <Logo width={80} height={42}/>
-            <TextLogo width={112} height={17}/>
+             <span className="min-w-[120px] flex items-center text-v-purple italic font-semibold text-xl">Oi Viana</span>
           </Link>
         </div>
         <button
