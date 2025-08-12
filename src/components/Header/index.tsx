@@ -26,7 +26,7 @@ export default function Header() {
               onClick={()=>{setPage('hero')}}
             >
               <Logo width={95} height={45}/>
-              <TextLogo width={150} height={30}/>
+             <span className="min-w-[120px] flex items-center text-v-purple italic font-semibold text-2xl">Oi Viana</span>
             </Link>
           </div>
         </div>
