@@ -167,3 +167,12 @@
 .image-gallery-slide, .image-gallery-thumbnails{
   background-color: #1D1A26;
 }
+
+
+.logo-text-gradient {
+  background: linear-gradient(to bottom,  #8b7bea, #2c189a); 
+  -webkit-background-clip: text; /* necessário no Chrome, Safari */
+  -webkit-text-fill-color: transparent; /* deixa o texto "transparente" pra mostrar o gradiente */
+  background-clip: text; /* para navegadores que já suportam */
+
+}

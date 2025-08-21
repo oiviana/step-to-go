@@ -26,7 +26,7 @@ export default function Header() {
               onClick={()=>{setPage('hero')}}
             >
               <Logo width={95} height={45}/>
-             <span className="min-w-[120px] flex items-center text-v-purple italic font-semibold text-2xl">Oi Viana</span>
+             <span className="min-w-[150px] flex items-center text-v-purple italic font-semibold text-3xl logo-text-gradient">Oi Viana</span>
             </Link>
           </div>
         </div>
@@ -52,7 +52,7 @@ export default function Header() {
             }}}
           >
             <Logo width={80} height={42}/>
-             <span className="min-w-[120px] flex items-center text-v-purple italic font-semibold text-xl">Oi Viana</span>
+             <span className="min-w-[120px] flex items-center italic font-semibold text-xl logo-text-gradient">Oi Viana</span>
           </Link>
         </div>
         <button
