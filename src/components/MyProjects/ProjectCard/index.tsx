@@ -58,12 +58,12 @@ export default function ProjectCard({
           ))}
         </div>
         <button
-          className={`text-xs lg:text-sm bg-v-purple p-3 rounded shadow-sm mt-auto ${
+          className={`text-xs lg:text-sm bg-v-purple h-11 rounded shadow-sm mt-auto flex justify-center items-center ${
             !hasFinished && "opacity-[0.50] cursor-default"
           }`}
         >
           <Link
-            className={`flex w-full h-full justify-center ${
+            className={`flex w-full h-full justify-center items-center  rounded ${
               !hasFinished && "opacity-[0.50] cursor-default"
             }`}
             href={`${hasFinished ? `/projects/${slug}` : `/#projects`} `}
