@@ -139,7 +139,7 @@ function PaginationSection({
 <>
       <button
         className={` absolute top-[50%] left-[-4px]  shadow rounded-full bg-white dark:bg-v-dark-900 w-9  h-9 lg:w-12 lg:h-12 flex justify-center items-center transition-opacity ${
-          currentPage == 1 && "opacity-[0.70] cursor-not-allowed"
+          currentPage == 1 && "hidden cursor-not-allowed"
         }`}
         onClick={() => handlePrevPage()}
         aria-label="Projetos anteriores"
@@ -150,7 +150,7 @@ function PaginationSection({
       <button
         onClick={() => handleNextPage()}
         className={`absolute top-[50%] right-[-4px] shadow bg-white dark:bg-v-dark-900 rounded-full w-9 h-9 lg:w-12 lg:h-12 flex justify-center items-center transition-opacity ${
-          currentPage == pages.length && "opacity-[0.90] cursor-not-allowed"
+          currentPage == pages.length && "hidden cursor-not-allowed"
         }`}
         aria-label="Próximos projetos"
       >
