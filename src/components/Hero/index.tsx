@@ -25,7 +25,7 @@ export default function Hero() {
             priority={true}
           />
           <TitleSection id="test" title={translate("title")} />
-          <p className="leading-9 text-center py-4 max-w-[650px]">
+          <p className="leading-9 text-center py-4 max-w-[720px]">
             {translate("description")}
           </p>
           <a
