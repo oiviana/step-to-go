@@ -17,7 +17,7 @@ export default function Hero() {
       >
         <div className="flex flex-col items-center justify-center lg:mx-0 w-full">
           <Image
-            src="/myself.png"
+            src="/myselff.png"
             width={250}
             height={250}
             alt="Lucas Viana"
