@@ -3,7 +3,7 @@
 import Navbar from "./Navbar";
 import TranslateButton from "../ui/TranslateButton";
 import Link from "next/link";
-import Logo from "../Logo";
+import Logo from "../ui/Logo";
 import { useState } from "react";
 import MobileHamburguer from "../ui/MobileHamburguer";
 import { useNavigationPage } from "@/utils/Providers";

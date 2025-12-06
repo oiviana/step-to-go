@@ -1,7 +1,7 @@
 "use client"
 import { useNavigationPage } from "../../utils/Providers";
 import Contact from "./Contact";
-import Hero from "../Hero";
+import Hero from "./Hero";
 import About from "./About";
 import Projects from "./Projects";
 

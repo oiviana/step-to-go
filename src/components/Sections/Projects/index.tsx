@@ -1,4 +1,4 @@
-import LayoutSection from "@/components/LayoutSection";
+import LayoutSection from "@/components/ui/LayoutSection";
 import MyProjects from "@/components/MyProjects";
 import { useLocale, useTranslations } from "next-intl";
 import { fetchProjects, ProjectProps } from "@/contentful/myProjects";

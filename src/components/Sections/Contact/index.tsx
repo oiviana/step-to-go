@@ -1,5 +1,5 @@
 import EmailForm from "@/components/EmailForm";
-import LayoutSection from "@/components/LayoutSection";
+import LayoutSection from "@/components/ui/LayoutSection";
 import { BsFileEarmarkCodeFill } from "react-icons/bs";
 import { IoHardwareChip } from "react-icons/io5";
 import { FiFigma } from "react-icons/fi"
