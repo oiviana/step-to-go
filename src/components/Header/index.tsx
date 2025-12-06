@@ -24,7 +24,7 @@ export default function Header() {
               aria-label="Logo do site"
               onClick={()=>{setPage('hero')}}
             >
-              <Logo className="w-[95px]"/>
+              <Logo className="w-[95px]" variant="gradient"/>
              <span className="min-w-[150px] font-jetbrains flex items-center italic logo-text-gradient font-semibold text-lg lg:text-3xl lg:pt-2">Oi Viana</span>
             </Link>
           </div>
@@ -50,7 +50,7 @@ export default function Header() {
               setShowMobileMenu(false)
             }}}
           >
-            <Logo className="w-20"/>
+            <Logo className="w-20" variant="solid"/>
              <span className="min-w-[120px] flex items-center italic font-semibold text-xl logo-text-gradient">Oi Viana</span>
           </Link>
         </div>
