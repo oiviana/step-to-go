@@ -14,10 +14,7 @@ const mainFontFamily = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Oi Viana",
-  description: "Lucas Viana - Desenvolvedor Full Stack",
-  icons: {
-    icon: ["/favicon.ico"],
-  },
+  description: "Lucas Viana - Analista de Sistemas",
 };
 
 const locales = ["en", "pt"];
