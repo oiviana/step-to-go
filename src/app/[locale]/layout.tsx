@@ -13,7 +13,7 @@ const mainFontFamily = JetBrains_Mono({
 
 
 export const metadata: Metadata = {
-  title: "Step to Go",
+  title: "Oi Viana",
   description: "Lucas Viana - Desenvolvedor Full Stack",
   icons: {
     icon: ["/icon.ico"],

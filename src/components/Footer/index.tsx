@@ -6,8 +6,8 @@ export default function Footer() {
   return (
     <footer className="w-full lg:fixed bottom-0 text-v-white-900 bg-v-dark-test">
       <div className="max-w-[1170px]  mx-auto px-2 ">
-        <div className=" flex justify-center mt-5 border-v-dark-500 text-xs lg:text-sm pb-3">
-          <span>&copy; 2024 - {translate("copyright")}</span>
+        <div className=" flex justify-center mt-5 border-v-dark-500 text-xs lg:text-sm py-6 lg:py-3">
+          <span>&copy; {new Date().getFullYear()} - {translate("copyright")}</span>
         </div>
       </div>
     </footer>

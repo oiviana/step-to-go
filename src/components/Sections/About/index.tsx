@@ -1,4 +1,4 @@
-import LayoutSection from "@/components/LayoutSection";
+import LayoutSection from "@/components/ui/LayoutSection";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Inter } from "next/font/google";

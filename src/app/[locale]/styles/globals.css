@@ -167,3 +167,11 @@
 .image-gallery-slide, .image-gallery-thumbnails{
   background-color: #1D1A26;
 }
+
+
+.logo-text-gradient {
+  background: linear-gradient(to bottom,  #b3e67f, #18B106); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  background-clip: text; 
+}

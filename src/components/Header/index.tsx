@@ -3,8 +3,7 @@
 import Navbar from "./Navbar";
 import TranslateButton from "../ui/TranslateButton";
 import Link from "next/link";
-import Logo from "../Logo";
-import TextLogo from "../Logo/TextLogo";
+import Logo from "../ui/Logo";
 import { useState } from "react";
 import MobileHamburguer from "../ui/MobileHamburguer";
 import { useNavigationPage } from "@/utils/Providers";
@@ -21,12 +20,12 @@ export default function Header() {
           <div className="flex w-full justify-between items-center">
             <Link
               href="#"
-              className=" w-full md:max-w-44 flex gap-4"
+              className=" w-full  flex gap-4"
               aria-label="Logo do site"
               onClick={()=>{setPage('hero')}}
             >
-              <Logo width={95} height={45}/>
-              <TextLogo width={150} height={30}/>
+              <Logo className="w-[95px]" variant="gradient"/>
+             <span className="min-w-[150px] font-jetbrains flex items-center italic logo-text-gradient font-semibold text-lg lg:text-3xl lg:pt-2">Oi Viana</span>
             </Link>
           </div>
         </div>
@@ -51,8 +50,8 @@ export default function Header() {
               setShowMobileMenu(false)
             }}}
           >
-            <Logo width={80} height={42}/>
-            <TextLogo width={112} height={17}/>
+            <Logo className="w-20" variant="solid"/>
+             <span className="min-w-[120px] flex items-center italic font-semibold text-xl logo-text-gradient">Oi Viana</span>
           </Link>
         </div>
         <button
