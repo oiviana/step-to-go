@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Oi Viana",
   description: "Lucas Viana - Desenvolvedor Full Stack",
   icons: {
-    icon: ["/icon.ico"],
+    icon: ["/favicon.ico"],
   },
 };
 
