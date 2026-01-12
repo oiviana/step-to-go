@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
-import "./styles/globals.css";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import { NavigationProvider } from "../../utils/Providers";
-
+import "./styles/globals.css";
 const mainFontFamily = JetBrains_Mono({
   subsets: ["latin"],
   display: "swap"

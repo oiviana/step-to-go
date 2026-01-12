@@ -58,7 +58,7 @@ export default function ProjectCard({
           ))}
         </div>
         <button
-          className={`text-xs lg:text-sm bg-v-purple h-11 rounded shadow-sm mt-auto flex justify-center items-center ${
+          className={`text-xs lg:text-sm bg-v-green text-v-dark-700 h-11 rounded shadow-sm mt-auto flex justify-center items-center ${
             !hasFinished && "opacity-[0.50] cursor-default"
           }`}
         >
