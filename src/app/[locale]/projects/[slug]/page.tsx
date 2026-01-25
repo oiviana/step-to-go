@@ -38,7 +38,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <div className="max-w-[1210px] mx-auto px-2 flex flex-col gap-4">
-      <header className="flex py-3  mt-3 px-2 text-v-purple-light border-b-2 border-v-dark-900">
+      <header className="flex py-3  mt-3 px-2 text-v-green border-b-2 border-v-dark-900">
         <Link
           href="/"
           className="flex justify-between p-2 gap-2 font-bold text-lg "
@@ -56,20 +56,20 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <div className="flex flex-col lg:flex-row lg:gap-2">
-          <section className="h-auto">
+        <div className="flex flex-col lg:flex-row lg:gap-3">
+          <section className="h-auto lg:pt-6">
             <ProjectSlider images={project.images} mobileImages={project.mobileImages} />
           </section>
-          <section className="lg:max-w-[410px]">
+          <section className="lg:max-w-[460px]">
             <div className="flex flex-col  py-6 md:p-6 gap-4 w-full  px-2 text-v-white-300">
               <div className="flex justify-center md:justify-between flex-col md:flex-row">
-                <h1 className="text-lg md:text-xl font-bold text-center lg:text-left text-v-green mb-4">
+                <h1 className="text-lg md:text-2xl font-bold text-center lg:text-left text-v-white-900 mb-4">
                   {project.title}
                 </h1>
               </div>
               <div className="flex gap-3 flex-wrap justify-center lg:justify-start">
                 {project.technologies.map((item, index) => (
-                  <span className="text-xs md:text-sm text-v-purple-light font-semibold border-[2px] border-v-purple-light rounded-md p-1 cursor-default" key={index}>
+                  <span className="text-xs md:text-sm text-v-green font-semibold border-[2px] border-v-green rounded-md p-1 cursor-default" key={index}>
                     {item}
                   </span>
                 ))}
