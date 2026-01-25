@@ -56,7 +56,8 @@
     animation: 35s slide infinite linear;
   }
 }
-.stack-slider:hover {
+.stack-slider:hover,
+.stack-slider-container:hover .stack-slider {
   animation-play-state: paused;
 }
 
@@ -79,6 +80,7 @@
   height: 100%;
   content: "";
   z-index: 10;
+  pointer-events: none;
 }
 
 @media only screen and (min-width: 1024px) {

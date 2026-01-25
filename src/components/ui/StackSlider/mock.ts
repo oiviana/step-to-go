@@ -1,48 +1,71 @@
-export const sliderMock = [
+import type { IconType } from "react-icons";
+import {
+  SiDocker,
+  SiGit,
+  SiJest,
+  SiNestjs,
+  SiNodedotjs,
+  SiPostgresql,
+  SiReact,
+  SiTailwindcss,
+  SiTypescript,
+  SiVtex,
+} from "react-icons/si";
+
+type SliderItem =
+  | {
+      techName: string;
+      techImg: string;
+      iconClassName?: string;
+      techIcon?: never;
+    }
+  | {
+      techName: string;
+      techIcon: IconType;
+      iconClassName?: string;
+      techImg?: never;
+    };
+
+export const sliderMock: SliderItem[] = [
   {
-    techImg: "/stack-slider/stack-slide-react.png",
+    techIcon: SiReact,
     techName: "React JS",
   },
   {
-    techImg: "/stack-slider/stack-slide-vtex.png",
+    techIcon: SiVtex,
     techName: "VTEX IO",
   },
   {
-    techImg: "/stack-slider/stack-slide-ts.png",
+    techIcon: SiTypescript,
     techName: "Typescript",
   },
   {
-    techImg: "/stack-slider/stack-slide-docker.png",
+    techIcon: SiDocker,
     techName: "Docker",
   },
   {
-    techImg: "/stack-slider/stack-slide-tailwind.png",
+    techIcon: SiTailwindcss,
     techName: "Tailwind CSS",
-  },
-  {
-    techImg: "/stack-slider/stack-slide-deco.png",
-    techName: "Deco.cx",
   },
 
   {
-    techImg: "/stack-slider/stack-slide-jest.png",
+    techIcon: SiJest,
     techName: "Jest",
   },
   {
-    techImg: "/stack-slider/stack-slide-post.png",
+    techIcon: SiPostgresql,
     techName: "PostgreSQL",
   },
   {
-    techImg: "/stack-slider/stack-slide-node.png",
+    techIcon: SiNodedotjs,
     techName: "NodeJS",
   },
   {
-    techImg: "/stack-slider/stack-slide-csharp.png",
-    techName: "C#",
+    techIcon: SiNestjs,
+    techName: "NestJS",
   },
   {
-    techImg: "/stack-slider/stack-slide-git.png",
+    techIcon: SiGit,
     techName: "GIT",
   },
-
 ];
