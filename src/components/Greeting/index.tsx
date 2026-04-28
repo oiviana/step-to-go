@@ -4,12 +4,6 @@ import { useTranslations } from "next-intl";
 import CvButton from "../ui/CvButton";
 import MyWorkButton from "../ui/MyWorkButton";
 
-const HERO_STATS = [
-    { value: "6", accent: "+", labelKey: "statsYearsLabel" },
-    { value: "40", accent: "+", labelKey: "statsProjectsLabel" },
-    { value: "3", accent: "x", labelKey: "statsStacksLabel" },
-] as const;
-
 export default function Greeting() {
     const translate = useTranslations("Hero");
 
@@ -51,25 +45,9 @@ export default function Greeting() {
 
                     <div className="my-8 h-10 w-px bg-gradient-to-b from-transparent via-v-green/45 to-transparent" />
 
-                    <div className="flex w-full flex-col items-center justify-center gap-4 sm:flex-row">
+                    <div className="flex w-full flex-col items-center justify-center gap-6 sm:flex-row">
                         <CvButton />
                         <MyWorkButton />
-                    </div>
-
-                    <div className="mt-10 w-full max-w-[33rem] rounded-[1.25rem] border border-white/[0.07] bg-white/[0.02] px-5 py-5 backdrop-blur-sm sm:max-w-[36rem] sm:px-6">
-                        <div className="grid gap-5 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-white/[0.08]">
-                            {HERO_STATS.map((item) => (
-                                <div key={item.labelKey} className="px-2 sm:px-5">
-                                    <div className="text-[2rem] font-bold leading-none tracking-[-0.04em] text-v-white-300">
-                                        {item.value}
-                                        <span className="text-v-green">{item.accent}</span>
-                                    </div>
-                                    <p className="mt-2 text-xs text-v-white-900/60 sm:text-[0.82rem]">
-                                        {translate(item.labelKey)}
-                                    </p>
-                                </div>
-                            ))}
-                        </div>
                     </div>
                 </div>
             </div>

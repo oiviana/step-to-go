@@ -5,7 +5,7 @@ export default function WorkPhoto() {
     <div className="wrapper">
       <div className="maskedPhoto">
         <Image
-          src="/test-codigng.jpg"
+          src="/me-working.png"
           className="shadow-lg"
           width={1200}
           height={450}

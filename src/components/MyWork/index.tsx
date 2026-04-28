@@ -1,5 +1,6 @@
 import Benefits from "../Benefits";
 import WorkPhoto from "../WorkPhoto";
+import HeroStatsCard from "../ui/HeroStatsCard";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -11,9 +12,19 @@ export default function MyWork() {
         <div className="w-full pt-14 lg:pt-16">
             <div
                 ref={ref}
-                className="flex flex-col gap-4 pt-8 lg:flex-row lg:justify-between lg:pt-16"
+                className="flex flex-col gap-12 pt-8 lg:pt-16"
                 id="my-work"
             >
+                <motion.div
+                    initial={{ opacity: 0, y: 48 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 48 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="mx-auto mb-2 flex w-full justify-center lg:mb-6"
+                >
+                    <HeroStatsCard isActive={isInView} />
+                </motion.div>
+
+                <div className="flex flex-col gap-4 lg:flex-row lg:justify-between">
                 <motion.div
                     initial={{ opacity: 0, x: -60 }}
                     animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -60 }}
@@ -40,6 +51,7 @@ export default function MyWork() {
                 >
                     <WorkPhoto />
                 </motion.div>
+                </div>
             </div>
             <Benefits />
         </div>

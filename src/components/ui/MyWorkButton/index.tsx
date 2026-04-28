@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useTranslations } from "next-intl";
 
@@ -10,11 +11,17 @@ export default function MyWorkButton() {
             href="#my-work"
         >
             {translate("workButton")}
-            <ChevronDown
-                size={18}
-                strokeWidth={2.4}
-                className="transition-transform duration-200 group-hover:translate-y-0.5"
-            />
+            <motion.span
+                animate={{ y: [0, 3, 0] }}
+                transition={{ duration: 1.5, ease: "easeInOut", repeat: Infinity }}
+                className="inline-flex"
+            >
+                <ChevronDown
+                    size={18}
+                    strokeWidth={2.4}
+                    className="transition-transform duration-200 group-hover:translate-y-0.5"
+                />
+            </motion.span>
         </a>
     );
 }
