@@ -14,7 +14,7 @@ export default function Header() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const { setPage } = useNavigationPage()
   return (
-   <header className="w-full flex flex-col px-4 lg:px-0 fixed z-40 lg:sticky py-4 lg:py-0 bg-v-dark-test shadow-lg">
+   <header className="fixed z-40 flex w-full flex-col border-b border-white/[0.04] bg-[rgba(20,18,23,0.58)] px-4 shadow-[0_10px_30px_rgba(0,0,0,0.12)] backdrop-blur-2xl backdrop-saturate-150 supports-[backdrop-filter]:bg-[rgba(20,18,23,0.34)] lg:sticky lg:px-0 lg:py-0 py-4">
       <div className="w-full max-w-[1170px] mx-auto">
 
 

@@ -82,10 +82,17 @@
   ],
   "Hero": {
     "title": "Nice to meet you, my name is Lucas Viana!",
-    "description": "I am a software developer with over 6 years of experience creating bespoke digital solutions. In this space I talk about my work and my projects.\nIf you are looking for modern and customized solutions for your website or application, please contact. I will gladly turn your ideas into reality!",
+    "titleLead": "Nice to meet you, my name is",
+    "titleName": "Lucas Viana!",
+    "description": "I am a software developer with over 6 years of experience building bespoke digital solutions, focused on performance, usability, and results for web and mobile products.",
     "technologies": "Technologies that i use:",
-    "button": "See my resume",
-    "link": "/lucas-viana-developer.pdf"
+    "button": "Download resume",
+    "link": "/lucas-viana-developer.pdf",
+    "availability": "Available for new projects",
+    "workButton": "See my work",
+    "statsYearsLabel": "Years of experience",
+    "statsProjectsLabel": "Projects delivered",
+    "statsStacksLabel": "Stacks mastered"
   },
   "Projects": {
     "bannerTitle": "Develop and innovate!",

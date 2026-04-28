@@ -1,16 +1,18 @@
+import { Download } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { TiDocumentText } from "react-icons/ti";
 
 export default function CvButton() {
     const translate = useTranslations("Hero");
+
     return (
         <a
-            href={process.env.CV_BUTTON_URL ?? 'https://drive.google.com/file/d/1BAALqxLvbuSeDMygtVv3v0mdtl3Vf6ID/view?usp=sharing'}
+            href={process.env.CV_BUTTON_URL ?? "https://drive.google.com/file/d/1BAALqxLvbuSeDMygtVv3v0mdtl3Vf6ID/view?usp=sharing"}
             target="_blank"
-            className="green-light w-[214px] p-3 h-[60px] flex justify-center gap-2 items-center mt-3 rounded-md  shadow-md font-semibold bg-transparent text-v-green border-2 border-v-green transition-colors"
+            rel="noreferrer"
+            className="green-light inline-flex min-h-14 items-center justify-center gap-2 rounded-xl bg-v-green px-6 py-3 text-sm font-semibold text-v-dark-test transition-transform hover:-translate-y-0.5 hover:bg-[#b3eb7a] sm:text-base"
         >
-            <TiDocumentText className="text-v-green" size={30} />
+            <Download size={18} strokeWidth={2.4} />
             {translate("button")}
         </a>
-    )
+    );
 }

@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { Link, usePathname } from "../../../../navigation";
-import { IoLanguage } from "react-icons/io5";
 import { BiSolidUpArrow } from "react-icons/bi";
+import { MdOutlineGTranslate } from "react-icons/md";
 
 export default function TranslateButton() {
   const pathName = usePathname();
@@ -25,10 +25,11 @@ export default function TranslateButton() {
   return (
     <div className="relative">
       <button
+      className="inline-flex items-center justify-center leading-none mt-2"
       onClick={()=> setShowDropdown(!showDropdown)} 
       aria-label="Botão de tradução"
       >
-        <IoLanguage
+        <MdOutlineGTranslate
           className="text-v-green transition-colors"
           size={25}
         />
