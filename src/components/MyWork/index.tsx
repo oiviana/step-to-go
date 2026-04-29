@@ -19,7 +19,7 @@ export default function MyWork() {
                     initial={{ opacity: 0, y: 48 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 48 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="mx-auto mb-2 flex w-full justify-center lg:mb-6"
+                    className="mx-auto mb-2 flex w-full justify-center lg:mb-8"
                 >
                     <HeroStatsCard isActive={isInView} />
                 </motion.div>
@@ -34,13 +34,7 @@ export default function MyWork() {
                     <span className="text-v-green text-base lg:text-lg mb-2">Quem sou eu</span>
                     <h2 className="font-semibold text-lg lg:text-2xl max-w-[600px] text-left mb-6">Criando soluções performáticas e inovadoras</h2>
                     <p className="leading-8">
-                        Com mais de 6 anos desenvolvendo soluções digitais, atuo na criação de projetos performáticos, otimizados e focados na melhor experiência do usuário.
-                    </p>
-                    <p className="leading-8">
-                        Nesse período, trabalhei na construção de plataformas SaaS, E-commerce, Landing Pages de alta conversão, aplicações mobile e web em geral.
-                    </p>
-                    <p className="leading-8">
-                        Minha missão é transformar ideias em soluções sólidas, intuitivas e de alto impacto, sempre alinhando tecnologia, design e resultados.
+                        Ao longo de mais de 6 anos desenvolvendo soluções digitais, atuei na criação de plataformas SaaS, e-commerces, landing pages de alta conversão e aplicações web e mobile, sempre com foco em performance, escalabilidade, usabilidade e alinhamento entre tecnologia, design e objetivos de negócio.
                     </p>
                 </motion.div>
                 <motion.div
