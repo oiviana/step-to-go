@@ -10,6 +10,7 @@
     "types:contentful": "export $(cat .env.local | awk '!/^\\s*#/' | awk '!/^\\s*$/'); cf-content-types-generator --spaceId $CONTENTFUL_SPACE_ID --token $CONTENTFUL_MANAGEMENT_TOKEN -o src/contentful/types -X && prettier --write src/contentful/types"
   },
   "dependencies": {
+    "@bprogress/next": "^3.2.12",
     "@isaacs/cliui": "^8.0.2",
     "@radix-ui/react-slot": "^1.0.2",
     "@types/nodemailer": "^6.4.15",

@@ -1,6 +1,7 @@
 "use client";
 
 import Navbar from "./Navbar";
+import { MobileNavbarOverlay } from "./Navbar";
 import TranslateButton from "../ui/TranslateButton";
 import Link from "next/link";
 import Logo from "../ui/Logo";
@@ -14,60 +15,61 @@ export default function Header() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const { setPage } = useNavigationPage()
   return (
-   <header className="fixed z-40 flex w-full flex-col border-b border-white/[0.04] bg-[rgba(20,18,23,0.58)] px-4 py-4 shadow-[0_10px_30px_rgba(0,0,0,0.12)] backdrop-blur-2xl backdrop-saturate-150 supports-[backdrop-filter]:bg-[rgba(20,18,23,0.34)] lg:px-0 lg:py-0">
-      <div className="w-full max-w-[1170px] mx-auto">
+    <>
+      {showMobileMenu && <MobileNavbarOverlay setShowMenu={setShowMobileMenu} />}
+
+      <header className="fixed inset-x-0 top-0 z-40 flex w-full flex-col border-b border-white/[0.04] bg-[rgba(20,18,23,0.58)] px-4 py-4 shadow-[0_10px_30px_rgba(0,0,0,0.12)] backdrop-blur-2xl backdrop-saturate-150 supports-[backdrop-filter]:bg-[rgba(20,18,23,0.34)] lg:px-0 lg:py-0">
+        <div className="w-full max-w-[1170px] mx-auto">
 
 
-        <div className="flex items-center h-full">
-          <div className="w-full justify-between items-center h-full hidden lg:flex ">
+          <div className="flex items-center h-full">
+            <div className="w-full justify-between items-center h-full hidden lg:flex ">
+              <div className="flex w-full justify-between items-center">
+                <Link
+                  href="#"
+                  className=" w-full  flex gap-4"
+                  aria-label="Logo do site"
+                  onClick={() => { setPage('hero') }}
+                >
+                  <Logo className="w-[95px]" variant="gradient" />
+                  <span className="min-w-[150px] font-jetbrains flex items-center italic logo-text-gradient font-semibold text-lg lg:text-3xl lg:pt-2">Oi Viana</span>
+                </Link>
+              </div>
+            </div>
+            <Navbar />
+            <div className="hidden lg:flex gap-6 lg:ml-5">
+              <LinkedinButton />
+              <GithubButton />
+              <TranslateButton />
+            </div>
+          </div>
+          <div className="w-full justify-between items-center h-full flex lg:hidden ">
             <div className="flex w-full justify-between items-center">
               <Link
                 href="#"
-                className=" w-full  flex gap-4"
+                className=" w-full max-w-48 flex gap-4"
                 aria-label="Logo do site"
-                onClick={() => { setPage('hero') }}
+                onClick={() => {
+                  {
+                    setPage('hero')
+                    setShowMobileMenu(false)
+                  }
+                }}
               >
-                <Logo className="w-[95px]" variant="gradient" />
-                <span className="min-w-[150px] font-jetbrains flex items-center italic logo-text-gradient font-semibold text-lg lg:text-3xl lg:pt-2">Oi Viana</span>
+                <Logo className="w-20" variant="solid" />
+                <span className="min-w-[120px] flex items-center italic font-semibold text-xl logo-text-gradient">Oi Viana</span>
               </Link>
             </div>
-          </div>
-          <Navbar
-            showMobileMenu={showMobileMenu}
-            setShowMenu={setShowMobileMenu}
-          />
-          <div className="hidden lg:flex gap-6 lg:ml-5">
-            <LinkedinButton />
-            <GithubButton />
-            <TranslateButton />
-          </div>
-        </div>
-        <div className="w-full justify-between items-center h-full flex lg:hidden ">
-          <div className="flex w-full justify-between items-center">
-            <Link
-              href="#"
-              className=" w-full max-w-48 flex gap-4"
-              aria-label="Logo do site"
-              onClick={() => {
-                {
-                  setPage('hero')
-                  setShowMobileMenu(false)
-                }
-              }}
+            <button
+              className="flex lg:hidden"
+              onClick={() => setShowMobileMenu(!showMobileMenu)}
+              aria-label="Abrir menu"
             >
-              <Logo className="w-20" variant="solid" />
-              <span className="min-w-[120px] flex items-center italic font-semibold text-xl logo-text-gradient">Oi Viana</span>
-            </Link>
+              <MobileHamburguer openedMenu={showMobileMenu} />
+            </button>
           </div>
-          <button
-            className="flex lg:hidden"
-            onClick={() => setShowMobileMenu(!showMobileMenu)}
-            aria-label="Abrir menu"
-          >
-            <MobileHamburguer openedMenu={showMobileMenu} />
-          </button>
         </div>
-      </div>
-    </header>
+      </header>
+    </>
   );
 }
