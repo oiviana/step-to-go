@@ -1,6 +1,6 @@
 import { ContentImage } from "@/contentful/contentImage";
 import Image from "next/image";
-import { Link, usePathname } from "../../../../navigation";
+import { Link } from "../../../../navigation";
 import { useTranslations } from "next-intl";
 
 export interface ProjectCardProps {
@@ -14,6 +14,21 @@ export interface ProjectCardProps {
   codeUrl: string;
   deployUrl: string;
   thumbnail: ContentImage | null;
+  featured?: boolean;
+}
+
+function getProjectTypeKey(stack: string[]) {
+  const normalizedStack = stack.map((item) => item.toLowerCase());
+
+  if (normalizedStack.some((item) => item.includes("vtex"))) {
+    return "ecommerce";
+  }
+
+  if (normalizedStack.some((item) => item.includes("cms"))) {
+    return "institutional";
+  }
+
+  return "web";
 }
 
 export default function ProjectCard({
@@ -23,57 +38,71 @@ export default function ProjectCard({
   slug,
   thumbnail,
   hasFinished,
+  featured = false,
 }: ProjectCardProps) {
-
   const translate = useTranslations("Projects");
+  const projectTypeKey = getProjectTypeKey(stack);
 
   return (
-    <div className="flex flex-col w-full max-w-[360px] shadow-md mx-auto lg:mx-0 cursor-pointer h-[430px] bg-v-dark-700 rounded-lg">
-      <div className="h-[220px] group overflow-hidden rounded-t w-full">
-        <div className="h-[200px] w-[95%] mx-auto mt-2 overflow-hidden rounded-lg">
-          <Image
-            src={`https:${thumbnail?.src}`}
-            alt="Projeto em construção"
-            width={400}
-            height={230}
-            className="transition-all duration-200 group-hover:scale-105 "
-            style={{ objectFit: "contain" }}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            priority={false}
-          />
+    <article
+      className={`flex min-h-[560px] w-full max-w-[360px] snap-start flex-col overflow-hidden rounded-3xl border bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.015)),#181820] shadow-[0_24px_80px_rgba(0,0,0,0.28)] transition duration-200 hover:-translate-y-1.5 hover:border-v-green/35 hover:shadow-[0_32px_100px_rgba(0,0,0,0.38)] ${
+        featured ? "border-v-green/25" : "border-white/[0.08]"
+      }`}
+    >
+      <div className="h-[210px] bg-white/[0.035] p-3">
+        <div className="group h-full w-full overflow-hidden rounded-2xl bg-v-dark-test">
+          {thumbnail?.src && (
+            <Image
+              src={`https:${thumbnail.src}`}
+              alt={title}
+              width={400}
+              height={230}
+              className="h-full w-full object-cover transition-transform duration-200 group-hover:scale-105"
+              sizes="(max-width: 768px) 88vw, (max-width: 1200px) 50vw, 360px"
+              priority={false}
+            />
+          )}
         </div>
       </div>
-      <div className="flex flex-col p-2 gap-3 rounded-b  flex-1">
-        <h3 className="text-lg lg:text-xl text-v-white-300 font-bold mb-1">
+
+      <div className="flex flex-1 flex-col p-6">
+        <span className="mb-3 text-xs font-extrabold uppercase tracking-[0.04em] text-v-green">
+          {translate(`projectTypes.${projectTypeKey}`)}
+        </span>
+
+        <h3 className="mb-3 text-2xl font-bold leading-[1.15] tracking-[-0.04em] text-v-white-300">
           {title}
         </h3>
-        <p className="text-xs lg:text-sm min-h-[40px] max-h-[80px] overflow-hidden text-ellipsis line-clamp-[4] text-v-white-900">
+
+        <p className="text-sm leading-7 text-v-white-900/85">
           {subtitle}
         </p>
-        <div className="flex gap-2 flex-wrap">
+
+        <div className="mb-6 mt-6 flex flex-wrap gap-2">
           {stack.map((item, index) => (
-            <span className="text-xs text-v-green font-semibold border-[1px] border-v-green rounded-md p-1" key={index}>
+            <span
+              className="rounded-full border border-v-green/35 bg-v-green/[0.06] px-3 py-1.5 text-xs font-bold text-v-green"
+              key={`${item}-${index}`}
+            >
               {item}
             </span>
           ))}
         </div>
-        <button
-          className={`text-xs lg:text-sm bg-v-green text-v-dark-700 h-11 rounded shadow-sm mt-auto flex justify-center items-center ${
-            !hasFinished && "opacity-[0.50] cursor-default"
-          }`}
-        >
+
+        {hasFinished ? (
           <Link
-            className={`flex w-full h-full justify-center items-center  rounded ${
-              !hasFinished && "opacity-[0.50] cursor-default"
-            }`}
-            href={`${hasFinished ? `/projects/${slug}` : `/#projects`} `}
+            className="mt-auto flex h-11 w-full items-center justify-center gap-3 rounded bg-v-green text-sm font-extrabold text-v-dark-700 shadow-sm transition hover:-translate-y-0.5 hover:bg-[#b3eb7a] lg:text-base"
+            href={`/projects/${slug}`}
           >
-            {hasFinished
-              ? translate("button")
-              : translate("buttonNotFinished")}
+            {translate("button")}
+            <span aria-hidden="true">-&gt;</span>
           </Link>
-        </button>
+        ) : (
+          <span className="mt-auto flex h-11 w-full cursor-default items-center justify-center rounded bg-v-green text-center text-xs font-extrabold text-v-dark-700 opacity-50 shadow-sm lg:text-sm">
+            {translate("buttonNotFinished")}
+          </span>
+        )}
       </div>
-    </div>
+    </article>
   );
 }

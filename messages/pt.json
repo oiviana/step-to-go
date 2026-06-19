@@ -86,7 +86,7 @@
     "titleName": "Lucas Viana!",
     "description": "Sou desenvolvedor de software com mais de 6 anos de experiência na criação de soluções digitais sob medida, com foco em performance, usabilidade e resultados para produtos web e mobile.",
     "technologies": "Tecnologias que utilizo:",
-    "button": "Baixar currículo",
+    "button": "Conheça meu blog",
     "link": "/lucas-viana-desenvolvedor.pdf/",
     "availability": "Disponível para novos projetos",
     "workButton": "Conheça meu trabalho",
@@ -95,12 +95,44 @@
     "statsTechnologiesLabel": "Tecnologias utilizadas"
   },
   "Projects": {
+    "eyebrow": "Portfólio",
+    "sectionTitle": "Projetos que desenvolvi",
+    "sectionDescription": "Uma seleção de interfaces, lojas e soluções web que desenvolvi ou mantive, com foco em performance, usabilidade e código bem estruturado.",
+    "talkButton": "Vamos conversar",
+    "loading": "Carregando projetos...",
     "bannerTitle": "Desenvolver e inovar!",
     "bannerSubtitle": "Ao longo dos últimos 5 anos, tenho contribuído ativamente para diversos projetos com foco na web.",
     "stackTitle": "Algumas tecnologias que eu já utilizei ou utilizo em meus projetos:",
     "projectTitle": "Confira alguns projetos que já desenvolvi: ",
-    "button": "Mais detalhes",
-    "buttonNotFinished": "Em breve: Mais detalhes"
+    "button": "Ver detalhes",
+    "buttonNotFinished": "Em breve: Mais detalhes",
+    "projectTypes": {
+      "ecommerce": "E-commerce",
+      "institutional": "Site institucional",
+      "web": "Projeto web"
+    },
+    "stackCards": {
+      "eyebrow": "Stack principal",
+      "title": "Tecnologias que uso para construir interfaces modernas",
+      "react": {
+        "description": "Componentização, hooks, estados e interfaces escaláveis."
+      },
+      "vtex": {
+        "description": "Desenvolvimento e manutenção de lojas dentro do ecossistema VTEX."
+      },
+      "typescript": {
+        "description": "Tipagem, segurança e melhor organização em projetos front-end."
+      },
+      "tailwind": {
+        "description": "Criação rápida de interfaces responsivas e consistentes."
+      },
+      "docker": {
+        "description": "Ambientes de desenvolvimento mais previsíveis e organizados."
+      },
+      "graphql": {
+        "description": "Consumo de dados mais flexível em aplicações e e-commerces."
+      }
+    }
   },
   "Contact": {
     "title": "Entre em contato!",

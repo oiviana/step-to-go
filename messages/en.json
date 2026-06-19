@@ -86,7 +86,7 @@
     "titleName": "Lucas Viana!",
     "description": "I am a software developer with over 6 years of experience building bespoke digital solutions, focused on performance, usability, and results for web and mobile products.",
     "technologies": "Technologies that i use:",
-    "button": "Download resume",
+    "button": "Visit my blog",
     "link": "/lucas-viana-developer.pdf",
     "availability": "Available for new projects",
     "workButton": "See my work",
@@ -95,12 +95,44 @@
     "statsTechnologiesLabel": "Technologies used"
   },
   "Projects": {
+    "eyebrow": "Portfolio",
+    "sectionTitle": "Projects I have built",
+    "sectionDescription": "A selection of interfaces, stores, and web solutions I have built or maintained, focused on performance, usability, and well-structured code.",
+    "talkButton": "Let's talk",
+    "loading": "Loading projects...",
     "bannerTitle": "Develop and innovate!",
     "bannerSubtitle": "Over the past 5 years, I have actively contributed to several web-focused projects.",
     "stackTitle": "Some technologies that I have already used or use in my projects:",
     "projectTitle": "Check out some projects I have already developed:",
-    "button": "More details",
-    "buttonNotFinished": "Coming soon: More details"
+    "button": "View details",
+    "buttonNotFinished": "Coming soon: More details",
+    "projectTypes": {
+      "ecommerce": "E-commerce",
+      "institutional": "Institutional site",
+      "web": "Web project"
+    },
+    "stackCards": {
+      "eyebrow": "Main stack",
+      "title": "Technologies I use to build modern interfaces",
+      "react": {
+        "description": "Componentization, hooks, state, and scalable interfaces."
+      },
+      "vtex": {
+        "description": "Store development and maintenance within the VTEX ecosystem."
+      },
+      "typescript": {
+        "description": "Typing, safety, and better organization in front-end projects."
+      },
+      "tailwind": {
+        "description": "Fast creation of responsive and consistent interfaces."
+      },
+      "docker": {
+        "description": "More predictable and organized development environments."
+      },
+      "graphql": {
+        "description": "More flexible data consumption in applications and e-commerces."
+      }
+    }
   },
   "Contact": {
     "title": "Get in touch!",
