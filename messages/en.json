@@ -167,6 +167,16 @@
     "title": "About the project",
     "tech": "Technologies:",
     "description": "Description:",
-    "codebutton": "Code"
+    "codebutton": "Code",
+    "selected": "Selected project",
+    "client": "Client",
+    "category": "Category",
+    "role": "Role",
+    "accessProject": "Open project",
+    "repository": "View repository",
+    "aboutMyWork": "About my work on the project",
+    "mainDeliveries": "Main deliveries",
+    "deliveriesFallback": "The main deliveries for this project will be added soon.",
+    "loading": "Loading project..."
   }
 }

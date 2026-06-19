@@ -45,10 +45,18 @@ export default function ProjectCard({
 
   return (
     <article
-      className={`flex min-h-[560px] w-full max-w-[360px] snap-start flex-col overflow-hidden rounded-3xl border bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.015)),#181820] shadow-[0_24px_80px_rgba(0,0,0,0.28)] transition duration-200 hover:-translate-y-1.5 hover:border-v-green/35 hover:shadow-[0_32px_100px_rgba(0,0,0,0.38)] ${
+      className={`group/card relative flex min-h-[560px] w-full max-w-[360px] snap-start flex-col overflow-hidden rounded-3xl border bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.015)),#181820] shadow-[0_24px_80px_rgba(0,0,0,0.28)] transition duration-200 hover:-translate-y-1.5 hover:border-v-green/35 hover:shadow-[0_32px_100px_rgba(0,0,0,0.38)] ${
         featured ? "border-v-green/25" : "border-white/[0.08]"
       }`}
     >
+      {hasFinished && (
+        <Link
+          className="absolute inset-0 z-10 rounded-3xl"
+          href={`/projects/${slug}`}
+          aria-label={`${translate("button")} ${title}`}
+        />
+      )}
+
       <div className="h-[210px] bg-white/[0.035] p-3">
         <div className="group h-full w-full overflow-hidden rounded-2xl bg-v-dark-test">
           {thumbnail?.src && (
@@ -90,13 +98,10 @@ export default function ProjectCard({
         </div>
 
         {hasFinished ? (
-          <Link
-            className="mt-auto flex h-11 w-full items-center justify-center gap-3 rounded bg-v-green text-sm font-extrabold text-v-dark-700 shadow-sm transition hover:-translate-y-0.5 hover:bg-[#b3eb7a] lg:text-base"
-            href={`/projects/${slug}`}
-          >
+          <span className="mt-auto flex h-11 w-full items-center justify-center gap-3 rounded bg-v-green text-sm font-extrabold text-v-dark-700 shadow-sm transition group-hover/card:-translate-y-0.5 group-hover/card:bg-[#b3eb7a] lg:text-base">
             {translate("button")}
             <span aria-hidden="true">-&gt;</span>
-          </Link>
+          </span>
         ) : (
           <span className="mt-auto flex h-11 w-full cursor-default items-center justify-center rounded bg-v-green text-center text-xs font-extrabold text-v-dark-700 opacity-50 shadow-sm lg:text-sm">
             {translate("buttonNotFinished")}

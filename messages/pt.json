@@ -167,6 +167,16 @@
     "title": "Sobre do Projeto",
     "tech": "Tecnologias:",
     "description": "Descrição:",
-    "codebutton": "Código"
+    "codebutton": "Código",
+    "selected": "Projeto selecionado",
+    "client": "Cliente",
+    "category": "Categoria",
+    "role": "Atuação",
+    "accessProject": "Acessar projeto",
+    "repository": "Ver repositório",
+    "aboutMyWork": "Sobre minha atuação no projeto",
+    "mainDeliveries": "Principais entregas",
+    "deliveriesFallback": "As principais entregas deste projeto serão adicionadas em breve.",
+    "loading": "Carregando projeto..."
   }
 }
