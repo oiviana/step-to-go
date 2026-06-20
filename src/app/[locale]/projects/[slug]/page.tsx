@@ -240,7 +240,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             </aside>
           </main>
 
-          <section className="mt-8 rounded-[2rem] border border-white/[0.08] bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.015)),#181820] p-4 shadow-[0_30px_90px_rgba(0,0,0,0.35)] sm:p-6">
+          <section className="mt-8 rounded-[2rem] border border-white/[0.08] bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.015)),#181820] p-4 shadow-[0_30px_90px_rgba(0,0,0,0.35)] sm:p-6 sm:pt-8">
             <ProjectSlider
               images={project.images}
               mobileImages={project.mobileImages}
