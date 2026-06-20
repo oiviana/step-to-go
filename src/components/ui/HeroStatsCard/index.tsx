@@ -29,10 +29,7 @@ function CountUpValue({ accent, delay, isActive, value }: CountUpValueProps) {
         let timeoutId = 0;
         const duration = 850;
 
-        if (!isActive) {
-            setCount(0);
-            return;
-        }
+        if (!isActive) return;
 
         timeoutId = window.setTimeout(() => {
             const animateCount = (timestamp: number) => {
@@ -57,7 +54,7 @@ function CountUpValue({ accent, delay, isActive, value }: CountUpValueProps) {
 
     return (
         <>
-            {count}
+            {isActive ? count : 0}
             <span className="text-v-green">{accent}</span>
         </>
     );

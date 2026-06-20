@@ -1,8 +1,8 @@
+@import "react-image-gallery/styles/image-gallery.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import "~react-image-gallery/styles/css/image-gallery.css";
 /* scroll for the layout main sections */
 
 .section-scroll::-webkit-scrollbar {

@@ -5,7 +5,6 @@ import {
 } from "./contentImage";
 import { TypeProjectSkeleton } from "./types/TypeProject";
 import { Entry } from "contentful";
-import { Document as RichTextDocument } from "@contentful/rich-text-types";
 import contentfulClient from "./client";
 
 export interface ProjectProps {

@@ -7,13 +7,13 @@ import Link from "next/link";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { VscPreview } from "react-icons/vsc";
 import { FaCode } from "react-icons/fa";
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 interface ProjectPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 function getFallbackCategory(project: ProjectProps) {
@@ -118,20 +118,21 @@ function ProjectDetailsSkeleton() {
 }
 
 export default function ProjectPage({ params }: ProjectPageProps) {
+  const { slug } = use(params);
   const locale = useLocale();
   const [project, setProject] = useState<ProjectProps | null>();
   const translate = useTranslations("ProjectDetails");
 
   useEffect(() => {
     const fetchData = async () => {
-      const getProjects = await fetchProjectsBySlug(params.slug, locale);
+      const getProjects = await fetchProjectsBySlug(slug, locale);
       setProject(getProjects);
     };
 
     fetchData();
-  }, [locale, params.slug]);
+  }, [locale, slug]);
 
-  if (!params.slug || !project) {
+  if (!slug || !project) {
     return <ProjectDetailsSkeleton />;
   }
 

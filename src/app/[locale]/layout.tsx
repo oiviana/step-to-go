@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
-import { NextIntlClientProvider, useMessages } from "next-intl";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { getMessages, setRequestLocale } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 import { NavigationProvider } from "../../utils/Providers";
 import "./styles/globals.css";
 const mainFontFamily = JetBrains_Mono({
@@ -16,17 +18,23 @@ export const metadata: Metadata = {
   description: "Lucas Viana - Analista de Sistemas",
 };
 
-const locales = ["en", "pt"];
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-  params: { locale },
+  params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }>) {
-  if (!locales.includes(locale as any)) notFound();
-  const messages = useMessages();
+  const { locale } = await params;
+
+  if (!hasLocale(routing.locales, locale)) notFound();
+
+  setRequestLocale(locale);
+  const messages = await getMessages();
 
   return (
     <html lang={locale}>

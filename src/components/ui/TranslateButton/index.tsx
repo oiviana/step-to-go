@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { Link, usePathname } from "../../../../navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import { BiSolidUpArrow } from "react-icons/bi";
 import { MdOutlineGTranslate } from "react-icons/md";
 import { useTranslations } from "next-intl";
