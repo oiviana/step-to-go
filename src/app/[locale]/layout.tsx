@@ -30,13 +30,13 @@ export default function RootLayout({
 
   return (
     <html lang={locale}>
-      <NextIntlClientProvider locale={locale} messages={messages}>
-        <NavigationProvider>
-          <body className={`${mainFontFamily.className} bg-v-dark-test`}>
+      <body className={`${mainFontFamily.className} bg-v-dark-test`}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <NavigationProvider>
             {children}
-          </body>
-        </NavigationProvider>
-      </NextIntlClientProvider>
+          </NavigationProvider>
+        </NextIntlClientProvider>
+      </body>
     </html>
   );
 }
