@@ -6,6 +6,7 @@ import { fetchProjects, ProjectProps } from "@/contentful/myProjects";
 import { motion, useInView } from 'framer-motion';
 import { useEffect, useState, useRef } from 'react';
 import StackSlider from "@/components/ui/StackSlider";
+import SkeletonGrid from "@/components/MyProjects/SkeletonGrid";
 
 export default function Projects() {
   const translate = useTranslations("Projects");
@@ -61,7 +62,7 @@ export default function Projects() {
             {projects ? (
               <MyProjects myProjects={projects} />
             ) : (
-              <p className="text-v-white-900/80">{translate("loading")}</p>
+              <SkeletonGrid label={translate("loading")} />
             )}
           </div>
         </motion.div>

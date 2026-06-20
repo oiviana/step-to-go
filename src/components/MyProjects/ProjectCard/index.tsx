@@ -45,7 +45,7 @@ export default function ProjectCard({
 
   return (
     <article
-      className={`group/card relative flex min-h-[560px] w-full max-w-[360px] snap-start flex-col overflow-hidden rounded-3xl border bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.015)),#181820] shadow-[0_24px_80px_rgba(0,0,0,0.28)] transition duration-200 hover:-translate-y-1.5 hover:border-v-green/35 hover:shadow-[0_32px_100px_rgba(0,0,0,0.38)] ${
+      className={`group/card relative flex min-h-[560px] w-full max-w-[400px] snap-start flex-col overflow-hidden rounded-3xl border bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.015)),#181820] shadow-[0_24px_80px_rgba(0,0,0,0.28)] transition duration-200 hover:-translate-y-1.5 hover:border-v-green/35 hover:shadow-[0_32px_100px_rgba(0,0,0,0.38)] ${
         featured ? "border-v-green/25" : "border-white/[0.08]"
       }`}
     >
@@ -66,7 +66,7 @@ export default function ProjectCard({
               width={400}
               height={230}
               className="h-full w-full object-cover transition-transform duration-200 group-hover:scale-105"
-              sizes="(max-width: 768px) 88vw, (max-width: 1200px) 50vw, 360px"
+              sizes="(max-width: 768px) 88vw, (max-width: 1200px) 50vw, 400px"
               priority={false}
             />
           )}

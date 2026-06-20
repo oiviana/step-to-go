@@ -18,7 +18,7 @@ export default function MyProjects({ myProjects }: ComponentProjectProps) {
     if (!slider) return;
 
     slider.scrollBy({
-      left: direction === "next" ? 384 : -384,
+      left: direction === "next" ? 424 : -424,
       behavior: "smooth",
     });
   };
@@ -35,7 +35,7 @@ export default function MyProjects({ myProjects }: ComponentProjectProps) {
 
       <div
         ref={sliderRef}
-        className="grid auto-cols-[88%] grid-flow-col snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth px-1 pb-5 pt-2 [scrollbar-width:none] md:auto-cols-[calc((100%_-_24px)/2)] xl:auto-cols-[360px] [&::-webkit-scrollbar]:hidden"
+        className="grid auto-cols-[88%] grid-flow-col snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth px-1 pb-5 pt-2 [scrollbar-width:none] md:auto-cols-[calc((100%_-_24px)/2)] xl:auto-cols-[400px] [&::-webkit-scrollbar]:hidden"
       >
         {myProjects.map((project, index) => (
           <ProjectCard
