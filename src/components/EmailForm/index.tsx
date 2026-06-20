@@ -27,7 +27,7 @@ export default function EmailForm() {
       });
 
       if (!response.ok) {
-        throw new Error("Erro ao enviar e-mail");
+        throw new Error(translate("form.error"));
       }
       toast.success(translate("form.success"))
       const responseData = await response.json();
@@ -47,7 +47,7 @@ export default function EmailForm() {
     >
       <fieldset className="border-2 bg-v-dark-test border-v-green rounded-md group">
         <label htmlFor="name" className="sr-only">
-          Nome
+          {translate("form.nameLabel")}
         </label>
         <legend className="text-base md:text-lg font-bold  ml-4 px-3 tracking-wider !leading-[14px]">
           {translate("form.nameLabel")}
@@ -63,7 +63,7 @@ export default function EmailForm() {
       </fieldset>
       <fieldset className="border-2 bg-v-dark-test border-v-green rounded-md ">
         <label htmlFor="email" className="sr-only">
-          Email
+          {translate("form.emailLabel")}
         </label>
         <legend className="text-base md:text-lg font-bold  ml-4 px-3 tracking-wider !leading-[14px]">
           {translate("form.emailLabel")}
@@ -79,7 +79,7 @@ export default function EmailForm() {
       </fieldset>
       <fieldset className="border-2 bg-v-dark-test border-v-green rounded-md rounded-ee-none">
         <label htmlFor="message" className="sr-only">
-          Mensagem
+          {translate("form.messageLabel")}
         </label>
         <legend className="text-base md:text-lg font-bold  ml-4 px-3 tracking-wider !leading-[14px]">
           {translate("form.messageLabel")}
@@ -100,7 +100,7 @@ export default function EmailForm() {
         {formLoading ? (
           <MoonLoader
             size={20}
-            aria-label="Loading Spinner"
+            aria-label={translate("form.loadingLabel")}
             data-testid="loader"
             className=" [&>*:nth-child(1)]:dark:!bg-black [&>*:nth-child(2)]:dark:!border-v-dark-700"
 

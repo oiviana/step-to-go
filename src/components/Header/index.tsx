@@ -10,17 +10,18 @@ import MobileHamburguer from "../ui/MobileHamburguer";
 import { useNavigationPage } from "@/utils/Providers";
 import GithubButton from "../ui/GithubButton";
 import LinkedinButton from "../ui/LinkedinButton";
+import { useTranslations } from "next-intl";
 
 export default function Header() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const { setPage } = useNavigationPage()
+  const translate = useTranslations("Header");
   return (
     <>
       {showMobileMenu && <MobileNavbarOverlay setShowMenu={setShowMobileMenu} />}
 
-      <header className="fixed inset-x-0 top-0 z-40 flex w-full flex-col border-b border-white/[0.04] bg-[rgba(20,18,23,0.58)] px-4 py-4 shadow-[0_10px_30px_rgba(0,0,0,0.12)] backdrop-blur-2xl backdrop-saturate-150 supports-[backdrop-filter]:bg-[rgba(20,18,23,0.34)] lg:px-0 lg:py-0">
+      <header className="fixed inset-x-0 top-0 z-40 flex w-full flex-col border-b border-white/[0.04] bg-[rgba(20,18,23,0.58)] px-4 py-4 shadow-[0_10px_30px_rgba(0,0,0,0.12)] backdrop-blur-2xl backdrop-saturate-150 supports-[backdrop-filter]:bg-[rgba(20,18,23,0.34)] lg:px-0 lg:py-0 lg:h-20">
         <div className="w-full max-w-[1170px] mx-auto">
-
 
           <div className="flex items-center h-full">
             <div className="w-full justify-between items-center h-full hidden lg:flex ">
@@ -28,11 +29,11 @@ export default function Header() {
                 <Link
                   href="#"
                   className=" w-full  flex gap-4"
-                  aria-label="Logo do site"
+                  aria-label={translate("logoLabel")}
                   onClick={() => { setPage('hero') }}
                 >
-                  <Logo className="w-[95px]" variant="gradient" />
-                  <span className="min-w-[150px] font-jetbrains flex items-center italic logo-text-gradient font-semibold text-lg lg:text-3xl lg:pt-2">Oi Viana</span>
+                  <Logo className="w-[84px]" variant="gradient" />
+                  <span className="min-w-[150px] font-jetbrains flex items-center italic logo-text-gradient font-semibold text-lg lg:text-3xl">Oi Viana</span>
                 </Link>
               </div>
             </div>
@@ -48,7 +49,7 @@ export default function Header() {
               <Link
                 href="#"
                 className=" w-full max-w-48 flex gap-4"
-                aria-label="Logo do site"
+                aria-label={translate("logoLabel")}
                 onClick={() => {
                   {
                     setPage('hero')
@@ -63,7 +64,7 @@ export default function Header() {
             <button
               className="flex lg:hidden"
               onClick={() => setShowMobileMenu(!showMobileMenu)}
-              aria-label="Abrir menu"
+              aria-label={translate(showMobileMenu ? "closeMenu" : "openMenu")}
             >
               <MobileHamburguer openedMenu={showMobileMenu} />
             </button>

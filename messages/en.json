@@ -3,81 +3,89 @@
     "navbar": [
       "Career",
       "Projects",
-      "Contact-me"
-    ]
+      "Contact"
+    ],
+    "logoLabel": "Go to the home section",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "languageButton": "Select language",
+    "portugueseLabel": "Switch language to Portuguese",
+    "englishLabel": "Switch language to English",
+    "githubLabel": "Lucas Viana's GitHub profile",
+    "linkedinLabel": "Lucas Viana's LinkedIn profile"
   },
   "timeline": [
     {
       "month": "february",
       "year": "2016",
-      "title": "Start of the journey",
-      "event": "It all started in my IT technical course at ETEC in Atibaia, where I was able to learn programming logic, OOP, hardware maintenance and website and application development."
+      "title": "The journey begins",
+      "event": "My journey began in the Information Technology technical program at ETEC Atibaia, where I learned programming fundamentals, object-oriented programming, hardware maintenance, and website and application development."
     },
     {
       "month": "november",
       "year": "2018",
       "title": "First stage completed",
-      "event": "I completed my first training, as a computer technician! For this, I developed a full-stack web project with PHP and MySQL."
+      "event": "I completed my first qualification as an IT technician. For my final project, I built a full-stack web application with PHP and MySQL."
     },
     {
       "month": "july",
       "year": "2019",
-      "title": "Start of college",
-      "event": "I started my degree at FATEC in Bragança Paulista. Over these three years, I was able to deepen my knowledge about programming, design patterns, hardware and IT governance."
+      "title": "Starting college",
+      "event": "I began my degree at FATEC Bragança Paulista. Over three years, I deepened my knowledge of programming, design patterns, hardware, and IT governance."
     },
     {
       "month": "july",
       "year": "2021",
       "title": "First opportunity",
-      "event": "I started working in the technology area, at the time as a software quality analyst, it was 6 months of a lot of learning."
+      "event": "I started my career in technology as a software quality analyst. Those six months gave me valuable hands-on experience."
     },
     {
       "month": "february",
       "year": "2022",
       "title": "Started as a developer",
-      "event": "I started my journey as a developer. I worked at Quality Digital developing web applications with a focus on e-commerce, using VTEX and ReactJS as a base, applying design patterns and agile methodologies rites."
+      "event": "I began working as a developer at Quality Digital, building e-commerce applications with VTEX and ReactJS while applying design patterns and agile practices."
     },
     {
       "month": "july",
       "year": "2022",
       "title": "Systems Analyst",
-      "event": "As an undergraduate project, I developed an application in React Native and NodeJS to manage internship vacancies and graduated as a Systems Analyst!"
+      "event": "For my graduation project, I built a React Native and Node.js application for managing internship opportunities and completed my degree in Systems Analysis and Development."
     },
     {
       "month": "february",
       "year": "2023",
       "title": "Jamstack and NextJS",
-      "event": "I started working on Jamstack projects in VTEX's Headless architecture such as Plurix, Vivara stores and Tata supermarkets."
+      "event": "I started working on Jamstack projects using VTEX headless architecture, including Plurix, Vivara stores, and Tata Supermarkets."
     },
     {
       "month": "january",
       "year": "2024",
       "title": "Getting to know Deco.cx",
-      "event": "Working as a freelancer for the company Adaptio, I had my first contact with the Deco platform, developing a customized product page for the 'Aviator' store."
+      "event": "While freelancing for Adaptio, I had my first experience with Deco.cx by building a custom product page for the Aviator store."
     },
     {
       "month": "may",
       "year": "2024",
       "title": "English course",
-      "event": "I finished my first English course focused on conversation."
+      "event": "I completed my first English course focused on conversation."
     },
     {
       "month": "june",
       "year": "2024",
       "title": "Web full-stack",
-      "event": "I worked at the company dna360 as a web developer focused on the VTEX, Wake commerce and Deco.cx platforms."
+      "event": "I worked at dna360 as a web developer, building solutions with VTEX, Wake Commerce, and Deco.cx."
     },
      {
       "month": "october",
       "year": "2024",
       "title": "Front-end Developer",
-      "event": "I gave it to the company B8One, working on the development and maintenance of robust projects in VTEX and Wake Commerce. My work has ranged from implementing advanced and customized features to continuously optimizing and evolving platforms to ensure performance, scalability, and an excellent user experience."
+      "event": "I provided development services to B8One, building and maintaining robust VTEX and Wake Commerce projects. My work included advanced custom features and continuous platform improvements focused on performance, scalability, and user experience."
     },
     {
       "month": "Currently",
       "year": "",
       "title": "Front-end Developer",
-      "event": "I currently work as a developer at Avanti, working interdisciplinarily with design, product, and technology teams to develop and maintain robust projects in VTEX and Deco.cx. My work ranges from implementing advanced, customized features, integrating complex solutions, to continuously optimizing and evolving platforms, always focusing on performance, scalability, and delivering an excellent user experience."
+      "event": "I currently work as a developer at Avanti, collaborating with design, product, and technology teams to build and maintain robust VTEX and Deco.cx projects. I implement advanced features, integrate complex solutions, and continuously improve platforms with a strong focus on performance, scalability, and user experience."
     }
   ],
   "Hero": {
@@ -85,7 +93,8 @@
     "titleLead": "Nice to meet you, my name is",
     "titleName": "Lucas Viana!",
     "description": "I am a software developer with over 6 years of experience building bespoke digital solutions, focused on performance, usability, and results for web and mobile products.",
-    "technologies": "Technologies that i use:",
+    "profileImageAlt": "Portrait of Lucas Viana",
+    "technologies": "Technologies I use:",
     "button": "Visit my blog",
     "link": "/lucas-viana-developer.pdf",
     "availability": "Available for new projects",
@@ -94,12 +103,39 @@
     "statsProjectsLabel": "Projects delivered",
     "statsTechnologiesLabel": "Technologies used"
   },
+  "MyWork": {
+    "eyebrow": "About me",
+    "title": "Building high-performance, innovative solutions",
+    "description": "Over more than 6 years of building digital solutions, I have worked on SaaS platforms, e-commerce stores, high-converting landing pages, and web and mobile applications, always focused on performance, scalability, usability, and aligning technology and design with business goals.",
+    "imageAlt": "Lucas Viana working at his development setup",
+    "benefits": {
+      "eyebrow": "Grow your business",
+      "title": "End-to-end services to drive your digital business forward",
+      "learnMore": "Learn more",
+      "items": {
+        "development": {
+          "title": "Website and app development",
+          "description": "I build web and mobile applications focused on performance, scalability, and a modern experience from start to finish."
+        },
+        "automation": {
+          "title": "AI-powered automation",
+          "description": "I build intelligent automations and workflows with n8n and Make, integrating APIs and AI models to reduce manual work and streamline processes."
+        },
+        "seo": {
+          "title": "Optimization and SEO",
+          "description": "I build fast, accessible, and well-structured pages, applying SEO best practices to improve performance, search rankings, and user experience."
+        }
+      }
+    }
+  },
   "Projects": {
     "eyebrow": "Portfolio",
     "sectionTitle": "Projects I have built",
     "sectionDescription": "A selection of interfaces, stores, and web solutions I have built or maintained, focused on performance, usability, and well-structured code.",
     "talkButton": "Let's talk",
     "loading": "Loading projects...",
+    "previousProject": "Previous project",
+    "nextProject": "Next project",
     "bannerTitle": "Develop and innovate!",
     "bannerSubtitle": "Over the past 5 years, I have actively contributed to several web-focused projects.",
     "stackTitle": "Some technologies that I have already used or use in my projects:",
@@ -147,6 +183,7 @@
       "emailLabel": "Email:",
       "messageLabel": "Message:",
       "button": "Send",
+      "loadingLabel": "Sending message",
       "success": "Thanks for getting in touch, I'll get back to you as soon as possible :)",
       "error": "There was a problem, please try again later :("
     }

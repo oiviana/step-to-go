@@ -1,44 +1,39 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { ArrowRight, Code2, SearchCheck, Activity } from "lucide-react";
+import { ArrowRight, Bot, Code2, SearchCheck } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useRef } from "react";
 
 type BenefitItem = {
-  description: string;
   icon: LucideIcon;
+  key: "development" | "automation" | "seo";
   number: string;
-  title: string;
 };
 
 const BENEFITS: BenefitItem[] = [
   {
     number: "01",
     icon: Code2,
-    title: "Desenvolvimento de sites e aplicativos",
-    description:
-      "Crio aplicações web e mobile com foco em performance, escalabilidade e uma experiência moderna do início ao fim.",
+    key: "development",
   },
   {
     number: "02",
-    icon: Activity,
-    title: "Implementação e documentação",
-    description:
-      "Atuo na implementação, evolução e sustentação de aplicações, entregando soluções bem estruturadas e documentadas de ponta a ponta.",
+    icon: Bot,
+    key: "automation",
   },
   {
     number: "03",
     icon: SearchCheck,
-    title: "Otimização e SEO",
-    description:
-      "Desenvolvo páginas rápidas, acessíveis e bem estruturadas, aplicando SEO para melhorar desempenho, ranqueamento e experiência do usuário.",
+    key: "seo",
   },
 ];
 
 export default function Benefits() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, amount: 0.2 });
+  const translate = useTranslations("MyWork.benefits");
 
   return (
     <div ref={ref} className="mt-24 w-full pt-8 lg:mt-28 lg:pt-10">
@@ -48,10 +43,10 @@ export default function Benefits() {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <span className="mb-3 block text-base text-v-green lg:text-lg">
-          Impulsione seu negócio
+          {translate("eyebrow")}
         </span>
         <h2 className="max-w-[38rem] text-left text-lg font-semibold leading-[1.35] text-v-white-300 lg:text-2xl">
-          Serviços completos para impulsionar o crescimento do seu negócio digital
+          {translate("title")}
         </h2>
       </motion.div>
 
@@ -85,17 +80,17 @@ export default function Benefits() {
               <div className="relative z-[1] flex flex-1 flex-col">
                 <div className="flex min-h-[12.5rem] flex-col gap-3 lg:min-h-[13.5rem]">
                   <h3 className="min-h-[3.75rem] max-w-[17rem] text-lg font-semibold leading-[1.3] text-v-white-300">
-                    {item.title}
+                    {translate(`items.${item.key}.title`)}
                   </h3>
                   <p className="min-h-[8rem] overflow-hidden text-sm leading-8 text-v-white-900/50 transition-colors duration-300 [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:4] group-hover:text-v-white-900/65">
-                    {item.description}
+                    {translate(`items.${item.key}.description`)}
                   </p>
                 </div>
 
                 <div className="mt-auto h-px bg-white/[0.05] transition-colors duration-300 group-hover:bg-v-green/[0.1]" />
 
                 <div className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-v-green/45 transition-[color,gap] duration-300 group-hover:gap-3 group-hover:text-v-green">
-                  Saiba mais
+                  {translate("learnMore")}
                   <ArrowRight
                     size={14}
                     strokeWidth={2.5}

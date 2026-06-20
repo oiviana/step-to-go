@@ -4,7 +4,15 @@
       "Carreira",
       "Projetos",
       "Contato"
-    ]
+    ],
+    "logoLabel": "Ir para o início",
+    "openMenu": "Abrir menu de navegação",
+    "closeMenu": "Fechar menu de navegação",
+    "languageButton": "Selecionar idioma",
+    "portugueseLabel": "Alterar idioma para português",
+    "englishLabel": "Alterar idioma para inglês",
+    "githubLabel": "Perfil de Lucas Viana no GitHub",
+    "linkedinLabel": "Perfil de Lucas Viana no LinkedIn"
   },
   "timeline": [
     {
@@ -17,19 +25,19 @@
       "month": "novembro",
       "year": "2018",
       "title": "Primeira etapa concluída",
-      "event": "Concluí minha primeira formação, de técnico de informatica! Para isso, desenvolvi um projeto full-stack web com PHP e MySQL."
+      "event": "Concluí minha primeira formação como técnico em Informática. Como projeto final, desenvolvi uma aplicação web full-stack com PHP e MySQL."
     },
     {
       "month": "julho",
       "year": "2019",
       "title": "Início da graduação",
-      "event": "Começei minha graduação na FATEC de Bragança Paulista. Ao longo daqueles três anos, pude aprofundar meus conhecimentos sobre programação, padrões de projeto, hardware e governança de TI."
+      "event": "Iniciei minha graduação na FATEC de Bragança Paulista. Ao longo de três anos, aprofundei meus conhecimentos em programação, padrões de projeto, hardware e governança de TI."
     },
     {
       "month": "julho",
       "year": "2021",
       "title": "Primeira oportunidade",
-      "event": "Começei a trabalhar na área de tecnologia, na época como analista de qualidade de software, foram 6 meses de muito aprendizado."
+      "event": "Comecei a trabalhar na área de tecnologia como analista de qualidade de software. Foram seis meses de muito aprendizado."
     },
     {
       "month": "fevereiro",
@@ -59,7 +67,7 @@
       "month": "maio",
       "year": "2024",
       "title": "Curso de inglês",
-      "event": "Finalizei meu primeiro curso de ingles focado em conversação."
+      "event": "Concluí meu primeiro curso de inglês com foco em conversação."
     },
     {
       "month": "junho",
@@ -71,7 +79,7 @@
       "month": "outubro",
       "year": "2024",
       "title": "Desenvolvedor Front-end",
-      "event": "Prestei para a empresa B8One, atuando no desenvolvimento e manutenção de projetos robustos em VTEX e Wake Commerce. Minha atuação envolveu desde a implementação de features avançadas e personalizadas, até a otimização e evolução contínua das plataformas para garantir performance, escalabilidade e uma excelente experiência do usuário."
+      "event": "Prestei serviços para a B8One no desenvolvimento e na manutenção de projetos robustos em VTEX e Wake Commerce. Minha atuação envolveu funcionalidades avançadas e personalizadas, além da otimização contínua das plataformas, com foco em performance, escalabilidade e experiência do usuário."
     },
     {
       "month": "Atualmente",
@@ -85,6 +93,7 @@
     "titleLead": "Olá, me chamo",
     "titleName": "Lucas Viana!",
     "description": "Sou desenvolvedor de software com mais de 6 anos de experiência na criação de soluções digitais sob medida, com foco em performance, usabilidade e resultados para produtos web e mobile.",
+    "profileImageAlt": "Retrato de Lucas Viana",
     "technologies": "Tecnologias que utilizo:",
     "button": "Conheça meu blog",
     "link": "/lucas-viana-desenvolvedor.pdf/",
@@ -94,12 +103,39 @@
     "statsProjectsLabel": "Projetos entregues",
     "statsTechnologiesLabel": "Tecnologias utilizadas"
   },
+  "MyWork": {
+    "eyebrow": "Quem sou eu",
+    "title": "Criando soluções performáticas e inovadoras",
+    "description": "Ao longo de mais de 6 anos desenvolvendo soluções digitais, atuei na criação de plataformas SaaS, e-commerces, landing pages de alta conversão e aplicações web e mobile, sempre com foco em performance, escalabilidade, usabilidade e alinhamento entre tecnologia, design e objetivos de negócio.",
+    "imageAlt": "Lucas Viana trabalhando em seu ambiente de desenvolvimento",
+    "benefits": {
+      "eyebrow": "Impulsione seu negócio",
+      "title": "Serviços completos para impulsionar o crescimento do seu negócio digital",
+      "learnMore": "Saiba mais",
+      "items": {
+        "development": {
+          "title": "Desenvolvimento de sites e aplicativos",
+          "description": "Crio aplicações web e mobile com foco em performance, escalabilidade e uma experiência moderna do início ao fim."
+        },
+        "automation": {
+          "title": "Automações com IA",
+          "description": "Crio automações e fluxos inteligentes com n8n e Make, integrando APIs e modelos de IA para reduzir tarefas manuais e otimizar processos."
+        },
+        "seo": {
+          "title": "Otimização e SEO",
+          "description": "Desenvolvo páginas rápidas, acessíveis e bem estruturadas, aplicando SEO para melhorar desempenho, ranqueamento e experiência do usuário."
+        }
+      }
+    }
+  },
   "Projects": {
     "eyebrow": "Portfólio",
     "sectionTitle": "Projetos que desenvolvi",
     "sectionDescription": "Uma seleção de interfaces, lojas e soluções web que desenvolvi ou mantive, com foco em performance, usabilidade e código bem estruturado.",
     "talkButton": "Vamos conversar",
     "loading": "Carregando projetos...",
+    "previousProject": "Projeto anterior",
+    "nextProject": "Próximo projeto",
     "bannerTitle": "Desenvolver e inovar!",
     "bannerSubtitle": "Ao longo dos últimos 5 anos, tenho contribuído ativamente para diversos projetos com foco na web.",
     "stackTitle": "Algumas tecnologias que eu já utilizei ou utilizo em meus projetos:",
@@ -147,6 +183,7 @@
       "emailLabel": "Email:",
       "messageLabel": "Mensagem:",
       "button": "Enviar",
+      "loadingLabel": "Enviando mensagem",
       "success": "Obrigado por entrar em contato, retorno assim que possível :)",
       "error": "Houve um problema, tente novamente mais tarde :("
     }

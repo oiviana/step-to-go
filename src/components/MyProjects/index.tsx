@@ -4,6 +4,7 @@ import { useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
 import { ProjectProps } from "@/contentful/myProjects";
+import { useTranslations } from "next-intl";
 
 interface ComponentProjectProps {
   myProjects: ProjectProps[];
@@ -11,6 +12,7 @@ interface ComponentProjectProps {
 
 export default function MyProjects({ myProjects }: ComponentProjectProps) {
   const sliderRef = useRef<HTMLDivElement>(null);
+  const translate = useTranslations("Projects");
 
   const handleScroll = (direction: "prev" | "next") => {
     const slider = sliderRef.current;
@@ -28,7 +30,7 @@ export default function MyProjects({ myProjects }: ComponentProjectProps) {
       <button
         className="absolute left-0 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/[0.12] bg-v-dark-test/90 text-v-white-300 shadow transition-colors hover:border-v-green/50 hover:text-v-green lg:flex"
         onClick={() => handleScroll("prev")}
-        aria-label="Projeto anterior"
+        aria-label={translate("previousProject")}
       >
         <MdArrowBack size={24} />
       </button>
@@ -58,7 +60,7 @@ export default function MyProjects({ myProjects }: ComponentProjectProps) {
       <button
         className="absolute right-0 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/[0.12] bg-v-dark-test/90 text-v-white-300 shadow transition-colors hover:border-v-green/50 hover:text-v-green lg:flex"
         onClick={() => handleScroll("next")}
-        aria-label="Próximo projeto"
+        aria-label={translate("nextProject")}
       >
         <MdArrowForward size={24} />
       </button>

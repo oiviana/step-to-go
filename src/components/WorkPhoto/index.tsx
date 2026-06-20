@@ -1,6 +1,9 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function WorkPhoto() {
+  const translate = useTranslations("MyWork");
+
   return (
     <div className="relative mx-auto flex w-full items-center justify-center px-3 sm:px-5">
       <div
@@ -16,7 +19,7 @@ export default function WorkPhoto() {
         <div className="relative z-[2] aspect-[4/3] overflow-hidden rounded-b-[1.25rem] border border-white/[0.06] bg-[linear-gradient(135deg,#141414_0%,#1c1c1c_100%)] shadow-[0_20px_45px_rgba(0,0,0,0.22)]">
           <Image
             src="/me-working.png"
-            alt="Lucas Viana trabalhando em seu setup"
+            alt={translate("imageAlt")}
             fill
             priority={false}
             sizes="(min-width: 1024px) 30rem, (min-width: 640px) 70vw, 92vw"
