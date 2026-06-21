@@ -1,9 +1,8 @@
 {
   "Header": {
     "navbar": [
-      "Carreira",
-      "Projetos",
-      "Contato"
+      "Sobre mim",
+      "Meus serviços"
     ],
     "logoLabel": "Ir para o início",
     "openMenu": "Abrir menu de navegação",
@@ -108,6 +107,25 @@
     "title": "Criando soluções performáticas e inovadoras",
     "description": "Ao longo de mais de 6 anos desenvolvendo soluções digitais, atuei na criação de plataformas SaaS, e-commerces, landing pages de alta conversão e aplicações web e mobile, sempre com foco em performance, escalabilidade, usabilidade e alinhamento entre tecnologia, design e objetivos de negócio.",
     "imageAlt": "Lucas Viana trabalhando em seu ambiente de desenvolvimento",
+    "milestones": {
+      "items": {
+        "education": {
+          "period": "Formação",
+          "title": "Base técnica e graduação",
+          "description": "Técnico em Informática e formado em Análise e Desenvolvimento de Sistemas pela FATEC."
+        },
+        "experience": {
+          "period": "Desde 2021",
+          "title": "Experiência em produtos digitais",
+          "description": "Desenvolvimento de soluções web e mobile para produtos, serviços e operações de e-commerce."
+        },
+        "current": {
+          "period": "Especialidades",
+          "title": "Aplicações web, mobile e automações",
+          "description": "Desenvolvimento com React e React Native integrado a APIs, fluxos automatizados e soluções com IA."
+        }
+      }
+    },
     "benefits": {
       "eyebrow": "Impulsione seu negócio",
       "title": "Serviços completos para impulsionar o crescimento do seu negócio digital",
@@ -170,22 +188,20 @@
       }
     }
   },
-  "Contact": {
-    "title": "Entre em contato!",
-    "subtitle": "Estou disponível para novas oportunidades. Vamos conversar para trabalharmos juntos!",
-    "jobs": {
-      "first": "Desenvolvimento Web e Mobile",
-      "second": "Consultoria e manutenção de hardware",
-      "third": "Criação de layouts e interfaces"
+  "ContactCallout": {
+    "linkedinButton": "Falar comigo no LinkedIn",
+    "whatsappButton": "Falar comigo no WhatsApp",
+    "about": {
+      "eyebrow": "Vamos conversar",
+      "title": "Tem uma ideia ou oportunidade em mente?",
+      "description": "Estou aberto a novos desafios e boas conversas sobre tecnologia, produtos digitais e colaboração profissional.",
+      "whatsappMessage": "Olá, Lucas! Vi seu portfólio e gostaria de conversar sobre uma oportunidade."
     },
-    "form": {
-      "nameLabel": "Nome:",
-      "emailLabel": "Email:",
-      "messageLabel": "Mensagem:",
-      "button": "Enviar",
-      "loadingLabel": "Enviando mensagem",
-      "success": "Obrigado por entrar em contato, retorno assim que possível :)",
-      "error": "Houve um problema, tente novamente mais tarde :("
+    "services": {
+      "eyebrow": "Próximo passo",
+      "title": "Precisa transformar uma ideia em produto?",
+      "description": "Vamos conversar sobre seu projeto e entender como desenvolvimento web, mobile ou automações podem ajudar.",
+      "whatsappMessage": "Olá, Lucas! Vi seus serviços no portfólio e gostaria de conversar sobre um projeto."
     }
   },
   "Footer": {

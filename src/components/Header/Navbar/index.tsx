@@ -13,7 +13,7 @@ type NavbarProps = {
 
 export default function Navbar() {
   return (
-    <nav className="flex w-full max-w-[450px]">
+    <nav className="flex w-full max-w-[350px]">
       <DesktopItems />
     </nav>
   );
@@ -23,6 +23,20 @@ export function MobileNavbarOverlay({ setShowMenu }: NavbarProps) {
   const { setPage } = useNavigationPage();
   const translate = useTranslations("Header");
 
+  const handleOpenAbout = () => {
+    setPage("hero");
+    setShowMenu(false);
+
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        document.getElementById("my-work")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      });
+    });
+  };
+
   return (
     <div className="fixed inset-0 z-30 flex bg-[rgba(20,18,23,0.78)] backdrop-blur-2xl backdrop-saturate-150 supports-[backdrop-filter]:bg-[rgba(20,18,23,0.58)] lg:hidden">
       <div className="relative flex h-full w-full flex-col overflow-hidden">
@@ -31,10 +45,7 @@ export function MobileNavbarOverlay({ setShowMenu }: NavbarProps) {
           <button
             type="button"
             className="w-fit text-left font-semibold transition-colors hover:text-v-green"
-            onClick={() => {
-              setPage('about')
-              setShowMenu(false)
-            }}
+            onClick={handleOpenAbout}
           >
             {translate(`navbar.0`)}
           </button>
@@ -47,16 +58,6 @@ export function MobileNavbarOverlay({ setShowMenu }: NavbarProps) {
             }}
           >
             {translate(`navbar.1`)}
-          </button>
-          <button
-            type="button"
-            className="w-fit text-left font-semibold transition-colors hover:text-v-green"
-            onClick={() => {
-              setPage('contact')
-              setShowMenu(false)
-            }}
-          >
-            {translate(`navbar.2`)}
           </button>
           <div className="mt-4 flex w-fit gap-8 border-t border-white/[0.08] pt-6">
             <LinkedinButton />

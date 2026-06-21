@@ -1,9 +1,8 @@
 {
   "Header": {
     "navbar": [
-      "Career",
-      "Projects",
-      "Contact"
+      "About me",
+      "My services"
     ],
     "logoLabel": "Go to the home section",
     "openMenu": "Open navigation menu",
@@ -108,6 +107,25 @@
     "title": "Building high-performance, innovative solutions",
     "description": "Over more than 6 years of building digital solutions, I have worked on SaaS platforms, e-commerce stores, high-converting landing pages, and web and mobile applications, always focused on performance, scalability, usability, and aligning technology and design with business goals.",
     "imageAlt": "Lucas Viana working at his development setup",
+    "milestones": {
+      "items": {
+        "education": {
+          "period": "Education",
+          "title": "Technical background and degree",
+          "description": "IT technician with a degree in Systems Analysis and Development from FATEC."
+        },
+        "experience": {
+          "period": "Since 2021",
+          "title": "Digital product experience",
+          "description": "Web and mobile development for digital products, services, and e-commerce operations."
+        },
+        "current": {
+          "period": "Specialties",
+          "title": "Web, mobile, and automation solutions",
+          "description": "Development with React and React Native integrated with APIs, automated workflows, and AI-powered solutions."
+        }
+      }
+    },
     "benefits": {
       "eyebrow": "Grow your business",
       "title": "End-to-end services to drive your digital business forward",
@@ -170,22 +188,20 @@
       }
     }
   },
-  "Contact": {
-    "title": "Get in touch!",
-    "subtitle": "I'm available for new opportunities. Let's talk to work together!",
-    "jobs": {
-      "first": "Web and Mobile Development",
-      "second": "Hardware consulting and maintenance",
-      "third": "Creating layouts and interfaces"
+  "ContactCallout": {
+    "linkedinButton": "Message me on LinkedIn",
+    "whatsappButton": "Message me on WhatsApp",
+    "about": {
+      "eyebrow": "Let's connect",
+      "title": "Have an idea or opportunity in mind?",
+      "description": "I am open to new challenges and meaningful conversations about technology, digital products, and professional collaboration.",
+      "whatsappMessage": "Hi Lucas! I saw your portfolio and would like to discuss an opportunity."
     },
-    "form": {
-      "nameLabel": "Name:",
-      "emailLabel": "Email:",
-      "messageLabel": "Message:",
-      "button": "Send",
-      "loadingLabel": "Sending message",
-      "success": "Thanks for getting in touch, I'll get back to you as soon as possible :)",
-      "error": "There was a problem, please try again later :("
+    "services": {
+      "eyebrow": "Next step",
+      "title": "Need to turn an idea into a product?",
+      "description": "Let's discuss your project and explore how web, mobile, or automation development can help.",
+      "whatsappMessage": "Hi Lucas! I saw your services in the portfolio and would like to discuss a project."
     }
   },
   "Footer": {

@@ -4,6 +4,8 @@ import HeroStatsCard from "../ui/HeroStatsCard";
 import { motion, useInView } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { useRef } from "react";
+import CareerHighlights from "./CareerHighlights";
+import ContactCallout from "../ContactCallout";
 
 export default function MyWork() {
     const ref = useRef(null);
@@ -14,7 +16,7 @@ export default function MyWork() {
         <div className="w-full pt-14 lg:pt-12">
             <div
                 ref={ref}
-                className="flex flex-col gap-12 pt-8 lg:pt-24"
+                className="flex scroll-mt-24 flex-col gap-12 pt-8 lg:pt-24"
                 id="my-work"
             >
                 <motion.div
@@ -48,8 +50,17 @@ export default function MyWork() {
                     <WorkPhoto />
                 </motion.div>
                 </div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 36 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 36 }}
+                    transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+                >
+                    <CareerHighlights />
+                </motion.div>
             </div>
             <Benefits />
+            <ContactCallout context="about" />
         </div>
     );
 }
