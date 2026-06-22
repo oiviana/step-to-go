@@ -16,7 +16,7 @@ export default function MyWork() {
         <div className="w-full pt-14 lg:pt-12">
             <div
                 ref={ref}
-                className="flex scroll-mt-24 flex-col gap-12 pt-8 lg:pt-24"
+                className="flex scroll-mt-24 flex-col gap-12 pt-8 lg:pt-20"
                 id="my-work"
             >
                 <motion.div
