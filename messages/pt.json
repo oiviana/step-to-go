@@ -1,10 +1,17 @@
 {
   "Header": {
     "navbar": [
-      "Carreira",
-      "Projetos",
-      "Contato"
-    ]
+      "Sobre mim",
+      "Meus serviços"
+    ],
+    "logoLabel": "Ir para o início",
+    "openMenu": "Abrir menu de navegação",
+    "closeMenu": "Fechar menu de navegação",
+    "languageButton": "Selecionar idioma",
+    "portugueseLabel": "Alterar idioma para português",
+    "englishLabel": "Alterar idioma para inglês",
+    "githubLabel": "Perfil de Lucas Viana no GitHub",
+    "linkedinLabel": "Perfil de Lucas Viana no LinkedIn"
   },
   "timeline": [
     {
@@ -17,19 +24,19 @@
       "month": "novembro",
       "year": "2018",
       "title": "Primeira etapa concluída",
-      "event": "Concluí minha primeira formação, de técnico de informatica! Para isso, desenvolvi um projeto full-stack web com PHP e MySQL."
+      "event": "Concluí minha primeira formação como técnico em Informática. Como projeto final, desenvolvi uma aplicação web full-stack com PHP e MySQL."
     },
     {
       "month": "julho",
       "year": "2019",
       "title": "Início da graduação",
-      "event": "Começei minha graduação na FATEC de Bragança Paulista. Ao longo daqueles três anos, pude aprofundar meus conhecimentos sobre programação, padrões de projeto, hardware e governança de TI."
+      "event": "Iniciei minha graduação na FATEC de Bragança Paulista. Ao longo de três anos, aprofundei meus conhecimentos em programação, padrões de projeto, hardware e governança de TI."
     },
     {
       "month": "julho",
       "year": "2021",
       "title": "Primeira oportunidade",
-      "event": "Começei a trabalhar na área de tecnologia, na época como analista de qualidade de software, foram 6 meses de muito aprendizado."
+      "event": "Comecei a trabalhar na área de tecnologia como analista de qualidade de software. Foram seis meses de muito aprendizado."
     },
     {
       "month": "fevereiro",
@@ -59,7 +66,7 @@
       "month": "maio",
       "year": "2024",
       "title": "Curso de inglês",
-      "event": "Finalizei meu primeiro curso de ingles focado em conversação."
+      "event": "Concluí meu primeiro curso de inglês com foco em conversação."
     },
     {
       "month": "junho",
@@ -71,7 +78,7 @@
       "month": "outubro",
       "year": "2024",
       "title": "Desenvolvedor Front-end",
-      "event": "Prestei para a empresa B8One, atuando no desenvolvimento e manutenção de projetos robustos em VTEX e Wake Commerce. Minha atuação envolveu desde a implementação de features avançadas e personalizadas, até a otimização e evolução contínua das plataformas para garantir performance, escalabilidade e uma excelente experiência do usuário."
+      "event": "Prestei serviços para a B8One no desenvolvimento e na manutenção de projetos robustos em VTEX e Wake Commerce. Minha atuação envolveu funcionalidades avançadas e personalizadas, além da otimização contínua das plataformas, com foco em performance, escalabilidade e experiência do usuário."
     },
     {
       "month": "Atualmente",
@@ -82,34 +89,128 @@
   ],
   "Hero": {
     "title": "Olá, me chamo Lucas Viana!",
-    "description": "Sou desenvolvedor de software com mais de 6 anos de experiência criando soluções digitais sob medida. Neste espaço compartilho projetos, aprendizados e ideias que já desenvolvi durante minha carreira.\nSe você busca soluções modernas e personalizadas para seu site ou aplicativo, entre em contato. Terei prazer em transformar suas ideias em realidade!",
+    "titleLead": "Olá, me chamo",
+    "titleName": "Lucas Viana!",
+    "description": "Sou desenvolvedor de software com mais de 6 anos de experiência na criação de soluções digitais sob medida, com foco em performance, usabilidade e resultados para produtos web e mobile.",
+    "profileImageAlt": "Retrato de Lucas Viana",
     "technologies": "Tecnologias que utilizo:",
-    "button": "Currículo",
-    "link": "/lucas-viana-desenvolvedor.pdf/"
+    "button": "Conheça meu blog",
+    "link": "/lucas-viana-desenvolvedor.pdf/",
+    "availability": "Disponível para novos projetos",
+    "workButton": "Conheça meu trabalho",
+    "statsYearsLabel": "Anos de experiência",
+    "statsProjectsLabel": "Projetos entregues",
+    "statsTechnologiesLabel": "Tecnologias utilizadas"
+  },
+  "MyWork": {
+    "eyebrow": "Quem sou eu",
+    "title": "Criando soluções performáticas e inovadoras",
+    "description": "Ao longo de mais de 6 anos desenvolvendo soluções digitais, atuei na criação de plataformas SaaS, e-commerces, landing pages de alta conversão e aplicações web e mobile, sempre com foco em performance, escalabilidade, usabilidade e alinhamento entre tecnologia, design e objetivos de negócio.",
+    "imageAlt": "Lucas Viana trabalhando em seu ambiente de desenvolvimento",
+    "milestones": {
+      "items": {
+        "education": {
+          "period": "Formação",
+          "title": "Base técnica e graduação",
+          "description": "Técnico em Informática e formado em Análise e Desenvolvimento de Sistemas pela FATEC."
+        },
+        "experience": {
+          "period": "Desde 2021",
+          "title": "Experiência em produtos digitais",
+          "description": "Desenvolvimento de soluções web e mobile para produtos, serviços e operações de e-commerce."
+        },
+        "current": {
+          "period": "Especialidades",
+          "title": "Aplicações web, mobile e automações",
+          "description": "Desenvolvimento com React e React Native integrado a APIs, fluxos automatizados e soluções com IA."
+        }
+      }
+    },
+    "benefits": {
+      "eyebrow": "Impulsione seu negócio",
+      "title": "Serviços completos para impulsionar o crescimento do seu negócio digital",
+      "learnMore": "Saiba mais",
+      "items": {
+        "development": {
+          "title": "Desenvolvimento de sites e aplicativos",
+          "description": "Crio aplicações web e mobile com foco em performance, escalabilidade e uma experiência moderna do início ao fim."
+        },
+        "automation": {
+          "title": "Automações com IA",
+          "description": "Crio automações e fluxos inteligentes com n8n e Make, integrando APIs e modelos de IA para reduzir tarefas manuais e otimizar processos."
+        },
+        "seo": {
+          "title": "Otimização e SEO",
+          "description": "Desenvolvo páginas rápidas, acessíveis e bem estruturadas, aplicando SEO para melhorar desempenho, ranqueamento e experiência do usuário."
+        }
+      }
+    }
   },
   "Projects": {
+    "eyebrow": "Portfólio",
+    "sectionTitle": "Projetos que desenvolvi",
+    "sectionDescription": "Uma seleção de interfaces, lojas e soluções web que desenvolvi ou mantive, com foco em performance, usabilidade e código bem estruturado.",
+    "talkButton": "Vamos conversar",
+    "loading": "Carregando projetos...",
+    "previousProject": "Projeto anterior",
+    "nextProject": "Próximo projeto",
     "bannerTitle": "Desenvolver e inovar!",
     "bannerSubtitle": "Ao longo dos últimos 5 anos, tenho contribuído ativamente para diversos projetos com foco na web.",
     "stackTitle": "Algumas tecnologias que eu já utilizei ou utilizo em meus projetos:",
     "projectTitle": "Confira alguns projetos que já desenvolvi: ",
-    "button": "Mais detalhes",
-    "buttonNotFinished": "Em breve: Mais detalhes"
-  },
-  "Contact": {
-    "title": "Entre em contato!",
-    "subtitle": "Estou disponível para novas oportunidades. Vamos conversar para trabalharmos juntos!",
-    "jobs": {
-      "first": "Desenvolvimento Web e Mobile",
-      "second": "Consultoria e manutenção de hardware",
-      "third": "Criação de layouts e interfaces"
+    "button": "Ver detalhes",
+    "buttonNotFinished": "Em breve: Mais detalhes",
+    "projectTypes": {
+      "ecommerce": "E-commerce",
+      "institutional": "Site institucional",
+      "web": "Projeto web"
     },
-    "form": {
-      "nameLabel": "Nome:",
-      "emailLabel": "Email:",
-      "messageLabel": "Mensagem:",
-      "button": "Enviar",
-      "success": "Obrigado por entrar em contato, retorno assim que possível :)",
-      "error": "Houve um problema, tente novamente mais tarde :("
+    "stackCards": {
+      "eyebrow": "Stack principal",
+      "title": "Tecnologias que uso para construir interfaces modernas",
+      "react": {
+        "description": "Componentização, hooks, estados e interfaces escaláveis."
+      },
+      "vtex": {
+        "description": "Desenvolvimento e manutenção de lojas dentro do ecossistema VTEX."
+      },
+      "typescript": {
+        "description": "Tipagem, segurança e melhor organização em projetos front-end."
+      },
+      "tailwind": {
+        "description": "Criação rápida de interfaces responsivas e consistentes."
+      },
+      "docker": {
+        "description": "Ambientes de desenvolvimento mais previsíveis e organizados."
+      },
+      "graphql": {
+        "description": "Consumo de dados mais flexível em aplicações e e-commerces."
+      },
+      "nestjs": {
+        "description": "APIs escaláveis, organizadas por módulos e prontas para crescer."
+      },
+      "prisma": {
+        "description": "Modelagem de dados tipada, consultas seguras e integração simples com bancos."
+      },
+      "postgres": {
+        "description": "Banco relacional robusto para dados consistentes e aplicações confiáveis."
+      }
+    }
+  },
+  "ContactCallout": {
+    "linkedinButton": "Falar comigo no LinkedIn",
+    "whatsappButton": "Falar comigo no WhatsApp",
+    "about": {
+      "eyebrow": "Vamos conversar",
+      "title": "Tem uma ideia ou oportunidade em mente?",
+      "description": "Estou aberto a novos desafios e boas conversas sobre tecnologia, produtos digitais e colaboração profissional.",
+      "whatsappMessage": "Olá, Lucas! Vi seu portfólio e gostaria de conversar sobre uma oportunidade."
+    },
+    "services": {
+      "eyebrow": "Próximo passo",
+      "title": "Precisa transformar uma ideia em produto?",
+      "description": "Vamos conversar sobre seu projeto e entender como desenvolvimento web, mobile ou automações podem ajudar.",
+      "whatsappMessage": "Olá, Lucas! Vi seus serviços no portfólio e gostaria de conversar sobre um projeto."
     }
   },
   "Footer": {
@@ -128,6 +229,16 @@
     "title": "Sobre do Projeto",
     "tech": "Tecnologias:",
     "description": "Descrição:",
-    "codebutton": "Código"
+    "codebutton": "Código",
+    "selected": "Resumo",
+    "client": "Cliente",
+    "category": "Categoria",
+    "role": "Atuação",
+    "accessProject": "Acessar projeto",
+    "repository": "Ver repositório",
+    "aboutMyWork": "Sobre minha atuação no projeto",
+    "mainDeliveries": "Principais entregas",
+    "deliveriesFallback": "As principais entregas deste projeto serão adicionadas em breve.",
+    "loading": "Carregando projeto..."
   }
 }

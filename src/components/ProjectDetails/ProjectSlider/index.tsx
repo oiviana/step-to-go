@@ -1,7 +1,6 @@
 
-import React from "react";
 import { ContentImage } from "@/contentful/contentImage";
-import ImageGallery, { ReactImageGalleryItem } from "react-image-gallery";
+import ImageGallery, { type GalleryItem } from "react-image-gallery";
 import useScreenSize from "@/hooks/useScreenSize";
 
 interface ProjectSliderProps {
@@ -13,7 +12,7 @@ export default function ProjectSlider({ images, mobileImages }: ProjectSliderPro
 
   const deviceType = useScreenSize();
 
-  const convertToGalleryItems = (imageList: ContentImage[] | null): ReactImageGalleryItem[] => {
+  const convertToGalleryItems = (imageList: ContentImage[] | null): GalleryItem[] => {
     if (!imageList) return [];
 
     return imageList.map(image => ({

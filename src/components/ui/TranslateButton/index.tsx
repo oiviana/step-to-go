@@ -1,13 +1,15 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { Link, usePathname } from "../../../../navigation";
-import { IoLanguage } from "react-icons/io5";
+import { Link, usePathname } from "@/i18n/navigation";
 import { BiSolidUpArrow } from "react-icons/bi";
+import { MdOutlineGTranslate } from "react-icons/md";
+import { useTranslations } from "next-intl";
 
 export default function TranslateButton() {
   const pathName = usePathname();
   const [showDropdown, setShowDropdown] = useState(false);
   const dropdownRef = useRef<HTMLInputElement>(null);
+  const translate = useTranslations("Header");
 
   useEffect(() => {
     function handleClickOutside(event: TouchEvent | MouseEvent) {
@@ -25,10 +27,11 @@ export default function TranslateButton() {
   return (
     <div className="relative">
       <button
+      className="inline-flex items-center justify-center leading-none mt-2"
       onClick={()=> setShowDropdown(!showDropdown)} 
-      aria-label="Botão de tradução"
+      aria-label={translate("languageButton")}
       >
-        <IoLanguage
+        <MdOutlineGTranslate
           className="text-v-green transition-colors"
           size={25}
         />
@@ -38,8 +41,8 @@ export default function TranslateButton() {
         className="absolute right-0 bottom-[5.1rem] text-v-dark-700"
         size={25}
         />
-      <Link className="p-1 text-center rounded mb-2  hover:bg-v-dark-300 transition-colors" href={pathName} locale="pt" aria-label="botão de traduções" onClick={()=>setShowDropdown(false)}>Português</Link>
-      <Link  className=" p-1 text-center rounded hover:bg-v-dark-300 transition-colors" href={pathName} locale="en" aria-label="botão de traduções" onClick={()=>setShowDropdown(false)}>English</Link>
+      <Link className="p-1 text-center rounded mb-2  hover:bg-v-dark-300 transition-colors" href={pathName} locale="pt" aria-label={translate("portugueseLabel")} onClick={()=>setShowDropdown(false)}>Português</Link>
+      <Link  className=" p-1 text-center rounded hover:bg-v-dark-300 transition-colors" href={pathName} locale="en" aria-label={translate("englishLabel")} onClick={()=>setShowDropdown(false)}>English</Link>
       </div>
     </div>
   );
