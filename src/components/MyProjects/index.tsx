@@ -1,12 +1,9 @@
 "use client";
 
-import { useState, useEffect} from "react";
+import { useRef } from "react";
 import ProjectCard from "./ProjectCard";
-import { MdArrowForwardIos } from "react-icons/md";
-import { MdArrowBackIosNew } from "react-icons/md";
+import { MdArrowBack, MdArrowForward } from "react-icons/md";
 import { ProjectProps } from "@/contentful/myProjects";
-import SkeletonGrid from "./SkeletonGrid";
-import React from "react";
 import { useTranslations } from "next-intl";
 
 interface ComponentProjectProps {
@@ -14,148 +11,59 @@ interface ComponentProjectProps {
 }
 
 export default function MyProjects({ myProjects }: ComponentProjectProps) {
-  const [isClient, setIsClient] = useState<boolean>();
-  const [currentPage, setCurrentPage] = useState<number>(1);
-  const [itemsPerPage, setItemsPerPage] = useState<number>(1);
-  const [fadeSlides, setFadeSlides] = useState<boolean>(false);
-
-  const projectCards = myProjects.map((project, index) => (
-    <ProjectCard
-      title={project.title}
-      subtitle={project.subtitle}
-      description={project.description}
-      hasDeploy={project.hasDeploy}
-      hasFinished={project.hasFinished}
-      stack={project.technologies}
-      key={index}
-      slug={project.slug}
-      codeUrl={project.codeUrl}
-      deployUrl={project.deployUrl}
-      thumbnail={project.thumbnail}
-    />
-  ));
-
-  const lasItemIndex = currentPage * itemsPerPage;
-  const firstItemIndex = lasItemIndex - itemsPerPage;
-  const currentItems = projectCards.slice(firstItemIndex, lasItemIndex);
+  const sliderRef = useRef<HTMLDivElement>(null);
   const translate = useTranslations("Projects");
 
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+  const handleScroll = (direction: "prev" | "next") => {
+    const slider = sliderRef.current;
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1230) {
-        setItemsPerPage(3);
-      } else if (window.innerWidth >= 768) {
-        setItemsPerPage(2);
-      } else {
-        setItemsPerPage(1);
-      }
-    };
-    handleResize();
+    if (!slider) return;
 
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  useEffect(() => {
-
-    setFadeSlides(true);
-
-    const timeout = setTimeout(() => {
-      setFadeSlides(false);
-    }, 1000);
-
-    return () => clearTimeout(timeout);
-  }, [currentPage]); 
+    slider.scrollBy({
+      left: direction === "next" ? 424 : -424,
+      behavior: "smooth",
+    });
+  };
 
   return (
-    <>
-      {isClient ? (
-        <div className=" lg:mb-[3rem] relative">
-           <h2 className="text-center lg:text-left text-base lg:text-xl mb-8">
-           {translate("projectTitle")}
-        </h2>
-          <div
-            className={`grid grid-cols-1 md:grid-cols-2 min-[1230px]:grid-cols-3 xl:flex h-[430px]
-            ${fadeSlides ? "animate-vote duration-500" : ""} 
-            ${
-              currentItems.length % 2 === 0
-                ? "xl:justify-start gap-[7.5rem]"
-                : "xl:justify-between"
-            }`}
-          >
-            {currentItems}
-          </div>
-          <PaginationSection
-            totalItems={projectCards.length}
-            currentPage={currentPage}
-            setCurrentPage={setCurrentPage}
-            itemsPerPage={itemsPerPage}
+    <div className="relative mt-12 lg:px-16">
+      <button
+        className="absolute left-0 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/[0.12] bg-v-dark-test/90 text-v-white-300 shadow transition-colors hover:border-v-green/50 hover:text-v-green lg:flex"
+        onClick={() => handleScroll("prev")}
+        aria-label={translate("previousProject")}
+      >
+        <MdArrowBack size={24} />
+      </button>
+
+      <div
+        ref={sliderRef}
+        className="grid auto-cols-[88%] grid-flow-col snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth px-1 pb-5 pt-2 [scrollbar-width:none] md:auto-cols-[calc((100%_-_24px)/2)] xl:auto-cols-[400px] [&::-webkit-scrollbar]:hidden"
+      >
+        {myProjects.map((project, index) => (
+          <ProjectCard
+            key={project.slug || index}
+            title={project.title}
+            subtitle={project.subtitle}
+            description={project.description}
+            hasDeploy={project.hasDeploy}
+            hasFinished={project.hasFinished}
+            stack={project.technologies}
+            slug={project.slug}
+            codeUrl={project.codeUrl}
+            deployUrl={project.deployUrl}
+            thumbnail={project.thumbnail}
+            featured={index === 1}
           />
-        </div>
-      ) : (
-        <SkeletonGrid/>
-      )}
-
-    </>
-  );
-}
-
-function PaginationSection({
-  totalItems,
-  itemsPerPage,
-  currentPage,
-  setCurrentPage,
-}: {
-  totalItems: number;
-  itemsPerPage: number;
-  currentPage: number;
-  setCurrentPage: (page: number) => void;
-}) {
-  let pages = [];
-  for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
-    pages.push(i);
-  }
-
-  const handleNextPage = () => {
-    if (currentPage < pages.length) {
-      setCurrentPage(currentPage + 1);
-    }
-  };
-
-  const handlePrevPage = () => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
-    }
-  };
-
-  return (
-<>
-      <button
-        className={` absolute top-[50%] left-[-4px]  shadow rounded-full bg-white dark:bg-v-dark-900 w-9  h-9 lg:w-12 lg:h-12 flex justify-center items-center transition-opacity ${
-          currentPage == 1 && "hidden cursor-not-allowed"
-        }`}
-        onClick={() => handlePrevPage()}
-        aria-label="Projetos anteriores"
-      >
-        <MdArrowBackIosNew size={25} className="flex justify-center" />
-      </button>
+        ))}
+      </div>
 
       <button
-        onClick={() => handleNextPage()}
-        className={`absolute top-[50%] right-[-4px] shadow bg-white dark:bg-v-dark-900 rounded-full w-9 h-9 lg:w-12 lg:h-12 flex justify-center items-center transition-opacity ${
-          currentPage == pages.length && "hidden cursor-not-allowed"
-        }`}
-        aria-label="Próximos projetos"
+        className="absolute right-0 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/[0.12] bg-v-dark-test/90 text-v-white-300 shadow transition-colors hover:border-v-green/50 hover:text-v-green lg:flex"
+        onClick={() => handleScroll("next")}
+        aria-label={translate("nextProject")}
       >
-        <MdArrowForwardIos size={25} />
+        <MdArrowForward size={24} />
       </button>
-</>
+    </div>
   );
 }

@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Link from "next/link";
 import { useTranslations } from "next-intl";
 import TranslateButton from "../../ui/TranslateButton";
 import DesktopItems from "./DesktopItems";
@@ -9,53 +8,64 @@ import GithubButton from "@/components/ui/GithubButton";
 import LinkedinButton from "@/components/ui/LinkedinButton";
 
 type NavbarProps = {
-  showMobileMenu: boolean
   setShowMenu: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export default function Navbar({showMobileMenu, setShowMenu}:NavbarProps) {
-  const {setPage} = useNavigationPage();
-  const translate = useTranslations("Header");
+export default function Navbar() {
   return (
-    <nav className="flex w-full max-w-[450px]">
-      <ul
-        className={`${
-          showMobileMenu ? "fixed z-50" : "hidden"
-        } lg:hidden inset-y-0 left-0 top-16 w-full overflow-y-auto bg-v-dark-test flex flex-col gap-7 text-v-white-500 text-base px-3 pt-16`}
-      >
-        <div className="flex flex-col gap-10 ml-3">
-          <li
-          onClick={() => {
-            setPage('about')
-            setShowMenu(false)
-          }}
+    <nav className="flex w-full max-w-[350px]">
+      <DesktopItems />
+    </nav>
+  );
+}
+
+export function MobileNavbarOverlay({ setShowMenu }: NavbarProps) {
+  const { setPage } = useNavigationPage();
+  const translate = useTranslations("Header");
+
+  const handleOpenAbout = () => {
+    setPage("hero");
+    setShowMenu(false);
+
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        document.getElementById("my-work")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      });
+    });
+  };
+
+  return (
+    <div className="fixed inset-0 z-30 flex bg-[rgba(20,18,23,0.78)] backdrop-blur-2xl backdrop-saturate-150 supports-[backdrop-filter]:bg-[rgba(20,18,23,0.58)] lg:hidden">
+      <div className="relative flex h-full w-full flex-col overflow-hidden">
+        <div className="main-grid-pattern pointer-events-none absolute inset-0 opacity-40" />
+        <div className="relative flex h-full w-full flex-col gap-8 overflow-y-auto px-8 pb-10 pt-[7.25rem] text-base text-v-white-500">
+          <button
+            type="button"
+            className="w-fit text-left font-semibold transition-colors hover:text-v-green"
+            onClick={handleOpenAbout}
           >
             {translate(`navbar.0`)}
-          </li>
-          <li
-          onClick={() => {
-            setPage('projects')
-            setShowMenu(false)
-          }}
+          </button>
+          <button
+            type="button"
+            className="w-fit text-left font-semibold transition-colors hover:text-v-green"
+            onClick={() => {
+              setPage('projects')
+              setShowMenu(false)
+            }}
           >
             {translate(`navbar.1`)}
-          </li>
-          <li
-          onClick={() => {
-            setPage('contact')
-            setShowMenu(false)
-          }}
-          >
-            {translate(`navbar.2`)}
-          </li>
-          <div className="flex gap-8 mt-4">
-            <LinkedinButton/>
-            <GithubButton/>
+          </button>
+          <div className="mt-4 flex w-fit gap-8 border-t border-white/[0.08] pt-6">
+            <LinkedinButton />
+            <GithubButton />
             <TranslateButton />
           </div>
         </div>
-      </ul>
-      <DesktopItems/>
-    </nav>
+      </div>
+    </div>
   );
 }

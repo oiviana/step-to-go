@@ -1,67 +1,76 @@
 "use client";
 
 import Navbar from "./Navbar";
+import { MobileNavbarOverlay } from "./Navbar";
 import TranslateButton from "../ui/TranslateButton";
 import Link from "next/link";
-import Logo from "../Logo";
+import Logo from "../ui/Logo";
 import { useState } from "react";
 import MobileHamburguer from "../ui/MobileHamburguer";
 import { useNavigationPage } from "@/utils/Providers";
 import GithubButton from "../ui/GithubButton";
 import LinkedinButton from "../ui/LinkedinButton";
+import { useTranslations } from "next-intl";
 
 export default function Header() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const {setPage} = useNavigationPage()
+  const { setPage } = useNavigationPage()
+  const translate = useTranslations("Header");
   return (
-    <header className="w-100 flex flex-col px-4 lg:px-0 w-full max-w-[1170px] mx-auto fixed z-50 lg:sticky py-4 lg:py-0 bg-v-dark-test lg:h-[74px]">
-      <div className="flex items-center h-full">
-        <div className="w-full justify-between items-center h-full hidden lg:flex ">
-          <div className="flex w-full justify-between items-center">
-            <Link
-              href="#"
-              className=" w-full  flex gap-4"
-              aria-label="Logo do site"
-              onClick={()=>{setPage('hero')}}
+    <>
+      {showMobileMenu && <MobileNavbarOverlay setShowMenu={setShowMobileMenu} />}
+
+      <header className="fixed inset-x-0 top-0 z-40 flex w-full flex-col border-b border-white/[0.04] bg-[rgba(20,18,23,0.58)] px-4 py-4 shadow-[0_10px_30px_rgba(0,0,0,0.12)] backdrop-blur-2xl backdrop-saturate-150 supports-[backdrop-filter]:bg-[rgba(20,18,23,0.34)] lg:px-0 lg:py-0 lg:h-20">
+        <div className="w-full max-w-[1170px] mx-auto">
+
+          <div className="flex items-center h-full">
+            <div className="w-full justify-between items-center h-full hidden lg:flex ">
+              <div className="flex w-full justify-between items-center">
+                <Link
+                  href="#"
+                  className=" w-full  flex gap-4"
+                  aria-label={translate("logoLabel")}
+                  onClick={() => { setPage('hero') }}
+                >
+                  <Logo className="w-[84px]" variant="gradient" />
+                  <span className="min-w-[150px] font-jetbrains flex items-center italic logo-text-gradient font-semibold text-lg lg:text-3xl">Oi Viana</span>
+                </Link>
+              </div>
+            </div>
+            <Navbar />
+            <div className="hidden lg:flex gap-6 lg:ml-5">
+              <LinkedinButton />
+              <GithubButton />
+              <TranslateButton />
+            </div>
+          </div>
+          <div className="w-full justify-between items-center h-full flex lg:hidden ">
+            <div className="flex w-full justify-between items-center">
+              <Link
+                href="#"
+                className=" w-full max-w-48 flex gap-4"
+                aria-label={translate("logoLabel")}
+                onClick={() => {
+                  {
+                    setPage('hero')
+                    setShowMobileMenu(false)
+                  }
+                }}
+              >
+                <Logo className="w-20" variant="solid" />
+                <span className="min-w-[120px] flex items-center italic font-semibold text-xl logo-text-gradient">Oi Viana</span>
+              </Link>
+            </div>
+            <button
+              className="flex lg:hidden"
+              onClick={() => setShowMobileMenu(!showMobileMenu)}
+              aria-label={translate(showMobileMenu ? "closeMenu" : "openMenu")}
             >
-              <Logo className="w-[95px]" variant="gradient"/>
-             <span className="min-w-[150px] font-jetbrains flex items-center italic logo-text-gradient font-semibold text-lg lg:text-3xl lg:pt-2">Oi Viana</span>
-            </Link>
+              <MobileHamburguer openedMenu={showMobileMenu} />
+            </button>
           </div>
         </div>
-        <Navbar
-          showMobileMenu={showMobileMenu}
-          setShowMenu={setShowMobileMenu}
-        />
-        <div className="hidden lg:flex gap-6 lg:ml-5">
-          <LinkedinButton/>
-          <GithubButton/>
-          <TranslateButton />
-        </div>
-      </div>
-      <div className="w-full justify-between items-center h-full flex lg:hidden ">
-        <div className="flex w-full justify-between items-center">
-          <Link
-            href="#"
-            className=" w-full max-w-48 flex gap-4"
-            aria-label="Logo do site"
-            onClick={()=>{{
-              setPage('hero')
-              setShowMobileMenu(false)
-            }}}
-          >
-            <Logo className="w-20" variant="solid"/>
-             <span className="min-w-[120px] flex items-center italic font-semibold text-xl logo-text-gradient">Oi Viana</span>
-          </Link>
-        </div>
-        <button
-          className="flex lg:hidden"
-          onClick={() => setShowMobileMenu(!showMobileMenu)}
-          aria-label="Abrir menu"
-        >
-          <MobileHamburguer openedMenu={showMobileMenu} />
-        </button>
-      </div>
-    </header>
+      </header>
+    </>
   );
 }

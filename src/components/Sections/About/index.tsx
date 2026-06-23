@@ -1,4 +1,4 @@
-import LayoutSection from "@/components/LayoutSection";
+import LayoutSection from "@/components/ui/LayoutSection";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Inter } from "next/font/google";
@@ -10,11 +10,18 @@ const secondaryFontFamily = Inter({
   subsets: ["latin"],
 });
 
+type TimelineItem = {
+  event: string;
+  month: string;
+  title: string;
+  year: string;
+};
+
 export default function About() {
   const translate = useTranslations();
-  const timeline = translate.raw("timeline");
+  const timeline = translate.raw("timeline") as TimelineItem[];
 
-  const timelineList = timeline.map((item: any, index: number) => (
+  const timelineList = timeline.map((item, index) => (
     <motion.li 
     className=" flex flex-col lg:flex-row mb-[3.5rem] lg:mb-[10rem] z-[-1]" 
     key={index}

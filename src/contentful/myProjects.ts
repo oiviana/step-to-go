@@ -5,13 +5,16 @@ import {
 } from "./contentImage";
 import { TypeProjectSkeleton } from "./types/TypeProject";
 import { Entry } from "contentful";
-import { Document as RichTextDocument } from "@contentful/rich-text-types";
 import contentfulClient from "./client";
 
 export interface ProjectProps {
   title: string;
   subtitle: string;
   description: string;
+  client: string;
+  category: string;
+  role: string;
+  mainDeliveries: string[];
   slug: string;
   thumbnail: ContentImage | null;
   images: ContentImage[] | null;
@@ -36,6 +39,10 @@ export function parseContentfulProject(
     title: projectEntry.fields.title || "",
     subtitle: projectEntry.fields.subtitle || "",
     description: projectEntry.fields.description || "",
+    client: projectEntry.fields.client || projectEntry.fields.title || "",
+    category: projectEntry.fields.category || "",
+    role: projectEntry.fields.role || "",
+    mainDeliveries: projectEntry.fields.mainDeliveries || [],
     slug: projectEntry.fields.slug,
     thumbnail: parseContentfulContentImage(projectEntry.fields.thumbnail),
     images: parseContentfulContentImages(projectEntry.fields.images),

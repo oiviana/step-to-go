@@ -1,9 +1,9 @@
-import LayoutSection from "../LayoutSection";
 import TitleSection from "../TitleSection";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { TiDocumentText } from "react-icons/ti";
 import { motion } from 'framer-motion';
+import LayoutSection from "../ui/LayoutSection";
 
 export default function Hero() {
   const translate = useTranslations("Hero");

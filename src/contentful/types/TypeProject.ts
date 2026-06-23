@@ -10,6 +10,10 @@ import type {
     title?: EntryFieldTypes.Symbol;
     subtitle?: EntryFieldTypes.Text;
     description?: EntryFieldTypes.Symbol;
+    client?: EntryFieldTypes.Symbol;
+    category?: EntryFieldTypes.Symbol;
+    role?: EntryFieldTypes.Symbol;
+    mainDeliveries?: EntryFieldTypes.Symbol[];
     slug: EntryFieldTypes.Symbol;
     thumbnail?: EntryFieldTypes.AssetLink;
     images?: EntryFieldTypes.AssetLink[];

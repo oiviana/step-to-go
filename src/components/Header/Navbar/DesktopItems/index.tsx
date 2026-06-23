@@ -14,19 +14,29 @@ export default function DesktopItems() {
         setActiveSection(section)
     }
 
+    const handleOpenAbout = () => {
+        setPage("hero");
+        setActiveSection("about");
+
+        window.requestAnimationFrame(() => {
+            window.requestAnimationFrame(() => {
+                document.getElementById("my-work")?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                });
+            });
+        });
+    }
+
   return (
-    <ul className="hidden lg:flex text-v-white-500 items-center gap-6 md:text-base lg:gap-14 font-semibold text-base lg:mr-6">
-      <li className={`transition-colors cursor-pointer  ${activeSection === 'about' && activeSection === page && 'text-v-green'} min-w-[104px]`}
-      onClick={() => handleSetSection("about")}>
+    <ul className="hidden lg:flex text-v-white-500 items-center gap-8 md:text-base lg:gap-14 font-semibold text-base lg:mr-6">
+      <li className={`transition-colors cursor-pointer whitespace-nowrap ${activeSection === 'about' && 'text-v-green'} min-w-[104px]`}
+      onClick={handleOpenAbout}>
          {translate(`navbar.0`)}
       </li>
-      <li className={`transition-colors cursor-pointer  ${activeSection === 'projects' && activeSection === page && 'text-v-green'} min-w-[104px]`}
+      <li className={`transition-colors cursor-pointer whitespace-nowrap ${activeSection === 'projects' && activeSection === page && 'text-v-green'} min-w-[132px]`}
        onClick={() => handleSetSection("projects")}>
          {translate(`navbar.1`)}
-      </li>
-      <li className={`transition-colors cursor-pointer  ${activeSection === 'contact' && activeSection === page && 'text-v-green'} min-w-[104px]`}
-       onClick={() => handleSetSection("contact")}>
-        {translate(`navbar.2`)}
       </li>
     </ul>
   );
