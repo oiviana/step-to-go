@@ -2,6 +2,9 @@ import { useTranslations } from "next-intl";
 import {
   SiDocker,
   SiGraphql,
+  SiNestjs,
+  SiPostgresql,
+  SiPrisma,
   SiReact,
   SiTailwindcss,
   SiTypescript,
@@ -38,6 +41,21 @@ const stackItems = [
     key: "graphql",
     name: "GraphQL",
     Icon: SiGraphql,
+  },
+  {
+    key: "nestjs",
+    name: "NestJS",
+    Icon: SiNestjs,
+  },
+  {
+    key: "prisma",
+    name: "Prisma ORM",
+    Icon: SiPrisma,
+  },
+  {
+    key: "postgres",
+    name: "PostgreSQL",
+    Icon: SiPostgresql,
   },
 ] as const;
 

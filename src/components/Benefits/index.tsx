@@ -5,6 +5,7 @@ import { ArrowRight, Bot, Code2, SearchCheck } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useRef } from "react";
+import { useNavigationPage } from "@/utils/Providers";
 
 type BenefitItem = {
   icon: LucideIcon;
@@ -34,6 +35,15 @@ export default function Benefits() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, amount: 0.2 });
   const translate = useTranslations("MyWork.benefits");
+  const { setPage } = useNavigationPage();
+
+  const handleOpenServices = () => {
+    setPage("projects");
+
+    window.requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  };
 
   return (
     <div ref={ref} className="mt-24 w-full pt-8 lg:mt-28 lg:pt-10">
@@ -89,14 +99,18 @@ export default function Benefits() {
 
                 <div className="mt-auto h-px bg-white/[0.05] transition-colors duration-300 group-hover:bg-v-green/[0.1]" />
 
-                <div className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-v-green/45 transition-[color,gap] duration-300 group-hover:gap-3 group-hover:text-v-green">
+                <button
+                  type="button"
+                  onClick={handleOpenServices}
+                  className="mt-5 inline-flex w-max items-center gap-2 text-left text-sm font-medium text-v-green/45 transition-[color,gap] duration-300 hover:gap-3 hover:text-v-green focus:outline-none focus-visible:text-v-green"
+                >
                   {translate("learnMore")}
                   <ArrowRight
                     size={14}
                     strokeWidth={2.5}
                     className="shrink-0 transition-transform duration-300 group-hover:translate-x-[3px]"
                   />
-                </div>
+                </button>
               </div>
             </motion.article>
           );

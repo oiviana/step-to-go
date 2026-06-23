@@ -185,6 +185,15 @@
       },
       "graphql": {
         "description": "Consumo de dados mais flexível em aplicações e e-commerces."
+      },
+      "nestjs": {
+        "description": "APIs escaláveis, organizadas por módulos e prontas para crescer."
+      },
+      "prisma": {
+        "description": "Modelagem de dados tipada, consultas seguras e integração simples com bancos."
+      },
+      "postgres": {
+        "description": "Banco relacional robusto para dados consistentes e aplicações confiáveis."
       }
     }
   },

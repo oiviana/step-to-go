@@ -185,6 +185,15 @@
       },
       "graphql": {
         "description": "More flexible data consumption in applications and e-commerces."
+      },
+      "nestjs": {
+        "description": "Scalable APIs organized with modules and ready to grow."
+      },
+      "prisma": {
+        "description": "Typed data modeling, safer queries, and simple database integration."
+      },
+      "postgres": {
+        "description": "Robust relational database for consistent data and reliable applications."
       }
     }
   },
