@@ -14,8 +14,36 @@ const mainFontFamily = JetBrains_Mono({
 
 
 export const metadata: Metadata = {
-  title: "Oi Viana",
-  description: "Lucas Viana - Analista de Sistemas",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://oiviana.com.br"
+  ),
+  title: "Lucas Viana | Desenvolvedor de Software",
+  description:
+    "Portfolio de Lucas Viana, desenvolvedor de software focado em produtos web, mobile, performance e automações.",
+  openGraph: {
+    title: "Lucas Viana | Desenvolvedor de Software",
+    description:
+      "Portfolio de Lucas Viana, desenvolvedor de software focado em produtos web, mobile, performance e automações.",
+    url: "/",
+    siteName: "Oi Viana",
+    images: [
+      {
+        url: "/meta-data/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Lucas Viana - Desenvolvedor de Software",
+      },
+    ],
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lucas Viana | Desenvolvedor de Software",
+    description:
+      "Portfolio de Lucas Viana, desenvolvedor de software focado em produtos web, mobile, performance e automações.",
+    images: ["/meta-data/og-image.png"],
+  },
 };
 
 export function generateStaticParams() {
