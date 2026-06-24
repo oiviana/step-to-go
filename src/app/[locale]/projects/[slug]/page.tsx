@@ -96,7 +96,7 @@ function ProjectDetailsSkeleton() {
           </div>
         </section>
 
-        <section className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1.35fr)_minmax(320px,0.65fr)]">
+        <section className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(360px,0.8fr)]">
           <article className="rounded-[2rem] border border-white/[0.08] bg-[linear-gradient(180deg,rgba(255,255,255,0.035),rgba(255,255,255,0.012)),#181820] p-6 sm:p-8">
             <SkeletonBlock className="mb-8 h-10 w-32 rounded-full" />
             <SkeletonBlock className="h-14 w-full max-w-[620px] rounded-xl" />
@@ -247,12 +247,12 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             />
           </section>
 
-          <section className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1.35fr)_minmax(320px,0.65fr)]">
+          <section className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(360px,0.8fr)]">
             <article className="rounded-[2rem] border border-white/[0.08] bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.015)),#181820] p-6 sm:p-8">
               <span className="mb-5 inline-flex w-fit rounded-full border border-v-green/30 bg-v-green/[0.07] px-3 py-2 text-xs font-extrabold uppercase tracking-[0.06em] text-v-green">
                 {translate("description")}
               </span>
-              <h2 className="mb-5 text-3xl font-black leading-[1.05] tracking-[-0.05em] text-v-white-300 lg:text-[2.75rem]">
+              <h2 className="mb-5 text-3xl font-black leading-[1.05] tracking-[-0.05em] text-v-white-300 lg:text-[2rem]">
                 {translate("aboutMyWork")}
               </h2>
               <p className="text-base leading-8 text-v-white-900/90 lg:text-[1.0625rem] lg:leading-9">
