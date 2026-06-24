@@ -178,7 +178,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 {translate("selected")}
               </span>
 
-              <h1 className="max-w-[720px] text-4xl font-black leading-[0.95] tracking-[-0.07em] text-v-white-300 sm:text-6xl lg:text-[4.75rem]">
+              <h1 className="max-w-[720px] text-4xl font-black leading-[0.95] tracking-[-0.07em] text-v-white-300 sm:text-6xl lg:text-[4rem]">
                 {project.title}
               </h1>
 
