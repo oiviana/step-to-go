@@ -16,6 +16,20 @@ export default function Header() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const { setPage } = useNavigationPage()
   const translate = useTranslations("Header");
+
+  const handleLogoClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    setPage("hero");
+    setShowMobileMenu(false);
+
+    window.requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      document
+        .querySelector(".section-scroll")
+        ?.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  };
+
   return (
     <>
       {showMobileMenu && <MobileNavbarOverlay setShowMenu={setShowMobileMenu} />}
@@ -30,7 +44,7 @@ export default function Header() {
                   href="#"
                   className=" w-full  flex gap-4"
                   aria-label={translate("logoLabel")}
-                  onClick={() => { setPage('hero') }}
+                  onClick={handleLogoClick}
                 >
                   <Logo className="w-[84px]" variant="gradient" />
                   <span className="min-w-[150px] font-jetbrains flex items-center italic logo-text-gradient font-semibold text-lg lg:text-3xl">Oi Viana</span>
@@ -50,12 +64,7 @@ export default function Header() {
                 href="#"
                 className=" w-full max-w-48 flex gap-4"
                 aria-label={translate("logoLabel")}
-                onClick={() => {
-                  {
-                    setPage('hero')
-                    setShowMobileMenu(false)
-                  }
-                }}
+                onClick={handleLogoClick}
               >
                 <Logo className="w-20" variant="solid" />
                 <span className="min-w-[120px] flex items-center italic font-semibold text-xl logo-text-gradient">Oi Viana</span>
